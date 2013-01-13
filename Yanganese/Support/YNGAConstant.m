@@ -9,5 +9,6 @@
 #import "YNGAConstant.h"
 
 float const kCornerRadius = 3.0f;
+float const kTransitionTime = 0.5f;
 
 NSString * const kQuizURL = @"http://yanganese.heroku.com/quizzes";
