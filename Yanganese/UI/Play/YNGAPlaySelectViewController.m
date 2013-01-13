@@ -8,7 +8,9 @@
 
 #import "YNGAPlaySelectViewController.h"
 
+#import "YNGAGameViewController.h"
 #import "YNGAAppDelegate.h"
+#import "Quiz.h"
 
 @implementation YNGAPlaySelectViewController
 
@@ -25,6 +27,18 @@
     NSError *error;
     NSArray *fetchedObjects = [context executeFetchRequest:request error:&error];
     self.quizzes = [[NSMutableArray alloc] initWithArray:fetchedObjects];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{    
+    if([segue.identifier isEqualToString:@"startGame"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        
+        YNGAGameViewController *gameController = segue.destinationViewController;
+        gameController.quiz = quiz;
+    }
 }
 
 @end
