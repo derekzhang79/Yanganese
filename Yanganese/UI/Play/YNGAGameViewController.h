@@ -8,11 +8,15 @@
 
 #import "YNGAQuestionViewController.h"
 
+#define kCategoryCount 7
+
+@class Question;
+
 @interface YNGAGameViewController : YNGAQuestionViewController
 {
     NSArray *categories;
-	int correctCount[7];
-	int questionTotal[7];
+	int correctCount[kCategoryCount];
+	int questionTotal[kCategoryCount];
 	
     NSUInteger questionNumber;
 	NSUInteger score;
@@ -21,6 +25,8 @@
     NSInteger lastButtonTag;
 	
 	CGAffineTransform translations[4];
+    
+    Question *question;
 }
 
 @property (weak, nonatomic) IBOutlet UITextView *questionView;

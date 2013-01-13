@@ -12,6 +12,7 @@
 #import "YNGAAppDelegate.h"
 #import "Quiz.h"
 #import "Question.h"
+#import "Score.h"
 
 #define kXTrans1 83
 #define kXTrans2 -82
@@ -69,7 +70,7 @@
 
 - (void)updateTextView
 {
-    Question *question = [self.quiz.questions objectAtIndex:questionNumber];
+    question = [self.quiz.questions objectAtIndex:questionNumber];
     
 	// Set question details
 	self.title = [[NSString alloc] initWithFormat:@"Question %d", (questionNumber + 1)];
@@ -82,7 +83,6 @@
 
 - (IBAction)answer:(id)sender
 {
-    Question *question = [self.quiz.questions objectAtIndex:questionNumber];
 	NSUInteger categoryIndex = [question.categoryID integerValue];
 
     UIButton *button = (UIButton *)sender;
@@ -113,8 +113,6 @@
 
 - (void)toggleAnswer
 {
-    Question *question = [self.quiz.questions objectAtIndex:questionNumber];
-
 	[UIView animateWithDuration:kTransitionTime animations:^ {
         
         UIButton *lastButton;
@@ -161,8 +159,30 @@
 
 - (void)endRound
 {
+    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Score" inManagedObjectContext:context];
+    
+    [context insertObject:self.quiz];
+    
+    NSMutableArray *counts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    NSMutableArray *totals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    
+    for(int i = 0; i < kCategoryCount; i++)
+    {
+        [counts addObject:[NSNumber numberWithInt:correctCount[i]]];
+        [totals addObject:[NSNumber numberWithInt:questionTotal[i]]];
+    }
+
+    Score *quizScore = [[Score alloc] initWithEntity:entity counts:counts totals:totals insertIntoManagedObjectContext:context];
+    
+    self.quiz.score = quizScore;
+    
+    NSError *contextError;
+    [context save:&contextError];
+    
     /*
-	self.title = @"Quiz";
 	
 	MKYGameResultViewController *next = [[MKYGameResultViewController alloc] initWithNibName:@"MKYResultViewController" bundle:nil];
 	
