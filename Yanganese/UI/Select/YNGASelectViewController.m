@@ -26,10 +26,15 @@
 
     self.tableView.rowHeight = kRowHeight;
     
-    NSArray *categories = @[@"None", @"Astro", @"Bio", @"Chem", @"Earth", @"Gen", @"Math", @"Phys"];
+    NSArray *categories = @[@"astro", @"bio", @"chem", @"earth", @"gen", @"math", @"phys"];
     NSMutableArray *temp = [NSMutableArray arrayWithCapacity:categories.count];
     for(NSString *category in categories)
-        [temp addObject:[UIImage imageNamed:[category stringByAppendingPathExtension:@".png"]]];
+    {
+        UIImage *categoryImage = [UIImage imageNamed:[category stringByAppendingPathExtension:@"png"]];
+        if(categoryImage != nil)
+            [temp addObject:categoryImage];
+        
+    }
     categoryImages = [[NSArray alloc] initWithArray:temp];
 }
 
@@ -41,7 +46,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 	
 	[super viewWillAppear:animated];
 }
