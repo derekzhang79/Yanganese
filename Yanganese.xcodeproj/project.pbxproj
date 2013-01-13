@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
 		D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
 		D249411516A2693F0058E7E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411416A2693F0058E7E6 /* CoreGraphics.framework */; };
@@ -98,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
+		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D249410C16A2693F0058E7E6 /* Yanganese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yanganese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D249411016A2693F0058E7E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D249411216A2693F0058E7E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -220,6 +223,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D22C009D16A37276009F26FD /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				D22C009916A37271009F26FD /* YNGAResultViewController.h */,
+				D22C009A16A37271009F26FD /* YNGAResultViewController.m */,
+			);
+			name = Result;
+			sourceTree = "<group>";
+		};
 		D249410116A2693F0058E7E6 = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +392,7 @@
 				D2DB1F7216A26CC6002061CC /* Cell */,
 				D2DB1F9016A277D2002061CC /* Select */,
 				D29CFDAA16A342E500C043E8 /* Question */,
+				D22C009D16A37276009F26FD /* Result */,
 				D2DB1FA016A28D2D002061CC /* Menu */,
 				D2675E5016A2B114005A5DB4 /* Play */,
 				D2DB1FD016A292E8002061CC /* Download */,
@@ -636,6 +649,7 @@
 				D2675E5416A2B135005A5DB4 /* YNGAPlaySelectViewController.m in Sources */,
 				D29CFDB716A344DA00C043E8 /* YNGAQuestionViewController.m in Sources */,
 				D29CFDBB16A3460300C043E8 /* YNGAGameViewController.m in Sources */,
+				D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
