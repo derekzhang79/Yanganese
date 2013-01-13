@@ -52,6 +52,7 @@
 		D2DB1F8C16A27741002061CC /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F8B16A27741002061CC /* Quiz.m */; };
 		D2DB1F8F16A27741002061CC /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F8E16A27741002061CC /* Question.m */; };
 		D2DB1F9316A27816002061CC /* YNGASelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F9216A27816002061CC /* YNGASelectViewController.m */; };
+		D2DB1FA816A28E81002061CC /* YNGAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1FA716A28E81002061CC /* YNGAMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		D2DB1F8E16A27741002061CC /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Model/Question.m; sourceTree = "<group>"; };
 		D2DB1F9116A27816002061CC /* YNGASelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGASelectViewController.h; path = UI/Select/YNGASelectViewController.h; sourceTree = "<group>"; };
 		D2DB1F9216A27816002061CC /* YNGASelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGASelectViewController.m; path = UI/Select/YNGASelectViewController.m; sourceTree = "<group>"; };
+		D2DB1FA616A28E81002061CC /* YNGAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAMenuViewController.h; path = UI/Menu/YNGAMenuViewController.h; sourceTree = "<group>"; };
+		D2DB1FA716A28E81002061CC /* YNGAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAMenuViewController.m; path = UI/Menu/YNGAMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +272,7 @@
 			children = (
 				D2DB1F7216A26CC6002061CC /* Cell */,
 				D2DB1F9016A277D2002061CC /* Select */,
+				D2DB1FA016A28D2D002061CC /* Menu */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -303,6 +307,15 @@
 				D2DB1F9216A27816002061CC /* YNGASelectViewController.m */,
 			);
 			name = Select;
+			sourceTree = "<group>";
+		};
+		D2DB1FA016A28D2D002061CC /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D2DB1FA616A28E81002061CC /* YNGAMenuViewController.h */,
+				D2DB1FA716A28E81002061CC /* YNGAMenuViewController.m */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +459,7 @@
 				D2DB1F8C16A27741002061CC /* Quiz.m in Sources */,
 				D2DB1F8F16A27741002061CC /* Question.m in Sources */,
 				D2DB1F9316A27816002061CC /* YNGASelectViewController.m in Sources */,
+				D2DB1FA816A28E81002061CC /* YNGAMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
