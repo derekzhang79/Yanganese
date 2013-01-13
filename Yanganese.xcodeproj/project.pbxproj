@@ -47,6 +47,8 @@
 		D249417F16A26A930058E7E6 /* yanganeseDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D249416B16A26A930058E7E6 /* yanganeseDisabled@2x.png */; };
 		D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F6A16A26B70002061CC /* YNGAConstant.m */; };
 		D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7416A26CD7002061CC /* YNGARatingView.m */; };
+		D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */; };
+		D2DB1F7F16A26E16002061CC /* YNGAQuizCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1F7D16A26E16002061CC /* YNGAQuizCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,9 @@
 		D2DB1F6A16A26B70002061CC /* YNGAConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAConstant.m; path = Support/YNGAConstant.m; sourceTree = "<group>"; };
 		D2DB1F7316A26CD7002061CC /* YNGARatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGARatingView.h; path = UI/Cell/YNGARatingView.h; sourceTree = "<group>"; };
 		D2DB1F7416A26CD7002061CC /* YNGARatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGARatingView.m; path = UI/Cell/YNGARatingView.m; sourceTree = "<group>"; };
+		D2DB1F7B16A26E16002061CC /* YNGAQuizCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAQuizCell.h; path = UI/Cell/YNGAQuizCell.h; sourceTree = "<group>"; };
+		D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAQuizCell.m; path = UI/Cell/YNGAQuizCell.m; sourceTree = "<group>"; };
+		D2DB1F7D16A26E16002061CC /* YNGAQuizCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YNGAQuizCell.xib; path = UI/Cell/YNGAQuizCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +267,9 @@
 			children = (
 				D2DB1F7316A26CD7002061CC /* YNGARatingView.h */,
 				D2DB1F7416A26CD7002061CC /* YNGARatingView.m */,
+				D2DB1F7B16A26E16002061CC /* YNGAQuizCell.h */,
+				D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */,
+				D2DB1F7D16A26E16002061CC /* YNGAQuizCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 				D249417D16A26A930058E7E6 /* yanganese@2x.png in Resources */,
 				D249417E16A26A930058E7E6 /* yanganeseDisabled.png in Resources */,
 				D249417F16A26A930058E7E6 /* yanganeseDisabled@2x.png in Resources */,
+				D2DB1F7F16A26E16002061CC /* YNGAQuizCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +411,7 @@
 				D249412C16A269400058E7E6 /* Yanganese.xcdatamodeld in Sources */,
 				D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */,
 				D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */,
+				D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
