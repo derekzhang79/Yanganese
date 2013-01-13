@@ -8,4 +8,6 @@
 
 #import "YNGAConstant.h"
 
+float const kCornerRadius = 3.0f;
+
 NSString * const kQuizURL = @"http://yanganese.heroku.com/quizzes";

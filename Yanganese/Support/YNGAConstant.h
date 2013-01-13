@@ -8,4 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
+extern float const kCornerRadius;
+
 extern NSString * const kQuizURL;

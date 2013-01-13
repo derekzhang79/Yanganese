@@ -47,6 +47,7 @@
 		D249417F16A26A930058E7E6 /* yanganeseDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D249416B16A26A930058E7E6 /* yanganeseDisabled@2x.png */; };
 		D2675E5416A2B135005A5DB4 /* YNGAPlaySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2675E5316A2B135005A5DB4 /* YNGAPlaySelectViewController.m */; };
 		D29CFDB016A3442D00C043E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29CFDAF16A3442D00C043E8 /* QuartzCore.framework */; };
+		D29CFDB716A344DA00C043E8 /* YNGAQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29CFDB616A344DA00C043E8 /* YNGAQuestionViewController.m */; };
 		D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F6A16A26B70002061CC /* YNGAConstant.m */; };
 		D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7416A26CD7002061CC /* YNGARatingView.m */; };
 		D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */; };
@@ -133,6 +134,8 @@
 		D2675E5216A2B135005A5DB4 /* YNGAPlaySelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAPlaySelectViewController.h; path = UI/Play/YNGAPlaySelectViewController.h; sourceTree = "<group>"; };
 		D2675E5316A2B135005A5DB4 /* YNGAPlaySelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAPlaySelectViewController.m; path = UI/Play/YNGAPlaySelectViewController.m; sourceTree = "<group>"; };
 		D29CFDAF16A3442D00C043E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D29CFDB516A344DA00C043E8 /* YNGAQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAQuestionViewController.h; path = UI/Question/YNGAQuestionViewController.h; sourceTree = "<group>"; };
+		D29CFDB616A344DA00C043E8 /* YNGAQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAQuestionViewController.m; path = UI/Question/YNGAQuestionViewController.m; sourceTree = "<group>"; };
 		D2DB1F6916A26B70002061CC /* YNGAConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAConstant.h; path = Support/YNGAConstant.h; sourceTree = "<group>"; };
 		D2DB1F6A16A26B70002061CC /* YNGAConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAConstant.m; path = Support/YNGAConstant.m; sourceTree = "<group>"; };
 		D2DB1F7316A26CD7002061CC /* YNGARatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGARatingView.h; path = UI/Cell/YNGARatingView.h; sourceTree = "<group>"; };
@@ -325,11 +328,21 @@
 			name = Play;
 			sourceTree = "<group>";
 		};
+		D29CFDAA16A342E500C043E8 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				D29CFDB516A344DA00C043E8 /* YNGAQuestionViewController.h */,
+				D29CFDB616A344DA00C043E8 /* YNGAQuestionViewController.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
 		D2DB1F7016A26CC1002061CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				D2DB1F7216A26CC6002061CC /* Cell */,
 				D2DB1F9016A277D2002061CC /* Select */,
+				D29CFDAA16A342E500C043E8 /* Question */,
 				D2DB1FA016A28D2D002061CC /* Menu */,
 				D2675E5016A2B114005A5DB4 /* Play */,
 				D2DB1FD016A292E8002061CC /* Download */,
@@ -576,6 +589,7 @@
 				D2DB1FA816A28E81002061CC /* YNGAMenuViewController.m in Sources */,
 				D2DB1FD316A29392002061CC /* YNGADownloadViewController.m in Sources */,
 				D2675E5416A2B135005A5DB4 /* YNGAPlaySelectViewController.m in Sources */,
+				D29CFDB716A344DA00C043E8 /* YNGAQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
