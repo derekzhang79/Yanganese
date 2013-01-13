@@ -25,6 +25,7 @@
     [super viewDidLoad];
 
     self.tableView.rowHeight = kRowHeight;
+    self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     
     NSArray *categories = @[@"astro", @"bio", @"chem", @"earth", @"gen", @"math", @"phys"];
     NSMutableArray *temp = [NSMutableArray arrayWithCapacity:categories.count];
@@ -87,6 +88,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
