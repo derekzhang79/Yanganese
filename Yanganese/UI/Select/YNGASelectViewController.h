@@ -17,6 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet YNGAQuizCell *protoCell;
 
-@property (nonatomic, retain) NSArray *quizzes;
+@property (nonatomic, retain) NSMutableArray *quizzes;
 
 @end

@@ -7,3 +7,5 @@
 //
 
 #import "YNGAConstant.h"
+
+NSString * const kQuizURL = @"http://yanganese.heroku.com/quizzes";
