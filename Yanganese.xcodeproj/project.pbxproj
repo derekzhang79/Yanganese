@@ -53,6 +53,25 @@
 		D2DB1F8F16A27741002061CC /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F8E16A27741002061CC /* Question.m */; };
 		D2DB1F9316A27816002061CC /* YNGASelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F9216A27816002061CC /* YNGASelectViewController.m */; };
 		D2DB1FA816A28E81002061CC /* YNGAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1FA716A28E81002061CC /* YNGAMenuViewController.m */; };
+		D2DB1FBD16A290FC002061CC /* astro.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FAA16A290FC002061CC /* astro.png */; };
+		D2DB1FBE16A290FC002061CC /* astro@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FAB16A290FC002061CC /* astro@2x.png */; };
+		D2DB1FBF16A290FC002061CC /* bio.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FAC16A290FC002061CC /* bio.png */; };
+		D2DB1FC016A290FC002061CC /* bio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FAD16A290FC002061CC /* bio@2x.png */; };
+		D2DB1FC116A290FC002061CC /* chem.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FAE16A290FC002061CC /* chem.png */; };
+		D2DB1FC216A290FC002061CC /* chem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FAF16A290FC002061CC /* chem@2x.png */; };
+		D2DB1FC316A290FC002061CC /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB016A290FC002061CC /* earth.png */; };
+		D2DB1FC416A290FC002061CC /* earth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB116A290FC002061CC /* earth@2x.png */; };
+		D2DB1FC516A290FC002061CC /* gen.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB216A290FC002061CC /* gen.png */; };
+		D2DB1FC616A290FC002061CC /* gen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB316A290FC002061CC /* gen@2x.png */; };
+		D2DB1FC716A290FC002061CC /* math.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB416A290FC002061CC /* math.png */; };
+		D2DB1FC816A290FC002061CC /* math@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB516A290FC002061CC /* math@2x.png */; };
+		D2DB1FC916A290FC002061CC /* phys.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB616A290FC002061CC /* phys.png */; };
+		D2DB1FCA16A290FC002061CC /* phys@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB716A290FC002061CC /* phys@2x.png */; };
+		D2DB1FCB16A290FC002061CC /* selectHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB816A290FC002061CC /* selectHighlight.png */; };
+		D2DB1FCC16A290FC002061CC /* starsBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FB916A290FC002061CC /* starsBackground.png */; };
+		D2DB1FCD16A290FC002061CC /* starsBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FBA16A290FC002061CC /* starsBackground@2x.png */; };
+		D2DB1FCE16A290FC002061CC /* starsForeground.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FBB16A290FC002061CC /* starsForeground.png */; };
+		D2DB1FCF16A290FC002061CC /* starsForeground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2DB1FBC16A290FC002061CC /* starsForeground@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +142,25 @@
 		D2DB1F9216A27816002061CC /* YNGASelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGASelectViewController.m; path = UI/Select/YNGASelectViewController.m; sourceTree = "<group>"; };
 		D2DB1FA616A28E81002061CC /* YNGAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAMenuViewController.h; path = UI/Menu/YNGAMenuViewController.h; sourceTree = "<group>"; };
 		D2DB1FA716A28E81002061CC /* YNGAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAMenuViewController.m; path = UI/Menu/YNGAMenuViewController.m; sourceTree = "<group>"; };
+		D2DB1FAA16A290FC002061CC /* astro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = astro.png; path = Images/Select/astro.png; sourceTree = "<group>"; };
+		D2DB1FAB16A290FC002061CC /* astro@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "astro@2x.png"; path = "Images/Select/astro@2x.png"; sourceTree = "<group>"; };
+		D2DB1FAC16A290FC002061CC /* bio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bio.png; path = Images/Select/bio.png; sourceTree = "<group>"; };
+		D2DB1FAD16A290FC002061CC /* bio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bio@2x.png"; path = "Images/Select/bio@2x.png"; sourceTree = "<group>"; };
+		D2DB1FAE16A290FC002061CC /* chem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chem.png; path = Images/Select/chem.png; sourceTree = "<group>"; };
+		D2DB1FAF16A290FC002061CC /* chem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chem@2x.png"; path = "Images/Select/chem@2x.png"; sourceTree = "<group>"; };
+		D2DB1FB016A290FC002061CC /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = earth.png; path = Images/Select/earth.png; sourceTree = "<group>"; };
+		D2DB1FB116A290FC002061CC /* earth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "earth@2x.png"; path = "Images/Select/earth@2x.png"; sourceTree = "<group>"; };
+		D2DB1FB216A290FC002061CC /* gen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gen.png; path = Images/Select/gen.png; sourceTree = "<group>"; };
+		D2DB1FB316A290FC002061CC /* gen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gen@2x.png"; path = "Images/Select/gen@2x.png"; sourceTree = "<group>"; };
+		D2DB1FB416A290FC002061CC /* math.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = math.png; path = Images/Select/math.png; sourceTree = "<group>"; };
+		D2DB1FB516A290FC002061CC /* math@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "math@2x.png"; path = "Images/Select/math@2x.png"; sourceTree = "<group>"; };
+		D2DB1FB616A290FC002061CC /* phys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phys.png; path = Images/Select/phys.png; sourceTree = "<group>"; };
+		D2DB1FB716A290FC002061CC /* phys@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "phys@2x.png"; path = "Images/Select/phys@2x.png"; sourceTree = "<group>"; };
+		D2DB1FB816A290FC002061CC /* selectHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selectHighlight.png; path = Images/Select/selectHighlight.png; sourceTree = "<group>"; };
+		D2DB1FB916A290FC002061CC /* starsBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starsBackground.png; path = Images/Select/starsBackground.png; sourceTree = "<group>"; };
+		D2DB1FBA16A290FC002061CC /* starsBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "starsBackground@2x.png"; path = "Images/Select/starsBackground@2x.png"; sourceTree = "<group>"; };
+		D2DB1FBB16A290FC002061CC /* starsForeground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starsForeground.png; path = Images/Select/starsForeground.png; sourceTree = "<group>"; };
+		D2DB1FBC16A290FC002061CC /* starsForeground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "starsForeground@2x.png"; path = "Images/Select/starsForeground@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +273,7 @@
 		D249415516A26A420058E7E6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2DB1FA916A2906B002061CC /* Select */,
 				D249415716A26A4A0058E7E6 /* Menu */,
 			);
 			name = Images;
@@ -316,6 +355,32 @@
 				D2DB1FA716A28E81002061CC /* YNGAMenuViewController.m */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		D2DB1FA916A2906B002061CC /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				D2DB1FAA16A290FC002061CC /* astro.png */,
+				D2DB1FAB16A290FC002061CC /* astro@2x.png */,
+				D2DB1FAC16A290FC002061CC /* bio.png */,
+				D2DB1FAD16A290FC002061CC /* bio@2x.png */,
+				D2DB1FAE16A290FC002061CC /* chem.png */,
+				D2DB1FAF16A290FC002061CC /* chem@2x.png */,
+				D2DB1FB016A290FC002061CC /* earth.png */,
+				D2DB1FB116A290FC002061CC /* earth@2x.png */,
+				D2DB1FB216A290FC002061CC /* gen.png */,
+				D2DB1FB316A290FC002061CC /* gen@2x.png */,
+				D2DB1FB416A290FC002061CC /* math.png */,
+				D2DB1FB516A290FC002061CC /* math@2x.png */,
+				D2DB1FB616A290FC002061CC /* phys.png */,
+				D2DB1FB716A290FC002061CC /* phys@2x.png */,
+				D2DB1FB816A290FC002061CC /* selectHighlight.png */,
+				D2DB1FB916A290FC002061CC /* starsBackground.png */,
+				D2DB1FBA16A290FC002061CC /* starsBackground@2x.png */,
+				D2DB1FBB16A290FC002061CC /* starsForeground.png */,
+				D2DB1FBC16A290FC002061CC /* starsForeground@2x.png */,
+			);
+			name = Select;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +481,25 @@
 				D249417E16A26A930058E7E6 /* yanganeseDisabled.png in Resources */,
 				D249417F16A26A930058E7E6 /* yanganeseDisabled@2x.png in Resources */,
 				D2DB1F7F16A26E16002061CC /* YNGAQuizCell.xib in Resources */,
+				D2DB1FBD16A290FC002061CC /* astro.png in Resources */,
+				D2DB1FBE16A290FC002061CC /* astro@2x.png in Resources */,
+				D2DB1FBF16A290FC002061CC /* bio.png in Resources */,
+				D2DB1FC016A290FC002061CC /* bio@2x.png in Resources */,
+				D2DB1FC116A290FC002061CC /* chem.png in Resources */,
+				D2DB1FC216A290FC002061CC /* chem@2x.png in Resources */,
+				D2DB1FC316A290FC002061CC /* earth.png in Resources */,
+				D2DB1FC416A290FC002061CC /* earth@2x.png in Resources */,
+				D2DB1FC516A290FC002061CC /* gen.png in Resources */,
+				D2DB1FC616A290FC002061CC /* gen@2x.png in Resources */,
+				D2DB1FC716A290FC002061CC /* math.png in Resources */,
+				D2DB1FC816A290FC002061CC /* math@2x.png in Resources */,
+				D2DB1FC916A290FC002061CC /* phys.png in Resources */,
+				D2DB1FCA16A290FC002061CC /* phys@2x.png in Resources */,
+				D2DB1FCB16A290FC002061CC /* selectHighlight.png in Resources */,
+				D2DB1FCC16A290FC002061CC /* starsBackground.png in Resources */,
+				D2DB1FCD16A290FC002061CC /* starsBackground@2x.png in Resources */,
+				D2DB1FCE16A290FC002061CC /* starsForeground.png in Resources */,
+				D2DB1FCF16A290FC002061CC /* starsForeground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
