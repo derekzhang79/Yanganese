@@ -24,6 +24,8 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Download";
+    
     [self loadData];
 }
 
@@ -36,6 +38,10 @@
 
 - (void)loadData
 {
+    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
+
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_async(group, queue, ^{
@@ -51,14 +57,10 @@
             NSError *jsonReadError;
             NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonReadError];
             
-            YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-            NSManagedObjectContext *context = appDelegate.managedObjectContext;
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
-            
             self.quizzes = [[NSMutableArray alloc] initWithCapacity:json.count];
             for(NSDictionary *dict in json)
             {
-                Quiz *quiz = [[Quiz alloc] initWithEntity:entity insertIntoManagedObjectContext:context andProperties:dict];
+                Quiz *quiz = [[Quiz alloc] initWithEntity:entity insertIntoManagedObjectContext:nil andProperties:dict];
                 [self.quizzes addObject:quiz];
             }
         }
@@ -69,5 +71,47 @@
 }
 
 #pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
+    
+    Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+    
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_async(group, queue, ^{
+        NSString *fullPath = [kQuizURL stringByAppendingPathComponent:[quiz.quizID stringValue]];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:fullPath]];
+        
+        NSHTTPURLResponse *response;
+        NSError *error;
+        
+        NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
+        if(data != nil)
+        {
+            NSError *jsonReadError;
+            NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonReadError];
+            
+            [context insertObject:quiz];
+            
+            for(NSDictionary *dict in json) {
+                Question *question = [[Question alloc] initWithEntity:entity insertIntoManagedObjectContext:context andProperties:dict];
+                [quiz addQuestionsObject:question];
+            }
+        }
+    });
+    dispatch_group_notify(group, queue, ^{
+        NSError *contextError;
+        
+        [context save:&contextError];
+    });
+    
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
 
 @end
