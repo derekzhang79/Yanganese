@@ -27,7 +27,84 @@
                     <view key="view" contentMode="scaleToFill" id="91P-t8-sAh">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="yanganese.png" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-SD-oaT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="gWP-ZQ-cCb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-BG-Pfp">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Review" backgroundImage="review.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="reviewHighlight.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARF-s1-JDj">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Scores" backgroundImage="scores.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="scoresHighlight.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veQ-Wu-CHF">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Play" backgroundImage="play.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="playHighlight.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOs-Bv-ag3">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Download" backgroundImage="download.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="downloadHighlight.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vOs-Bv-ag3" secondAttribute="bottom" constant="218" id="CEt-8E-52u"/>
+                            <constraint firstAttribute="bottom" secondItem="vGL-BG-Pfp" secondAttribute="bottom" constant="162" id="GNv-lS-Nh9"/>
+                            <constraint firstItem="yqk-SD-oaT" firstAttribute="centerX" secondItem="91P-t8-sAh" secondAttribute="centerX" type="default" id="I6Y-a9-k3d"/>
+                            <constraint firstAttribute="trailing" secondItem="vGL-BG-Pfp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PEf-1R-aca"/>
+                            <constraint firstItem="ARF-s1-JDj" firstAttribute="top" secondItem="91P-t8-sAh" secondAttribute="top" constant="237" id="TrN-Nv-NYJ"/>
+                            <constraint firstItem="yqk-SD-oaT" firstAttribute="top" secondItem="91P-t8-sAh" secondAttribute="top" type="default" id="n5N-3W-Xar"/>
+                            <constraint firstAttribute="trailing" secondItem="ARF-s1-JDj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s33-mY-tgL"/>
+                            <constraint firstItem="veQ-Wu-CHF" firstAttribute="leading" secondItem="91P-t8-sAh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tw9-eK-Djh"/>
+                            <constraint firstItem="veQ-Wu-CHF" firstAttribute="top" secondItem="91P-t8-sAh" secondAttribute="top" constant="182" id="vGd-Ey-HLb"/>
+                            <constraint firstItem="vOs-Bv-ag3" firstAttribute="leading" secondItem="91P-t8-sAh" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xrK-qY-iVO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ASa-QB-bwt"/>
                 </viewController>
@@ -36,6 +113,22 @@
             <point key="canvasLocation" x="568" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="download.png" width="150" height="38"/>
+        <image name="downloadHighlight.png" width="150" height="38"/>
+        <image name="play.png" width="150" height="38"/>
+        <image name="playHighlight.png" width="150" height="38"/>
+        <image name="review.png" width="150" height="38"/>
+        <image name="reviewHighlight.png" width="150" height="38"/>
+        <image name="scores.png" width="150" height="38"/>
+        <image name="scoresHighlight.png" width="150" height="38"/>
+        <image name="yanganese.png" width="131" height="150"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
