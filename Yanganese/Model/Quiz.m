@@ -8,6 +8,7 @@
 
 #import "Quiz.h"
 #import "Question.h"
+#import "Score.h"
 
 
 @implementation Quiz
@@ -19,6 +20,7 @@
 @dynamic rating;
 @dynamic title;
 @dynamic questions;
+@dynamic score;
 
 #pragma mark -
 

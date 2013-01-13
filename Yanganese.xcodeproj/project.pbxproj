@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
+		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
 		D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
 		D249411516A2693F0058E7E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411416A2693F0058E7E6 /* CoreGraphics.framework */; };
@@ -101,6 +102,8 @@
 /* Begin PBXFileReference section */
 		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
+		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
+		D22C00A916A37528009F26FD /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Model/Score.m; sourceTree = "<group>"; };
 		D249410C16A2693F0058E7E6 /* Yanganese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yanganese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D249411016A2693F0058E7E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D249411216A2693F0058E7E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -419,6 +422,8 @@
 				D2DB1F8E16A27741002061CC /* Question.m */,
 				D2DB1F8A16A27741002061CC /* Quiz.h */,
 				D2DB1F8B16A27741002061CC /* Quiz.m */,
+				D22C00A816A37528009F26FD /* Score.h */,
+				D22C00A916A37528009F26FD /* Score.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				D29CFDB716A344DA00C043E8 /* YNGAQuestionViewController.m in Sources */,
 				D29CFDBB16A3460300C043E8 /* YNGAGameViewController.m in Sources */,
 				D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */,
+				D22C00AA16A37528009F26FD /* Score.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

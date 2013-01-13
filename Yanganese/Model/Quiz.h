@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Question;
+@class Question, Score;
 
 @interface Quiz : NSManagedObject
 
@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSNumber * rating;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSOrderedSet *questions;
+@property (nonatomic, retain) Score *score;
 
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context andProperties:(NSDictionary *)APIResponse;
 
