@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
+		D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
+		D249411516A2693F0058E7E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411416A2693F0058E7E6 /* CoreGraphics.framework */; };
+		D249411716A2693F0058E7E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411616A2693F0058E7E6 /* CoreData.framework */; };
+		D249411D16A2693F0058E7E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D249411B16A2693F0058E7E6 /* InfoPlist.strings */; };
+		D249411F16A2693F0058E7E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D249411E16A2693F0058E7E6 /* main.m */; };
+		D249412316A269400058E7E6 /* YNGAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D249412216A269400058E7E6 /* YNGAAppDelegate.m */; };
+		D249412516A269400058E7E6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D249412416A269400058E7E6 /* Default.png */; };
+		D249412716A269400058E7E6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D249412616A269400058E7E6 /* Default@2x.png */; };
+		D249412916A269400058E7E6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D249412816A269400058E7E6 /* Default-568h@2x.png */; };
+		D249412C16A269400058E7E6 /* Yanganese.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D249412A16A269400058E7E6 /* Yanganese.xcdatamodeld */; };
+		D249413416A269400058E7E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249413316A269400058E7E6 /* SenTestingKit.framework */; };
+		D249413516A269400058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
+		D249413616A269400058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
+		D249413716A269400058E7E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411616A2693F0058E7E6 /* CoreData.framework */; };
+		D249413F16A269400058E7E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D249413D16A269400058E7E6 /* InfoPlist.strings */; };
+		D249414216A269400058E7E6 /* YanganeseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D249414116A269400058E7E6 /* YanganeseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D249413816A269400058E7E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D249410316A2693F0058E7E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D249410B16A2693F0058E7E6;
+			remoteInfo = Yanganese;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D249410C16A2693F0058E7E6 /* Yanganese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yanganese.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D249411016A2693F0058E7E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D249411216A2693F0058E7E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D249411416A2693F0058E7E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D249411616A2693F0058E7E6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D249411A16A2693F0058E7E6 /* Yanganese-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yanganese-Info.plist"; sourceTree = "<group>"; };
+		D249411C16A2693F0058E7E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D249411E16A2693F0058E7E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D249412016A269400058E7E6 /* Yanganese-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yanganese-Prefix.pch"; sourceTree = "<group>"; };
+		D249412116A269400058E7E6 /* YNGAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNGAAppDelegate.h; sourceTree = "<group>"; };
+		D249412216A269400058E7E6 /* YNGAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YNGAAppDelegate.m; sourceTree = "<group>"; };
+		D249412416A269400058E7E6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D249412616A269400058E7E6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D249412816A269400058E7E6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D249412B16A269400058E7E6 /* Yanganese.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Yanganese.xcdatamodel; sourceTree = "<group>"; };
+		D249413216A269400058E7E6 /* YanganeseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YanganeseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D249413316A269400058E7E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D249413C16A269400058E7E6 /* YanganeseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YanganeseTests-Info.plist"; sourceTree = "<group>"; };
+		D249413E16A269400058E7E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D249414016A269400058E7E6 /* YanganeseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YanganeseTests.h; sourceTree = "<group>"; };
+		D249414116A269400058E7E6 /* YanganeseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YanganeseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D249410916A2693F0058E7E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */,
+				D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */,
+				D249411516A2693F0058E7E6 /* CoreGraphics.framework in Frameworks */,
+				D249411716A2693F0058E7E6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D249412E16A269400058E7E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D249413416A269400058E7E6 /* SenTestingKit.framework in Frameworks */,
+				D249413516A269400058E7E6 /* UIKit.framework in Frameworks */,
+				D249413616A269400058E7E6 /* Foundation.framework in Frameworks */,
+				D249413716A269400058E7E6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D249410116A2693F0058E7E6 = {
+			isa = PBXGroup;
+			children = (
+				D249411816A2693F0058E7E6 /* Yanganese */,
+				D249413A16A269400058E7E6 /* YanganeseTests */,
+				D249410F16A2693F0058E7E6 /* Frameworks */,
+				D249410D16A2693F0058E7E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D249410D16A2693F0058E7E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D249410C16A2693F0058E7E6 /* Yanganese.app */,
+				D249413216A269400058E7E6 /* YanganeseTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D249410F16A2693F0058E7E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D249411016A2693F0058E7E6 /* UIKit.framework */,
+				D249411216A2693F0058E7E6 /* Foundation.framework */,
+				D249411416A2693F0058E7E6 /* CoreGraphics.framework */,
+				D249411616A2693F0058E7E6 /* CoreData.framework */,
+				D249413316A269400058E7E6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D249411816A2693F0058E7E6 /* Yanganese */ = {
+			isa = PBXGroup;
+			children = (
+				D249412116A269400058E7E6 /* YNGAAppDelegate.h */,
+				D249412216A269400058E7E6 /* YNGAAppDelegate.m */,
+				D249412A16A269400058E7E6 /* Yanganese.xcdatamodeld */,
+				D249411916A2693F0058E7E6 /* Supporting Files */,
+			);
+			path = Yanganese;
+			sourceTree = "<group>";
+		};
+		D249411916A2693F0058E7E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D249411A16A2693F0058E7E6 /* Yanganese-Info.plist */,
+				D249411B16A2693F0058E7E6 /* InfoPlist.strings */,
+				D249411E16A2693F0058E7E6 /* main.m */,
+				D249412016A269400058E7E6 /* Yanganese-Prefix.pch */,
+				D249412416A269400058E7E6 /* Default.png */,
+				D249412616A269400058E7E6 /* Default@2x.png */,
+				D249412816A269400058E7E6 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D249413A16A269400058E7E6 /* YanganeseTests */ = {
+			isa = PBXGroup;
+			children = (
+				D249414016A269400058E7E6 /* YanganeseTests.h */,
+				D249414116A269400058E7E6 /* YanganeseTests.m */,
+				D249413B16A269400058E7E6 /* Supporting Files */,
+			);
+			path = YanganeseTests;
+			sourceTree = "<group>";
+		};
+		D249413B16A269400058E7E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D249413C16A269400058E7E6 /* YanganeseTests-Info.plist */,
+				D249413D16A269400058E7E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D249410B16A2693F0058E7E6 /* Yanganese */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D249414516A269400058E7E6 /* Build configuration list for PBXNativeTarget "Yanganese" */;
+			buildPhases = (
+				D249410816A2693F0058E7E6 /* Sources */,
+				D249410916A2693F0058E7E6 /* Frameworks */,
+				D249410A16A2693F0058E7E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yanganese;
+			productName = Yanganese;
+			productReference = D249410C16A2693F0058E7E6 /* Yanganese.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D249413116A269400058E7E6 /* YanganeseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D249414816A269400058E7E6 /* Build configuration list for PBXNativeTarget "YanganeseTests" */;
+			buildPhases = (
+				D249412D16A269400058E7E6 /* Sources */,
+				D249412E16A269400058E7E6 /* Frameworks */,
+				D249412F16A269400058E7E6 /* Resources */,
+				D249413016A269400058E7E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D249413916A269400058E7E6 /* PBXTargetDependency */,
+			);
+			name = YanganeseTests;
+			productName = YanganeseTests;
+			productReference = D249413216A269400058E7E6 /* YanganeseTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D249410316A2693F0058E7E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YNGA;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Michael Yang";
+			};
+			buildConfigurationList = D249410616A2693F0058E7E6 /* Build configuration list for PBXProject "Yanganese" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D249410116A2693F0058E7E6;
+			productRefGroup = D249410D16A2693F0058E7E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D249410B16A2693F0058E7E6 /* Yanganese */,
+				D249413116A269400058E7E6 /* YanganeseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D249410A16A2693F0058E7E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D249411D16A2693F0058E7E6 /* InfoPlist.strings in Resources */,
+				D249412516A269400058E7E6 /* Default.png in Resources */,
+				D249412716A269400058E7E6 /* Default@2x.png in Resources */,
+				D249412916A269400058E7E6 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D249412F16A269400058E7E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D249413F16A269400058E7E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D249413016A269400058E7E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D249410816A2693F0058E7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D249411F16A2693F0058E7E6 /* main.m in Sources */,
+				D249412316A269400058E7E6 /* YNGAAppDelegate.m in Sources */,
+				D249412C16A269400058E7E6 /* Yanganese.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D249412D16A269400058E7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D249414216A269400058E7E6 /* YanganeseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D249413916A269400058E7E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D249410B16A2693F0058E7E6 /* Yanganese */;
+			targetProxy = D249413816A269400058E7E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D249411B16A2693F0058E7E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D249411C16A2693F0058E7E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D249413D16A269400058E7E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D249413E16A269400058E7E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D249414316A269400058E7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D249414416A269400058E7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D249414616A269400058E7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yanganese/Yanganese-Prefix.pch";
+				INFOPLIST_FILE = "Yanganese/Yanganese-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D249414716A269400058E7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yanganese/Yanganese-Prefix.pch";
+				INFOPLIST_FILE = "Yanganese/Yanganese-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D249414916A269400058E7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yanganese.app/Yanganese";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yanganese/Yanganese-Prefix.pch";
+				INFOPLIST_FILE = "YanganeseTests/YanganeseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D249414A16A269400058E7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yanganese.app/Yanganese";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yanganese/Yanganese-Prefix.pch";
+				INFOPLIST_FILE = "YanganeseTests/YanganeseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D249410616A2693F0058E7E6 /* Build configuration list for PBXProject "Yanganese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D249414316A269400058E7E6 /* Debug */,
+				D249414416A269400058E7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D249414516A269400058E7E6 /* Build configuration list for PBXNativeTarget "Yanganese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D249414616A269400058E7E6 /* Debug */,
+				D249414716A269400058E7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D249414816A269400058E7E6 /* Build configuration list for PBXNativeTarget "YanganeseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D249414916A269400058E7E6 /* Debug */,
+				D249414A16A269400058E7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D249412A16A269400058E7E6 /* Yanganese.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D249412B16A269400058E7E6 /* Yanganese.xcdatamodel */,
+			);
+			currentVersion = D249412B16A269400058E7E6 /* Yanganese.xcdatamodel */;
+			path = Yanganese.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D249410316A2693F0058E7E6 /* Project object */;
+}
