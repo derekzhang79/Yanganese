@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSNumber * quizID;
 @property (nonatomic, retain) NSNumber * rating;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSSet *questions;
+@property (nonatomic, retain) NSOrderedSet *questions;
 
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context andProperties:(NSDictionary *)APIResponse;
 
@@ -27,9 +27,15 @@
 
 @interface Quiz (CoreDataGeneratedAccessors)
 
+- (void)insertObject:(Question *)value inQuestionsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromQuestionsAtIndex:(NSUInteger)idx;
+- (void)insertQuestions:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeQuestionsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInQuestionsAtIndex:(NSUInteger)idx withObject:(Question *)value;
+- (void)replaceQuestionsAtIndexes:(NSIndexSet *)indexes withQuestions:(NSArray *)values;
 - (void)addQuestionsObject:(Question *)value;
 - (void)removeQuestionsObject:(Question *)value;
-- (void)addQuestions:(NSSet *)values;
-- (void)removeQuestions:(NSSet *)values;
+- (void)addQuestions:(NSOrderedSet *)values;
+- (void)removeQuestions:(NSOrderedSet *)values;
 
 @end
