@@ -36,4 +36,13 @@
     return self;
 }
 
+#pragma mark - Temp fix for generated accessor
+
+- (void)addQuestionsObject:(Question *)value
+{
+    NSMutableOrderedSet* temp = [NSMutableOrderedSet orderedSetWithOrderedSet:self.questions];
+    [temp addObject:value];
+    self.questions = temp;
+}
+
 @end
