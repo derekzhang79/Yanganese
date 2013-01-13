@@ -599,7 +599,7 @@
 					<reference ref="596798385"/>
 					<reference ref="102384097"/>
 				</array>
-				<string key="4.CustomClassName">RatingView</string>
+				<string key="4.CustomClassName">YNGARatingView</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<boolean value="NO" key="4.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
