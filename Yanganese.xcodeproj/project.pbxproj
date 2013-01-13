@@ -24,6 +24,7 @@
 		D249413716A269400058E7E6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411616A2693F0058E7E6 /* CoreData.framework */; };
 		D249413F16A269400058E7E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D249413D16A269400058E7E6 /* InfoPlist.strings */; };
 		D249414216A269400058E7E6 /* YanganeseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D249414116A269400058E7E6 /* YanganeseTests.m */; };
+		D249414C16A269680058E7E6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D249414B16A269680058E7E6 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		D249413E16A269400058E7E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D249414016A269400058E7E6 /* YanganeseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YanganeseTests.h; sourceTree = "<group>"; };
 		D249414116A269400058E7E6 /* YanganeseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YanganeseTests.m; sourceTree = "<group>"; };
+		D249414B16A269680058E7E6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				D249412116A269400058E7E6 /* YNGAAppDelegate.h */,
 				D249412216A269400058E7E6 /* YNGAAppDelegate.m */,
 				D249412A16A269400058E7E6 /* Yanganese.xcdatamodeld */,
+				D249414B16A269680058E7E6 /* MainStoryboard.storyboard */,
 				D249411916A2693F0058E7E6 /* Supporting Files */,
 			);
 			path = Yanganese;
@@ -237,6 +240,7 @@
 				D249412516A269400058E7E6 /* Default.png in Resources */,
 				D249412716A269400058E7E6 /* Default@2x.png in Resources */,
 				D249412916A269400058E7E6 /* Default-568h@2x.png in Resources */,
+				D249414C16A269680058E7E6 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
