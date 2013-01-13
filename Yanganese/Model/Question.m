@@ -39,4 +39,21 @@
     return self;
 }
 
+- (NSString *)fullText
+{
+    NSMutableString *text = [[NSMutableString alloc] initWithString:self.text];
+    [text appendString:@"\n"];
+    
+    NSArray *choices = @[@"w", @"x", @"y", @"z"];
+    for(NSString *choice in choices)
+        [text appendFormat:@"\n%@. %@", choice, [self valueForKey:choice]];
+    
+	return text;
+}
+
+- (NSString *)answerText
+{
+    return [NSString stringWithFormat:@"%@. %@", self.answer, [self valueForKey:self.answer]];
+}
+
 @end

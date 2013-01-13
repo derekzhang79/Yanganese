@@ -24,4 +24,7 @@
 
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context andProperties:(NSDictionary *)APIResponse;
 
+- (NSString *)fullText;
+- (NSString *)answerText;
+
 @end
