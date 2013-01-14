@@ -61,6 +61,7 @@
 		D29CFDD016A3514B00C043E8 /* grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29CFDC816A3514B00C043E8 /* grey@2x.png */; };
 		D29CFDD116A3514B00C043E8 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D29CFDC916A3514B00C043E8 /* red.png */; };
 		D29CFDD216A3514B00C043E8 /* red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29CFDCA16A3514B00C043E8 /* red@2x.png */; };
+		D29F89A516A4AB6600404242 /* YNGAScoreSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89A416A4AB6600404242 /* YNGAScoreSelectViewController.m */; };
 		D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F6A16A26B70002061CC /* YNGAConstant.m */; };
 		D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7416A26CD7002061CC /* YNGARatingView.m */; };
 		D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */; };
@@ -167,6 +168,8 @@
 		D29CFDC816A3514B00C043E8 /* grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey@2x.png"; path = "Images/Play/grey@2x.png"; sourceTree = "<group>"; };
 		D29CFDC916A3514B00C043E8 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = Images/Play/red.png; sourceTree = "<group>"; };
 		D29CFDCA16A3514B00C043E8 /* red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red@2x.png"; path = "Images/Play/red@2x.png"; sourceTree = "<group>"; };
+		D29F89A316A4AB6600404242 /* YNGAScoreSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAScoreSelectViewController.h; path = UI/Score/YNGAScoreSelectViewController.h; sourceTree = "<group>"; };
+		D29F89A416A4AB6600404242 /* YNGAScoreSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAScoreSelectViewController.m; path = UI/Score/YNGAScoreSelectViewController.m; sourceTree = "<group>"; };
 		D2DB1F6916A26B70002061CC /* YNGAConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAConstant.h; path = Support/YNGAConstant.h; sourceTree = "<group>"; };
 		D2DB1F6A16A26B70002061CC /* YNGAConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAConstant.m; path = Support/YNGAConstant.m; sourceTree = "<group>"; };
 		D2DB1F7316A26CD7002061CC /* YNGARatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGARatingView.h; path = UI/Cell/YNGARatingView.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 			children = (
 				D2362EC916A3EB05007216D8 /* YNGAScoreViewController.h */,
 				D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */,
+				D29F89A316A4AB6600404242 /* YNGAScoreSelectViewController.h */,
+				D29F89A416A4AB6600404242 /* YNGAScoreSelectViewController.m */,
 			);
 			name = Score;
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 				D22C00AA16A37528009F26FD /* Score.m in Sources */,
 				D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */,
 				D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */,
+				D29F89A516A4AB6600404242 /* YNGAScoreSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
