@@ -10,6 +10,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
+#import "YNGAGameResultViewController.h"
 #import "Quiz.h"
 #import "Question.h"
 #import "Score.h"
@@ -67,6 +68,17 @@
     questionNumber = 0;
 	[self updateTextView];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"endGame"])
+    {
+        YNGAGameResultViewController *resultController = segue.destinationViewController;
+        resultController.score = self.quiz.score;
+    }
+}
+
+#pragma mark -
 
 - (void)updateTextView
 {
@@ -163,9 +175,7 @@
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Score" inManagedObjectContext:context];
-    
-    [context insertObject:self.quiz];
-    
+
     NSMutableArray *counts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
     NSMutableArray *totals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
     
@@ -175,25 +185,21 @@
         [totals addObject:[NSNumber numberWithInt:questionTotal[i]]];
     }
 
-    Score *quizScore = [[Score alloc] initWithEntity:entity counts:counts totals:totals insertIntoManagedObjectContext:context];
+    Score *quizScore = self.quiz.score;
     
-    self.quiz.score = quizScore;
+    if(quizScore == nil)
+    {
+        quizScore = [[Score alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+        self.quiz.score = quizScore;
+    }
+    
+    quizScore.counts = counts;
+    quizScore.totals = totals;
     
     NSError *contextError;
     [context save:&contextError];
     
-    /*
-	
-	MKYGameResultViewController *next = [[MKYGameResultViewController alloc] initWithNibName:@"MKYResultViewController" bundle:nil];
-	
-	next.correctCount = correctCount;
-	next.questionTotal = questionTotal;
-	next.quiz = self.quiz;
-    
-	[self changeTimeToCurrent];
-	[_timer invalidate];
-	
-	[self.navigationController pushViewController:next animated:YES];*/
+    [self performSegueWithIdentifier:@"endGame" sender:self];
 }
 
 - (void)changeScoreToCurrent
