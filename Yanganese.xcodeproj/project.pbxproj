@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
@@ -100,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20C204816A3DE6C00958D1E /* YNGAGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAGameResultViewController.h; path = UI/Play/YNGAGameResultViewController.h; sourceTree = "<group>"; };
+		D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAGameResultViewController.m; path = UI/Play/YNGAGameResultViewController.m; sourceTree = "<group>"; };
 		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 				D2675E5316A2B135005A5DB4 /* YNGAPlaySelectViewController.m */,
 				D29CFDB916A3460300C043E8 /* YNGAGameViewController.h */,
 				D29CFDBA16A3460300C043E8 /* YNGAGameViewController.m */,
+				D20C204816A3DE6C00958D1E /* YNGAGameResultViewController.h */,
+				D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */,
 			);
 			name = Play;
 			sourceTree = "<group>";
@@ -656,6 +661,7 @@
 				D29CFDBB16A3460300C043E8 /* YNGAGameViewController.m in Sources */,
 				D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */,
 				D22C00AA16A37528009F26FD /* Score.m in Sources */,
+				D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
