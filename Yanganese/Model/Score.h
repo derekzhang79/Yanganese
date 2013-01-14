@@ -15,7 +15,8 @@
 
 @property (nonatomic, retain) NSArray * counts;
 @property (nonatomic, retain) NSArray * totals;
-@property (nonatomic, retain) NSNumber * time;
+@property (nonatomic, retain) NSNumber * timeSecond;
+@property (nonatomic, retain) NSNumber * timeMinute;
 @property (nonatomic, retain) Quiz *quiz;
 
 - (id)initWithEntity:(NSEntityDescription *)entity counts:(NSArray *)counts totals:(NSArray *)totals insertIntoManagedObjectContext:(NSManagedObjectContext *)context;

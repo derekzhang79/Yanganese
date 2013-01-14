@@ -13,7 +13,8 @@
 
 @dynamic counts;
 @dynamic totals;
-@dynamic time;
+@dynamic timeSecond;
+@dynamic timeMinute;
 @dynamic quiz;
 
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context

@@ -224,6 +224,9 @@
     quizScore.totals = totals;
     globalScore.counts = globalCounts;
     globalScore.totals = globalTotals;
+
+    quizScore.timeSecond = [NSNumber numberWithInt:timeSec];
+    quizScore.timeMinute = [NSNumber numberWithInt:timeMin];
     
     // Save changes
     NSError *contextError;

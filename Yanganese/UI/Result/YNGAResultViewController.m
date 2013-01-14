@@ -31,8 +31,8 @@
     _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", intScore];
     
 	NSUInteger minutes, seconds;
-    minutes = [_score.time intValue] / 60;
-    seconds = [_score.time intValue] % 60;
+    minutes = [_score.timeMinute intValue];
+    seconds = [_score.timeSecond intValue];
     _timeLabel.text = seconds < 10 ? [NSString stringWithFormat:@"Time: %d:0%d", minutes, seconds] : [NSString stringWithFormat:@"Time: %d:%d", minutes, seconds];
 }
 
