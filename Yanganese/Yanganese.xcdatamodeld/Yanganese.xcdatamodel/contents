@@ -13,7 +13,6 @@
     <entity name="Quiz" representedClassName="Quiz" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="categoryID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="finished" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="quizID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,7 +28,7 @@
     </entity>
     <elements>
         <element name="Question" positionX="160" positionY="192" width="128" height="163"/>
-        <element name="Quiz" positionX="-90" positionY="192" width="128" height="165"/>
+        <element name="Quiz" positionX="-90" positionY="192" width="128" height="150"/>
         <element name="Score" positionX="160" positionY="192" width="128" height="120"/>
     </elements>
 </model>

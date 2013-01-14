@@ -15,7 +15,6 @@
 
 @dynamic author;
 @dynamic categoryID;
-@dynamic finished;
 @dynamic quizID;
 @dynamic rating;
 @dynamic title;

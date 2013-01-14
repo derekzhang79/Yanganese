@@ -15,7 +15,6 @@
 
 @property (nonatomic, retain) NSString * author;
 @property (nonatomic, retain) NSNumber * categoryID;
-@property (nonatomic, retain) NSNumber * finished;
 @property (nonatomic, retain) NSNumber * quizID;
 @property (nonatomic, retain) NSNumber * rating;
 @property (nonatomic, retain) NSString * title;
