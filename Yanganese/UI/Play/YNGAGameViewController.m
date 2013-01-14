@@ -176,15 +176,23 @@
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Score" inManagedObjectContext:context];
 
-    NSMutableArray *counts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
-    NSMutableArray *totals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    // Load global scores
+    Score *globalScore;
     
-    for(int i = 0; i < kCategoryCount; i++)
-    {
-        [counts addObject:[NSNumber numberWithInt:correctCount[i]]];
-        [totals addObject:[NSNumber numberWithInt:questionTotal[i]]];
-    }
-
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSPredicate *noQuiz = [NSPredicate predicateWithFormat:@"quiz == nil"];
+    [request setEntity:entity];
+    [request setPredicate:noQuiz];
+    [request setFetchLimit:1];
+    
+    NSError *fetchError;
+    NSArray *fetchedObjects = [context executeFetchRequest:request error:&fetchError];
+    
+    globalScore = [fetchedObjects lastObject];
+    if(globalScore == nil)
+        globalScore = [[Score alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+    
+    // Load quiz score
     Score *quizScore = self.quiz.score;
     
     if(quizScore == nil)
@@ -193,9 +201,31 @@
         self.quiz.score = quizScore;
     }
     
+    // Update counts
+    NSMutableArray *counts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    NSMutableArray *totals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    NSMutableArray *globalCounts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    NSMutableArray *globalTotals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
+    
+    for(int i = 0; i < kCategoryCount; i++)
+    {
+        int count = correctCount[i];
+        int total = questionTotal[i];
+        [counts addObject:[NSNumber numberWithInt:count]];
+        [totals addObject:[NSNumber numberWithInt:total]];
+        
+        int globalCount = count + [[globalScore.counts objectAtIndex:i] intValue] - [[quizScore.counts objectAtIndex:i] intValue];
+        int globalTotal = total + [[globalScore.totals objectAtIndex:i] intValue] - [[quizScore.counts objectAtIndex:i] intValue];
+        [globalCounts addObject:[NSNumber numberWithInt:globalCount]];
+        [globalTotals addObject:[NSNumber numberWithInt:globalTotal]];
+    }
+    
     quizScore.counts = counts;
     quizScore.totals = totals;
+    globalScore.counts = globalCounts;
+    globalScore.totals = globalTotals;
     
+    // Save changes
     NSError *contextError;
     [context save:&contextError];
     
