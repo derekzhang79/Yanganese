@@ -240,6 +240,7 @@
                                     <outlet property="iconView" destination="e7b-Ai-CyS" id="6X6-uh-1Xq"/>
                                     <outlet property="nameLabel" destination="igu-ZO-9im" id="wis-hZ-0f4"/>
                                     <outlet property="ratingView" destination="3iQ-38-lsq" id="uUd-zL-dIy"/>
+                                    <segue destination="SKw-3V-a99" kind="push" identifier="loadScoreDetail" id="hbR-Vs-E8T"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -595,6 +596,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyw-9h-fnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="494"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="uSL-mq-kJt">
+            <objects>
+                <viewController id="SKw-3V-a99" customClass="YNGAScoreViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="88g-pX-dko">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8eB-sp-8kx">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3qm-hh-Q1u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DFM-dt-ZIi">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="M99-3w-C7U"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="SKw-3V-a99" id="eNy-SW-zFT"/>
+                                    <outlet property="delegate" destination="SKw-3V-a99" id="mMA-eC-w9H"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time: %dm %ds" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fYl-qh-QOF">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="llz-AP-k6d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DFM-dt-ZIi" firstAttribute="leading" secondItem="88g-pX-dko" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7F2-RO-Ula"/>
+                            <constraint firstAttribute="trailing" secondItem="DFM-dt-ZIi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="95A-l7-D9d"/>
+                            <constraint firstItem="DFM-dt-ZIi" firstAttribute="top" secondItem="fYl-qh-QOF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DcM-bv-BtH"/>
+                            <constraint firstItem="fYl-qh-QOF" firstAttribute="top" secondItem="8eB-sp-8kx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Rzt-1K-UvI"/>
+                            <constraint firstItem="fYl-qh-QOF" firstAttribute="leading" secondItem="88g-pX-dko" secondAttribute="leading" constant="55" id="d5H-eU-ub9"/>
+                            <constraint firstItem="8eB-sp-8kx" firstAttribute="leading" secondItem="88g-pX-dko" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mhO-jN-woE"/>
+                            <constraint firstAttribute="trailing" secondItem="8eB-sp-8kx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qPR-ld-mRk"/>
+                            <constraint firstItem="8eB-sp-8kx" firstAttribute="top" secondItem="88g-pX-dko" secondAttribute="top" constant="86" id="vq8-Xv-5AH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="spR-pw-EJs"/>
+                    <connections>
+                        <outlet property="resultTable" destination="DFM-dt-ZIi" id="yNj-RR-LYY"/>
+                        <outlet property="scoreLabel" destination="8eB-sp-8kx" id="Zji-KN-TNH"/>
+                        <outlet property="timeLabel" destination="fYl-qh-QOF" id="lws-Gw-DQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0E7-36-nTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="-160"/>
         </scene>
     </scenes>
     <resources>

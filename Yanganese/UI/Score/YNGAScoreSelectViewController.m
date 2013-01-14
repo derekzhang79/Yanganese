@@ -10,6 +10,7 @@
 
 #import "YNGAAppDelegate.h"
 #import "YNGAScoreViewController.h"
+#import "Quiz.h"
 
 @implementation YNGAScoreSelectViewController
 
@@ -31,6 +32,18 @@
     NSError *fetchError;
     NSArray *fetchedObjects = [context executeFetchRequest:request error:&fetchError];
     self.quizzes = [[NSMutableArray alloc] initWithArray:fetchedObjects];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"loadScoreDetail"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        
+        YNGAScoreViewController *detailController = segue.destinationViewController;
+        detailController.score = quiz.score;
+    }
 }
 
 @end
