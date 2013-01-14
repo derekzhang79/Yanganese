@@ -9,6 +9,7 @@
 #import "YNGAReviewSelectViewController.h"
 
 #import "YNGAAppDelegate.h"
+#import "YNGAReviewQuestionViewController.h"
 #import "Quiz.h"
 
 @implementation YNGAReviewSelectViewController
@@ -29,6 +30,18 @@
     NSError *fetchError;
     NSArray *fetchedObjects = [context executeFetchRequest:request error:&fetchError];
     self.quizzes = [[NSMutableArray alloc] initWithArray:fetchedObjects];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showReviewQuestions"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        
+        YNGAReviewQuestionViewController *questionController = segue.destinationViewController;
+        questionController.quiz = quiz;
+    }
 }
 
 @end

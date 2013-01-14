@@ -12,12 +12,18 @@
 
 #define kSideMargin 20
 
+#define kDefaultWidth 320
+#define kDefaultHeight 313
+
 @implementation YNGAScrollView
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if(self = [super initWithCoder:aDecoder])
     {
+        if(CGSizeEqualToSize(self.frame.size, CGSizeZero))
+            self.frame = CGRectMake(0, 0, kDefaultWidth, kDefaultHeight);
+
         CGSize size = self.frame.size;
         UITextView *prevView = [[UITextView alloc] initWithFrame:CGRectMake(kSideMargin, 0, size.width - 2 * kSideMargin, size.height)];
         UITextView *currView = [[UITextView alloc] initWithFrame:CGRectMake(size.width + kSideMargin, 0, size.width - 2 * kSideMargin, size.height)];
