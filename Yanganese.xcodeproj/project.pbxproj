@@ -10,6 +10,7 @@
 		D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
+		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
 		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
 		D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
 		D249411516A2693F0058E7E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411416A2693F0058E7E6 /* CoreGraphics.framework */; };
@@ -107,6 +108,8 @@
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
 		D22C00A916A37528009F26FD /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Model/Score.m; sourceTree = "<group>"; };
+		D2362EC916A3EB05007216D8 /* YNGAScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAScoreViewController.h; path = UI/Score/YNGAScoreViewController.h; sourceTree = "<group>"; };
+		D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAScoreViewController.m; path = UI/Score/YNGAScoreViewController.m; sourceTree = "<group>"; };
 		D249410C16A2693F0058E7E6 /* Yanganese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yanganese.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D249411016A2693F0058E7E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D249411216A2693F0058E7E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -236,6 +239,15 @@
 				D22C009A16A37271009F26FD /* YNGAResultViewController.m */,
 			);
 			name = Result;
+			sourceTree = "<group>";
+		};
+		D2362EC316A3EA5C007216D8 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				D2362EC916A3EB05007216D8 /* YNGAScoreViewController.h */,
+				D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */,
+			);
+			name = Score;
 			sourceTree = "<group>";
 		};
 		D249410116A2693F0058E7E6 = {
@@ -404,6 +416,7 @@
 				D2DB1FA016A28D2D002061CC /* Menu */,
 				D2675E5016A2B114005A5DB4 /* Play */,
 				D2DB1FD016A292E8002061CC /* Download */,
+				D2362EC316A3EA5C007216D8 /* Score */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -662,6 +675,7 @@
 				D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */,
 				D22C00AA16A37528009F26FD /* Score.m in Sources */,
 				D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */,
+				D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
