@@ -7,13 +7,14 @@
 //
 
 #import "Score.h"
-
+#import "Quiz.h"
 
 @implementation Score
 
 @dynamic counts;
 @dynamic totals;
 @dynamic time;
+@dynamic quiz;
 
 #pragma mark -
 
