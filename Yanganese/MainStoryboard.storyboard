@@ -161,7 +161,13 @@
                             <constraint firstAttribute="trailing" secondItem="8Ab-ke-iXP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oac-9P-Rd9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Waf-VE-cyy"/>
+                    <navigationItem key="navigationItem" id="Waf-VE-cyy">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="gbJ-BI-S8z">
+                            <connections>
+                                <segue destination="KUt-eI-TE8" kind="push" id="fQ5-T9-Yyz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
                         <outlet property="resultTable" destination="8Ab-ke-iXP" id="u9N-7g-Cs2"/>
@@ -171,6 +177,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXp-UK-UOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="-160"/>
+        </scene>
+        <!--Score Select View Controller-->
+        <scene sceneID="run-ef-I6F">
+            <objects>
+                <tableViewController id="KUt-eI-TE8" customClass="YNGAScoreSelectViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P9s-vh-pOc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="List Cell" id="xhC-lO-AZP" customClass="YNGAQuizCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-Ai-CyS">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="4ET-g8-lVc"/>
+                                                <constraint firstAttribute="width" constant="60" id="WKZ-pP-E90"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4n0-LL-BNa">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="QT5-OW-KBk"/>
+                                                <constraint firstAttribute="width" constant="199" id="ra3-aR-kYG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quiz Name" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igu-ZO-9im">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="199" id="h2R-FH-PId"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iQ-38-lsq" customClass="YNGARatingView">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="e7b-Ai-CyS" firstAttribute="top" secondItem="xhC-lO-AZP" secondAttribute="top" constant="7" id="5Ih-6u-Lkh"/>
+                                    <constraint firstItem="4n0-LL-BNa" firstAttribute="leading" secondItem="3iQ-38-lsq" secondAttribute="leading" type="default" id="Gr9-BS-dta"/>
+                                    <constraint firstItem="e7b-Ai-CyS" firstAttribute="leading" secondItem="xhC-lO-AZP" secondAttribute="leading" constant="11" id="J04-Vh-I7s"/>
+                                    <constraint firstItem="igu-ZO-9im" firstAttribute="leading" secondItem="xhC-lO-AZP" secondAttribute="leading" constant="82" id="Mzw-ZX-20j"/>
+                                    <constraint firstItem="4n0-LL-BNa" firstAttribute="top" secondItem="xhC-lO-AZP" secondAttribute="top" constant="9" id="RNu-R5-n8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="3iQ-38-lsq" secondAttribute="trailing" constant="169" id="ROV-zY-DsJ"/>
+                                    <constraint firstItem="4n0-LL-BNa" firstAttribute="leading" secondItem="xhC-lO-AZP" secondAttribute="leading" constant="81" id="g5Q-4c-2K6"/>
+                                    <constraint firstItem="3iQ-38-lsq" firstAttribute="top" secondItem="xhC-lO-AZP" secondAttribute="top" constant="47" id="h7J-wJ-aMM"/>
+                                    <constraint firstAttribute="bottom" secondItem="3iQ-38-lsq" secondAttribute="bottom" constant="-19" id="hsF-WR-LyX"/>
+                                    <constraint firstItem="igu-ZO-9im" firstAttribute="top" secondItem="xhC-lO-AZP" secondAttribute="top" constant="24" id="u4v-Xa-kVj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="authorLabel" destination="4n0-LL-BNa" id="1PW-MT-Wcb"/>
+                                    <outlet property="iconView" destination="e7b-Ai-CyS" id="6X6-uh-1Xq"/>
+                                    <outlet property="nameLabel" destination="igu-ZO-9im" id="wis-hZ-0f4"/>
+                                    <outlet property="ratingView" destination="3iQ-38-lsq" id="uUd-zL-dIy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KUt-eI-TE8" id="Mp7-kr-YS2"/>
+                            <outlet property="delegate" destination="KUt-eI-TE8" id="In9-Gl-G4T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9Lc-3h-xaX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94W-b7-HcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="-160"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="cEd-lQ-EHz">
@@ -581,6 +663,9 @@
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="YNGAScoreSelectViewController" superclassName="YNGASelectViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAScoreSelectViewController.h"/>
         </class>
         <class className="YNGAScoreViewController" superclassName="YNGAResultViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAScoreViewController.h"/>
