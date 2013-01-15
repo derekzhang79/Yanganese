@@ -65,6 +65,7 @@
 		D29F89AF16A4B47700404242 /* YNGAReviewSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89AE16A4B47700404242 /* YNGAReviewSelectViewController.m */; };
 		D29F89BC16A4B74600404242 /* YNGAScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89BB16A4B74600404242 /* YNGAScrollView.m */; };
 		D29F89BF16A4B8D500404242 /* YNGAReviewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89BE16A4B8D500404242 /* YNGAReviewQuestionViewController.m */; };
+		D29F89D416A5358200404242 /* YNGAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89D316A5358200404242 /* YNGAProgressView.m */; };
 		D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F6A16A26B70002061CC /* YNGAConstant.m */; };
 		D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7416A26CD7002061CC /* YNGARatingView.m */; };
 		D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */; };
@@ -179,6 +180,8 @@
 		D29F89BB16A4B74600404242 /* YNGAScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAScrollView.m; path = UI/Scroll/YNGAScrollView.m; sourceTree = "<group>"; };
 		D29F89BD16A4B8D500404242 /* YNGAReviewQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAReviewQuestionViewController.h; path = UI/Review/YNGAReviewQuestionViewController.h; sourceTree = "<group>"; };
 		D29F89BE16A4B8D500404242 /* YNGAReviewQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAReviewQuestionViewController.m; path = UI/Review/YNGAReviewQuestionViewController.m; sourceTree = "<group>"; };
+		D29F89D216A5358200404242 /* YNGAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAProgressView.h; path = UI/Progress/YNGAProgressView.h; sourceTree = "<group>"; };
+		D29F89D316A5358200404242 /* YNGAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAProgressView.m; path = UI/Progress/YNGAProgressView.m; sourceTree = "<group>"; };
 		D2DB1F6916A26B70002061CC /* YNGAConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAConstant.h; path = Support/YNGAConstant.h; sourceTree = "<group>"; };
 		D2DB1F6A16A26B70002061CC /* YNGAConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAConstant.m; path = Support/YNGAConstant.m; sourceTree = "<group>"; };
 		D2DB1F7316A26CD7002061CC /* YNGARatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGARatingView.h; path = UI/Cell/YNGARatingView.h; sourceTree = "<group>"; };
@@ -440,9 +443,19 @@
 			name = Scroll;
 			sourceTree = "<group>";
 		};
+		D29F89D016A5356700404242 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				D29F89D216A5358200404242 /* YNGAProgressView.h */,
+				D29F89D316A5358200404242 /* YNGAProgressView.m */,
+			);
+			name = Progress;
+			sourceTree = "<group>";
+		};
 		D2DB1F7016A26CC1002061CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D29F89D016A5356700404242 /* Progress */,
 				D29F89B816A4B6F300404242 /* Scroll */,
 				D2DB1F7216A26CC6002061CC /* Cell */,
 				D2DB1F9016A277D2002061CC /* Select */,
@@ -716,6 +729,7 @@
 				D29F89AF16A4B47700404242 /* YNGAReviewSelectViewController.m in Sources */,
 				D29F89BC16A4B74600404242 /* YNGAScrollView.m in Sources */,
 				D29F89BF16A4B8D500404242 /* YNGAReviewQuestionViewController.m in Sources */,
+				D29F89D416A5358200404242 /* YNGAProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

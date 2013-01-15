@@ -16,6 +16,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIColor *baseColor = [UIColor colorWithRed:(67.0)/255 green:(149.0)/255 blue:(192.0)/255 alpha:1.0];
+    
+    // Set custom appearances
+    [[UIProgressView appearance] setProgressTintColor:baseColor];
+    
+    // Set universal background image
+    
     UIScreen *screen = [UIScreen mainScreen];
     CGFloat pixelHeight = CGRectGetHeight(screen.bounds);
     
