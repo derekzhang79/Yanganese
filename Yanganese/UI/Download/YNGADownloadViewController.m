@@ -10,6 +10,7 @@
 
 #import "YNGAAppDelegate.h"
 #import "YNGATableNotificationView.h"
+#import "YNGAPopupView.h"
 #import "Quiz.h"
 #import "Question.h"
 
@@ -17,6 +18,7 @@
 
 - (void)loadRequest:(NSURLRequest *)request;
 - (void)updateQuizzes:(NSData *)data;
+- (void)togglePopup;
 
 @end
 
@@ -25,6 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Add popup view
+    popupView = [[YNGAPopupView alloc] initWithFrame:CGRectMake(20, 200, 280, 40)];
+    popupView.messageLabel.text = @"Quiz Downloaded";
+    popupView.alpha = 0.0;
+    [self.tableView addSubview:popupView];
     
     self.emptyMessage = @"No quizzes available for download.";
     
@@ -71,6 +79,13 @@
     [self.tableView reloadData];
 }
 
+- (void)togglePopup
+{
+    [UIView animateWithDuration:kTransitionTime animations:^{
+        popupView.alpha = popupView.alpha == 0.0 ? 1.0 : 0.0;
+    }];
+}
+
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -110,6 +125,12 @@
         NSError *contextError;
         
         [context save:&contextError];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self togglePopup];
+            
+            [self performSelector:@selector(togglePopup) withObject:nil afterDelay:2 * kTransitionTime];
+        });
     });
     
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];

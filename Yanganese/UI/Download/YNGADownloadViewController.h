@@ -8,10 +8,12 @@
 
 #import "YNGASelectViewController.h"
 
+@class YNGAPopupView;
+
 @interface YNGADownloadViewController : YNGASelectViewController <NSURLConnectionDelegate>
 {
-    UIView *errorView;
-
+    YNGAPopupView *popupView;
+    
     NSMutableData *retainedData;
 }
 
