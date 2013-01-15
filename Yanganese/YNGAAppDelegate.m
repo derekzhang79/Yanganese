@@ -16,6 +16,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIScreen *screen = [UIScreen mainScreen];
+    CGFloat pixelHeight = CGRectGetHeight(screen.bounds);
+    
+    UIImage *backgroundImage;
+    
+    if(pixelHeight == 568.0f)
+        backgroundImage = [UIImage imageNamed:@"Default-568h.png"];
+    else
+        backgroundImage = [UIImage imageNamed:@"Default.png"];
+
+    _window.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
+    
     return YES;
 }
 

@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vOs-Bv-ag3" secondAttribute="bottom" constant="218" id="CEt-8E-52u"/>
                             <constraint firstAttribute="bottom" secondItem="vGL-BG-Pfp" secondAttribute="bottom" constant="162" id="GNv-lS-Nh9"/>
@@ -154,7 +154,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Ab-ke-iXP" firstAttribute="top" secondItem="SCV-D9-XXE" secondAttribute="top" constant="163" id="NAP-Yf-Cul"/>
                             <constraint firstItem="KhV-pN-mm1" firstAttribute="top" secondItem="SCV-D9-XXE" secondAttribute="top" constant="86" id="Ov8-Ox-rmf"/>
@@ -393,7 +393,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AYJ-qh-gB7" firstAttribute="top" secondItem="jZa-ce-Jng" secondAttribute="top" constant="49" id="0CN-I2-vDa"/>
                             <constraint firstItem="yHL-hi-cZg" firstAttribute="leading" secondItem="jZa-ce-Jng" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0I4-7E-d0V"/>
@@ -479,7 +479,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7bz-dW-dCU" firstAttribute="top" secondItem="nb5-1A-scL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="K1V-bq-VfV"/>
                             <constraint firstAttribute="trailing" secondItem="LWZ-6F-Zu1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NuO-uF-z2G"/>
@@ -637,7 +637,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DFM-dt-ZIi" firstAttribute="leading" secondItem="88g-pX-dko" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7F2-RO-Ula"/>
                             <constraint firstAttribute="trailing" secondItem="DFM-dt-ZIi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="95A-l7-D9d"/>
@@ -791,7 +791,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Yd9-kA-XKX" secondAttribute="bottom" constant="186" id="13y-gg-8FD"/>
                             <constraint firstItem="mtR-sE-GGI" firstAttribute="centerX" secondItem="ouO-p3-W4y" secondAttribute="centerX" type="default" id="5uL-Qu-zrX"/>
