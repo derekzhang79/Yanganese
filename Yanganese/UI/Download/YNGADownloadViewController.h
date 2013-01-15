@@ -8,6 +8,9 @@
 
 #import "YNGASelectViewController.h"
 
-@interface YNGADownloadViewController : YNGASelectViewController
+@interface YNGADownloadViewController : YNGASelectViewController <NSURLConnectionDelegate>
+{    
+    NSMutableData *retainedData;
+}
 
 @end
