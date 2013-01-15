@@ -16,9 +16,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    self.title = @"Overall";
-    
+
     // Load global score
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];

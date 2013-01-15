@@ -39,7 +39,6 @@
     [super viewDidLoad];
     
     // Set title and style
-	self.title = @"Quiz";
 	_questionView.layer.cornerRadius = kCornerRadius;
 	_questionView.font = [UIFont fontWithName:@"Helvetica" size:16];
 	

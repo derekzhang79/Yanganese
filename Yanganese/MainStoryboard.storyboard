@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="568" y="126"/>
         </scene>
-        <!--Score View Controller-->
+        <!--Score View Controller - Total Score-->
         <scene sceneID="Rwh-5Y-a26">
             <objects>
                 <viewController id="q3O-6c-10C" customClass="YNGAScoreViewController" sceneMemberID="viewController">
@@ -164,7 +164,7 @@
                             <constraint firstAttribute="trailing" secondItem="8Ab-ke-iXP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oac-9P-Rd9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Waf-VE-cyy">
+                    <navigationItem key="navigationItem" title="Total Score" id="Waf-VE-cyy">
                         <barButtonItem key="rightBarButtonItem" title="History" id="gbJ-BI-S8z">
                             <connections>
                                 <segue destination="KUt-eI-TE8" kind="push" id="fQ5-T9-Yyz"/>
@@ -181,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="1132" y="-160"/>
         </scene>
-        <!--Score Select View Controller-->
+        <!--Score Select View Controller - Quizzes-->
         <scene sceneID="run-ef-I6F">
             <objects>
                 <tableViewController id="KUt-eI-TE8" customClass="YNGAScoreSelectViewController" sceneMemberID="viewController">
@@ -252,7 +252,7 @@
                             <outlet property="delegate" destination="KUt-eI-TE8" id="In9-Gl-G4T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9Lc-3h-xaX"/>
+                    <navigationItem key="navigationItem" title="Quizzes" id="9Lc-3h-xaX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94W-b7-HcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -442,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="1562" y="-809"/>
         </scene>
-        <!--Game Result View Controller-->
+        <!--Game Result View Controller - Score-->
         <scene sceneID="Ufg-8A-ntt">
             <objects>
                 <viewController id="z1c-1g-mNX" customClass="YNGAGameResultViewController" sceneMemberID="viewController">
@@ -491,7 +491,7 @@
                             <constraint firstItem="7bz-dW-dCU" firstAttribute="leading" secondItem="afI-U8-XJx" secondAttribute="leading" constant="55" id="z73-Gh-y5R"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zdz-TG-NjR"/>
+                    <navigationItem key="navigationItem" title="Score" id="zdz-TG-NjR"/>
                     <connections>
                         <outlet property="resultTable" destination="LWZ-6F-Zu1" id="Bze-Kw-mzE"/>
                         <outlet property="scoreLabel" destination="nb5-1A-scL" id="XZn-HY-rik"/>
@@ -502,7 +502,7 @@
             </objects>
             <point key="canvasLocation" x="2018" y="-809"/>
         </scene>
-        <!--Play Select View Controller-->
+        <!--Play Select View Controller - Quizzes-->
         <scene sceneID="MbG-uC-4yv">
             <objects>
                 <tableViewController id="XuF-jN-VyJ" customClass="YNGAPlaySelectViewController" sceneMemberID="viewController">
@@ -573,14 +573,14 @@
                             <outlet property="delegate" destination="XuF-jN-VyJ" id="Rci-Ub-RGc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JIk-On-yla"/>
+                    <navigationItem key="navigationItem" title="Quizzes" id="JIk-On-yla"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgV-tH-V2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="-809"/>
         </scene>
-        <!--Download View Controller-->
+        <!--Download View Controller - Quizzes-->
         <scene sceneID="Uoh-fi-dzm">
             <objects>
                 <tableViewController id="o81-Xy-rcL" customClass="YNGADownloadViewController" sceneMemberID="viewController">
@@ -593,14 +593,14 @@
                             <outlet property="delegate" destination="o81-Xy-rcL" id="EQe-9v-UpE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="S2a-w8-OM3"/>
+                    <navigationItem key="navigationItem" title="Quizzes" id="S2a-w8-OM3"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyw-9h-fnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="494"/>
         </scene>
-        <!--Score View Controller-->
+        <!--Score View Controller - Score-->
         <scene sceneID="uSL-mq-kJt">
             <objects>
                 <viewController id="SKw-3V-a99" customClass="YNGAScoreViewController" sceneMemberID="viewController">
@@ -649,7 +649,7 @@
                             <constraint firstItem="8eB-sp-8kx" firstAttribute="top" secondItem="88g-pX-dko" secondAttribute="top" constant="86" id="vq8-Xv-5AH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="spR-pw-EJs"/>
+                    <navigationItem key="navigationItem" title="Score" id="spR-pw-EJs"/>
                     <connections>
                         <outlet property="resultTable" destination="DFM-dt-ZIi" id="yNj-RR-LYY"/>
                         <outlet property="scoreLabel" destination="8eB-sp-8kx" id="Zji-KN-TNH"/>
@@ -660,7 +660,7 @@
             </objects>
             <point key="canvasLocation" x="2018" y="-160"/>
         </scene>
-        <!--Review Select View Controller-->
+        <!--Review Select View Controller - Quizzes-->
         <scene sceneID="S7Y-hW-53V">
             <objects>
                 <tableViewController id="1Ec-Vu-scK" customClass="YNGAReviewSelectViewController" sceneMemberID="viewController">
@@ -731,7 +731,7 @@
                             <outlet property="delegate" destination="1Ec-Vu-scK" id="bOV-aH-9cZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zhk-Rw-Ej2"/>
+                    <navigationItem key="navigationItem" title="Quizzes" id="zhk-Rw-Ej2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLS-2B-FaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
