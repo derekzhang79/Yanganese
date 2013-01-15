@@ -17,7 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.emptyMessage = @"You have no finished quizzez. Try finishing a quiz to see your scores.";
     
+    // Load quizzes
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];

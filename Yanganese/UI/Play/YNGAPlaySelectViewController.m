@@ -17,7 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.emptyMessage = @"There are no quizzes available. Try downloading a quiz to start playing.";
 
+    // Load quizzes
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     

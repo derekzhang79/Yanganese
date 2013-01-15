@@ -69,8 +69,12 @@
     NSInteger count = _quizzes.count;
     
     if(count == 0)
+    {
+        _notificationView.textView.text = _emptyMessage;
+        _notificationView.imageView.image = [UIImage imageNamed:@"zero.png"];
         _notificationView.hidden = NO;
-    
+    }
+
     return count;
 }
 

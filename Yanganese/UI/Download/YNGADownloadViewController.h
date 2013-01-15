@@ -9,7 +9,9 @@
 #import "YNGASelectViewController.h"
 
 @interface YNGADownloadViewController : YNGASelectViewController <NSURLConnectionDelegate>
-{    
+{
+    UIView *errorView;
+
     NSMutableData *retainedData;
 }
 

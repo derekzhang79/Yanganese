@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	
+    self.emptyMessage = @"You have no finished quizzes to review. Try finishing a quiz to begin reviewing.";
+    
+    // Load quizzes
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];

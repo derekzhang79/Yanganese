@@ -20,5 +20,6 @@
 @property (strong, nonatomic) IBOutlet YNGATableNotificationView *notificationView;
 
 @property (nonatomic, retain) NSMutableArray *quizzes;
+@property (nonatomic, retain) NSString *emptyMessage;
 
 @end

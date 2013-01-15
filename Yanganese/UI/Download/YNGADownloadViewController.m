@@ -9,6 +9,7 @@
 #import "YNGADownloadViewController.h"
 
 #import "YNGAAppDelegate.h"
+#import "YNGATableNotificationView.h"
 #import "Quiz.h"
 #import "Question.h"
 
@@ -24,7 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.emptyMessage = @"No quizzes available for download.";
+    
     retainedData = [[NSMutableData alloc] init];
     
     NSURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:kQuizURL]];
@@ -36,6 +39,15 @@
 - (void)loadRequest:(NSURLRequest *)request
 {
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    if(connection)
+        self.notificationView.hidden = YES;
+    else
+    {
+        self.notificationView.imageView.image = [UIImage imageNamed:@"error.png"];
+        self.notificationView.textView.text = @"There was a problem connecting to the server. Please try again later.";
+        self.notificationView.hidden = NO;
+    }
 }
 
 - (void)updateQuizzes:(NSData *)data
@@ -52,6 +64,9 @@
         Quiz *quiz = [[Quiz alloc] initWithEntity:entity insertIntoManagedObjectContext:nil andProperties:dict];
         [self.quizzes addObject:quiz];
     }
+    
+    if(self.quizzes.count > 0)
+        self.notificationView.hidden = YES;
     
     [self.tableView reloadData];
 }
