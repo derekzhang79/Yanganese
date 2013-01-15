@@ -10,6 +10,7 @@
 
 #import "YNGAQuizCell.h"
 #import "YNGARatingView.h"
+#import "YNGATableNotificationView.h"
 #import "Quiz.h"
 
 #define kRowHeight 75
@@ -26,7 +27,16 @@
 
     self.tableView.rowHeight = kRowHeight;
     self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-    
+
+    // Load and add notification view
+    [[NSBundle mainBundle] loadNibNamed:@"YNGATableNotificationView" owner:self options:nil];
+
+    _notificationView.frame  = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y + 100, _notificationView.frame.size.width, _notificationView.frame.size.height);
+    _notificationView.hidden = YES;
+
+    [self.tableView addSubview:_notificationView];
+
+    // Initialize categories and corresponding images
     NSArray *categories = @[@"astro", @"bio", @"chem", @"earth", @"gen", @"math", @"phys"];
     NSMutableArray *temp = [NSMutableArray arrayWithCapacity:categories.count];
     for(NSString *category in categories)
@@ -56,7 +66,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _quizzes.count;
+    NSInteger count = _quizzes.count;
+    
+    if(count == 0)
+        _notificationView.hidden = NO;
+    
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

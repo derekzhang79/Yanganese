@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class YNGAQuizCell;
+@class YNGATableNotificationView;
 
 @interface YNGASelectViewController : UITableViewController
 {
@@ -16,6 +17,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet YNGAQuizCell *protoCell;
+@property (strong, nonatomic) IBOutlet YNGATableNotificationView *notificationView;
 
 @property (nonatomic, retain) NSMutableArray *quizzes;
 
