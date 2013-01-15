@@ -68,6 +68,10 @@
 		D29F89D416A5358200404242 /* YNGAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89D316A5358200404242 /* YNGAProgressView.m */; };
 		D2A1609816A5D8DC007010A4 /* YNGATableNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A1609716A5D8DC007010A4 /* YNGATableNotificationView.m */; };
 		D2A1609A16A5D94D007010A4 /* YNGATableNotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609916A5D94D007010A4 /* YNGATableNotificationView.xib */; };
+		D2A160A016A5E03F007010A4 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609C16A5E03F007010A4 /* error.png */; };
+		D2A160A116A5E03F007010A4 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609D16A5E03F007010A4 /* error@2x.png */; };
+		D2A160A216A5E03F007010A4 /* zero.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609E16A5E03F007010A4 /* zero.png */; };
+		D2A160A316A5E03F007010A4 /* zero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609F16A5E03F007010A4 /* zero@2x.png */; };
 		D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F6A16A26B70002061CC /* YNGAConstant.m */; };
 		D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7416A26CD7002061CC /* YNGARatingView.m */; };
 		D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */; };
@@ -187,6 +191,10 @@
 		D2A1609616A5D8DC007010A4 /* YNGATableNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGATableNotificationView.h; path = "UI/Table Notification/YNGATableNotificationView.h"; sourceTree = "<group>"; };
 		D2A1609716A5D8DC007010A4 /* YNGATableNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGATableNotificationView.m; path = "UI/Table Notification/YNGATableNotificationView.m"; sourceTree = "<group>"; };
 		D2A1609916A5D94D007010A4 /* YNGATableNotificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YNGATableNotificationView.xib; path = "UI/Table Notification/YNGATableNotificationView.xib"; sourceTree = "<group>"; };
+		D2A1609C16A5E03F007010A4 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = error.png; path = Images/Notification/error.png; sourceTree = "<group>"; };
+		D2A1609D16A5E03F007010A4 /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error@2x.png"; path = "Images/Notification/error@2x.png"; sourceTree = "<group>"; };
+		D2A1609E16A5E03F007010A4 /* zero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zero.png; path = Images/Notification/zero.png; sourceTree = "<group>"; };
+		D2A1609F16A5E03F007010A4 /* zero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zero@2x.png"; path = "Images/Notification/zero@2x.png"; sourceTree = "<group>"; };
 		D2DB1F6916A26B70002061CC /* YNGAConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAConstant.h; path = Support/YNGAConstant.h; sourceTree = "<group>"; };
 		D2DB1F6A16A26B70002061CC /* YNGAConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAConstant.m; path = Support/YNGAConstant.m; sourceTree = "<group>"; };
 		D2DB1F7316A26CD7002061CC /* YNGARatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGARatingView.h; path = UI/Cell/YNGARatingView.h; sourceTree = "<group>"; };
@@ -357,6 +365,7 @@
 		D249415516A26A420058E7E6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2A1609B16A5DFF3007010A4 /* Notification */,
 				D29CFDC216A350EC00C043E8 /* Play */,
 				D2DB1FA916A2906B002061CC /* Select */,
 				D249415716A26A4A0058E7E6 /* Menu */,
@@ -465,6 +474,17 @@
 				D2A1609916A5D94D007010A4 /* YNGATableNotificationView.xib */,
 			);
 			name = "Table Notification";
+			sourceTree = "<group>";
+		};
+		D2A1609B16A5DFF3007010A4 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D2A1609C16A5E03F007010A4 /* error.png */,
+				D2A1609D16A5E03F007010A4 /* error@2x.png */,
+				D2A1609E16A5E03F007010A4 /* zero.png */,
+				D2A1609F16A5E03F007010A4 /* zero@2x.png */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		D2DB1F7016A26CC1002061CC /* UI */ = {
@@ -690,6 +710,10 @@
 				D29CFDD116A3514B00C043E8 /* red.png in Resources */,
 				D29CFDD216A3514B00C043E8 /* red@2x.png in Resources */,
 				D2A1609A16A5D94D007010A4 /* YNGATableNotificationView.xib in Resources */,
+				D2A160A016A5E03F007010A4 /* error.png in Resources */,
+				D2A160A116A5E03F007010A4 /* error@2x.png in Resources */,
+				D2A160A216A5E03F007010A4 /* zero.png in Resources */,
+				D2A160A316A5E03F007010A4 /* zero@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
