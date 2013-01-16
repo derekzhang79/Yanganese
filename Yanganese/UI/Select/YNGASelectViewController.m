@@ -96,7 +96,11 @@
     
     Quiz *quiz = [_quizzes objectAtIndex:[indexPath row]];
     cell.nameLabel.text = quiz.title;
-    cell.iconView.image = [categoryImages objectAtIndex:[quiz.categoryID intValue]];
+    
+    int index = [quiz.categoryID intValue];
+
+    if(index > 0)
+        cell.iconView.image = [categoryImages objectAtIndex:index - 1];
     cell.authorLabel.text = quiz.author;
     cell.ratingView.rating = [quiz.rating floatValue];
     
