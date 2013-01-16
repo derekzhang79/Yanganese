@@ -73,6 +73,7 @@
 		D2A160A216A5E03F007010A4 /* zero.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609E16A5E03F007010A4 /* zero.png */; };
 		D2A160A316A5E03F007010A4 /* zero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A1609F16A5E03F007010A4 /* zero@2x.png */; };
 		D2A160BD16A5EA8F007010A4 /* YNGAPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A160BC16A5EA8F007010A4 /* YNGAPopupView.m */; };
+		D2A160C816A5FC3B007010A4 /* YNGASegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A160C716A5FC3B007010A4 /* YNGASegue.m */; };
 		D2DB1F6B16A26B70002061CC /* YNGAConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F6A16A26B70002061CC /* YNGAConstant.m */; };
 		D2DB1F7516A26CD7002061CC /* YNGARatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7416A26CD7002061CC /* YNGARatingView.m */; };
 		D2DB1F7E16A26E16002061CC /* YNGAQuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */; };
@@ -198,6 +199,8 @@
 		D2A1609F16A5E03F007010A4 /* zero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zero@2x.png"; path = "Images/Notification/zero@2x.png"; sourceTree = "<group>"; };
 		D2A160BB16A5EA8F007010A4 /* YNGAPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAPopupView.h; path = UI/Popup/YNGAPopupView.h; sourceTree = "<group>"; };
 		D2A160BC16A5EA8F007010A4 /* YNGAPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAPopupView.m; path = UI/Popup/YNGAPopupView.m; sourceTree = "<group>"; };
+		D2A160C616A5FC3B007010A4 /* YNGASegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGASegue.h; path = UI/Segue/YNGASegue.h; sourceTree = "<group>"; };
+		D2A160C716A5FC3B007010A4 /* YNGASegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGASegue.m; path = UI/Segue/YNGASegue.m; sourceTree = "<group>"; };
 		D2DB1F6916A26B70002061CC /* YNGAConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAConstant.h; path = Support/YNGAConstant.h; sourceTree = "<group>"; };
 		D2DB1F6A16A26B70002061CC /* YNGAConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAConstant.m; path = Support/YNGAConstant.m; sourceTree = "<group>"; };
 		D2DB1F7316A26CD7002061CC /* YNGARatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGARatingView.h; path = UI/Cell/YNGARatingView.h; sourceTree = "<group>"; };
@@ -511,9 +514,19 @@
 			name = Popup;
 			sourceTree = "<group>";
 		};
+		D2A160C516A5FBF2007010A4 /* Custom Segues */ = {
+			isa = PBXGroup;
+			children = (
+				D2A160C616A5FC3B007010A4 /* YNGASegue.h */,
+				D2A160C716A5FC3B007010A4 /* YNGASegue.m */,
+			);
+			name = "Custom Segues";
+			sourceTree = "<group>";
+		};
 		D2DB1F7016A26CC1002061CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D2A160C516A5FBF2007010A4 /* Custom Segues */,
 				D2A160AE16A5E656007010A4 /* Custom Views */,
 				D2DB1F9016A277D2002061CC /* Select */,
 				D29CFDAA16A342E500C043E8 /* Question */,
@@ -794,6 +807,7 @@
 				D29F89D416A5358200404242 /* YNGAProgressView.m in Sources */,
 				D2A1609816A5D8DC007010A4 /* YNGATableNotificationView.m in Sources */,
 				D2A160BD16A5EA8F007010A4 /* YNGAPopupView.m in Sources */,
+				D2A160C816A5FC3B007010A4 /* YNGASegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
