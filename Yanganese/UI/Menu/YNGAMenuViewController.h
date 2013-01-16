@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface YNGAMenuViewController : UIViewController
+{
+    CGAffineTransform translateLeft, translateRight, translateDown, translateUp;
+}
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (nonatomic, retain) IBOutletCollection(UIButton) NSArray *buttons;
 
 @end
