@@ -18,7 +18,6 @@
 
 - (void)loadRequest:(NSURLRequest *)request;
 - (void)updateQuizzes:(NSData *)data;
-- (void)togglePopup;
 
 @end
 
@@ -79,13 +78,6 @@
     [self.tableView reloadData];
 }
 
-- (void)togglePopup
-{
-    [UIView animateWithDuration:kTransitionTime animations:^{
-        popupView.alpha = popupView.alpha == 0.0 ? 1.0 : 0.0;
-    }];
-}
-
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,9 +119,19 @@
         [context save:&contextError];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self togglePopup];
             
-            [self performSelector:@selector(togglePopup) withObject:nil afterDelay:2 * kTransitionTime];
+            void(^showToggle)(void) = ^(void) {
+                popupView.alpha = 1.0;
+            };
+            
+            
+            void(^animateHideToggle)(BOOL) = ^(BOOL completed) {
+                [UIView animateWithDuration:kTransitionTime delay:kTransitionTime options:UIViewAnimationCurveLinear animations:^{
+                    popupView.alpha = 0.0;
+                } completion:nil];
+            };
+            
+            [UIView animateWithDuration:kTransitionTime animations:showToggle completion:animateHideToggle];
         });
     });
     
