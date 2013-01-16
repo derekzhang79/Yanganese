@@ -44,4 +44,13 @@
     }
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"startGame" sender:self];
+    
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
 @end

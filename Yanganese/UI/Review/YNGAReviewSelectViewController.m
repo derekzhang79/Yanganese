@@ -47,4 +47,13 @@
     }
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"showReviewQuestions" sender:self];
+    
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
 @end
