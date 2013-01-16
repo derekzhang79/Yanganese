@@ -17,6 +17,8 @@
 
 @interface YNGASelectViewController ()
 
+- (void)animateBack;
+
 @end
 
 @implementation YNGASelectViewController
@@ -27,6 +29,7 @@
 
     self.tableView.rowHeight = kRowHeight;
     self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    self.tableView.alpha = 0.0;
 
     // Load and add notification view
     [[NSBundle mainBundle] loadNibNamed:@"YNGATableNotificationView" owner:self options:nil];
@@ -58,8 +61,28 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-	
+	[UIView animateWithDuration:kTransitionTime animations:^{
+        self.tableView.alpha = 1.0;
+    }];
+    
 	[super viewWillAppear:animated];
+}
+
+#pragma mark -
+
+- (void)animateBack
+{
+	[self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    void(^fadeTable)(void) = ^(void) {
+        self.tableView.alpha = 0.0;
+    };
+    
+    void(^popController)(BOOL) = ^(BOOL completed) {
+        [self.navigationController popViewControllerAnimated:NO];
+    };
+
+    [UIView animateWithDuration:kTransitionTime animations:fadeTable completion:popController];
 }
 
 #pragma mark - Table view data source

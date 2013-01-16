@@ -11,12 +11,21 @@
 #import "YNGAAppDelegate.h"
 #import "Score.h"
 
+@interface YNGAScoreViewController ()
+
+- (void)animateBack;
+
+@end
+
 @implementation YNGAScoreViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    self.scoreLabel.alpha = 0.0;
+    self.resultTable.alpha = 0.0;
+    
     // Load global score
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -46,8 +55,30 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [UIView animateWithDuration:kTransitionTime animations:^{
+        self.scoreLabel.alpha = 1.0;
+        self.resultTable.alpha = 1.0;
+    }];
     
     [super viewWillAppear:animated];
+}
+
+#pragma mark -
+
+- (void)animateBack
+{
+	[self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    void(^fadeTable)(void) = ^(void) {
+        self.scoreLabel.alpha = 0.0;
+        self.resultTable.alpha = 0.0;
+    };
+    
+    void(^popController)(BOOL) = ^(BOOL completed) {
+        [self.navigationController popViewControllerAnimated:NO];
+    };
+    
+    [UIView animateWithDuration:kTransitionTime animations:fadeTable completion:popController];
 }
 
 @end

@@ -65,6 +65,12 @@
             [self translateOut];
         };
     }
+    
+    UIViewController *viewController = segue.destinationViewController;
+    // Replace back button
+	UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:viewController action:@selector(animateBack)];
+	viewController.navigationItem.leftBarButtonItem = leftItem;
+    viewController.navigationItem.hidesBackButton = YES;
 }
 
 #pragma mark -

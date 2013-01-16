@@ -49,7 +49,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1Ec-Vu-scK" kind="push" id="WkA-sr-5pF"/>
+                                    <segue destination="1Ec-Vu-scK" kind="custom" customClass="YNGASegue" id="WkA-sr-5pF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="ARF-s1-JDj">
@@ -69,7 +69,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q3O-6c-10C" kind="push" id="oNj-Jn-gQf"/>
+                                    <segue destination="q3O-6c-10C" kind="custom" customClass="YNGASegue" id="oNj-Jn-gQf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="veQ-Wu-CHF">
@@ -86,7 +86,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XuF-jN-VyJ" kind="push" customClass="YNGASegue" id="2gR-8m-2EI"/>
+                                    <segue destination="XuF-jN-VyJ" kind="custom" customClass="YNGASegue" id="2gR-8m-2EI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="vOs-Bv-ag3">
@@ -103,7 +103,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="o81-Xy-rcL" kind="push" id="v39-4X-KtR"/>
+                                    <segue destination="o81-Xy-rcL" kind="custom" customClass="YNGASegue" id="v39-4X-KtR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -572,96 +572,6 @@
         <image name="scoresHighlight.png" width="150" height="38"/>
         <image name="yanganese.png" width="131" height="150"/>
     </resources>
-    <classes>
-        <class className="YNGADownloadViewController" superclassName="YNGASelectViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGADownloadViewController.h"/>
-        </class>
-        <class className="YNGAGameResultViewController" superclassName="YNGAResultViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAGameResultViewController.h"/>
-        </class>
-        <class className="YNGAGameViewController" superclassName="YNGAQuestionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAGameViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="answer:"/>
-                <relationship kind="outlet" name="questionView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="buttons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="YNGAMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="iconImage" candidateClass="UIImageView"/>
-                <relationship kind="outletCollection" name="buttons" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="YNGAPlaySelectViewController" superclassName="YNGASelectViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAPlaySelectViewController.h"/>
-        </class>
-        <class className="YNGAQuestionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAQuestionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="answerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dashView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="YNGAQuizCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAQuizCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="iconView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ratingView" candidateClass="YNGARatingView"/>
-            </relationships>
-        </class>
-        <class className="YNGARatingView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGARatingView.h"/>
-        </class>
-        <class className="YNGAResultViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAResultViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="resultTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="YNGAReviewQuestionViewController" superclassName="YNGAQuestionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAReviewQuestionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="show"/>
-                <relationship kind="outlet" name="questionScroll" candidateClass="YNGAScrollView"/>
-                <relationship kind="outlet" name="toggleButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="YNGAReviewSelectViewController" superclassName="YNGASelectViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAReviewSelectViewController.h"/>
-        </class>
-        <class className="YNGAScoreSelectViewController" superclassName="YNGASelectViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAScoreSelectViewController.h"/>
-        </class>
-        <class className="YNGAScoreViewController" superclassName="YNGAResultViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAScoreViewController.h"/>
-        </class>
-        <class className="YNGAScrollView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAScrollView.h"/>
-        </class>
-        <class className="YNGASelectViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGASelectViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="notificationView" candidateClass="YNGATableNotificationView"/>
-                <relationship kind="outlet" name="protoCell" candidateClass="YNGAQuizCell"/>
-            </relationships>
-        </class>
-        <class className="YNGATableNotificationView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGATableNotificationView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
