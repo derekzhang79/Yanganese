@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */; };
 		D2140F6C16A90108004C013F /* YNGAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2140F6B16A90108004C013F /* YNGAAlertView.m */; };
+		D2140F7716A9312B004C013F /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7116A9312B004C013F /* help.png */; };
+		D2140F7816A9312B004C013F /* help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7216A9312B004C013F /* help@2x.png */; };
+		D2140F7916A9312B004C013F /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7316A9312B004C013F /* info.png */; };
+		D2140F7A16A9312B004C013F /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7416A9312B004C013F /* info@2x.png */; };
+		D2140F7B16A9312B004C013F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7516A9312B004C013F /* settings.png */; };
+		D2140F7C16A9312B004C013F /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7616A9312B004C013F /* settings@2x.png */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
@@ -120,6 +126,12 @@
 		D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAGameResultViewController.m; path = UI/Play/YNGAGameResultViewController.m; sourceTree = "<group>"; };
 		D2140F6A16A90108004C013F /* YNGAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAAlertView.h; path = UI/Alert/YNGAAlertView.h; sourceTree = "<group>"; };
 		D2140F6B16A90108004C013F /* YNGAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAAlertView.m; path = UI/Alert/YNGAAlertView.m; sourceTree = "<group>"; };
+		D2140F7116A9312B004C013F /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = Images/Menu/help.png; sourceTree = "<group>"; };
+		D2140F7216A9312B004C013F /* help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "help@2x.png"; path = "Images/Menu/help@2x.png"; sourceTree = "<group>"; };
+		D2140F7316A9312B004C013F /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = Images/Menu/info.png; sourceTree = "<group>"; };
+		D2140F7416A9312B004C013F /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "Images/Menu/info@2x.png"; sourceTree = "<group>"; };
+		D2140F7516A9312B004C013F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Images/Menu/settings.png; sourceTree = "<group>"; };
+		D2140F7616A9312B004C013F /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@2x.png"; path = "Images/Menu/settings@2x.png"; sourceTree = "<group>"; };
 		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
@@ -394,6 +406,12 @@
 		D249415716A26A4A0058E7E6 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				D2140F7116A9312B004C013F /* help.png */,
+				D2140F7216A9312B004C013F /* help@2x.png */,
+				D2140F7316A9312B004C013F /* info.png */,
+				D2140F7416A9312B004C013F /* info@2x.png */,
+				D2140F7516A9312B004C013F /* settings.png */,
+				D2140F7616A9312B004C013F /* settings@2x.png */,
 				D249415816A26A930058E7E6 /* download.png */,
 				D249415916A26A930058E7E6 /* download@2x.png */,
 				D249415A16A26A930058E7E6 /* downloadHighlight.png */,
@@ -761,6 +779,12 @@
 				D2A160A116A5E03F007010A4 /* error@2x.png in Resources */,
 				D2A160A216A5E03F007010A4 /* zero.png in Resources */,
 				D2A160A316A5E03F007010A4 /* zero@2x.png in Resources */,
+				D2140F7716A9312B004C013F /* help.png in Resources */,
+				D2140F7816A9312B004C013F /* help@2x.png in Resources */,
+				D2140F7916A9312B004C013F /* info.png in Resources */,
+				D2140F7A16A9312B004C013F /* info@2x.png in Resources */,
+				D2140F7B16A9312B004C013F /* settings.png in Resources */,
+				D2140F7C16A9312B004C013F /* settings@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,6 +35,8 @@
     
     // Set initial positions
 	[self translateOut];
+    
+    _settingsHidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -75,7 +77,43 @@
 
 #pragma mark -
 
-- (void)translateOut {
+- (IBAction)toggleSettings:(id)sender
+{
+	if(![sender isKindOfClass:[UIButton class]] && _settingsHidden)
+		return;
+	
+    [UIView animateWithDuration:kTransitionTime animations:^ {
+        CGAffineTransform move;
+        BOOL buttonEnabled;
+        if(_settingsHidden)
+        {
+            move = translateRight;
+            self.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f];
+            buttonEnabled = NO;
+            self.iconImage.image = [UIImage imageNamed:@"yanganeseDisabled.png"];
+        }
+        else
+        {
+            move = CGAffineTransformIdentity;
+            self.view.backgroundColor = [UIColor clearColor];
+            buttonEnabled = YES;
+            self.iconImage.image = [UIImage imageNamed:@"yanganese.png"];
+            
+        }
+        for(UIView *object in self.view.subviews) {
+            if([object isKindOfClass:[UIButton class]]) {
+                UIButton *button = (UIButton *)object;
+                button.enabled = buttonEnabled;
+            }
+        }
+        _settingsView.transform = move;
+    }];
+	
+	_settingsHidden = !_settingsHidden;
+}
+
+- (void)translateOut
+{
 	// Map translations
     for(UIButton *button in _buttons)
     {
