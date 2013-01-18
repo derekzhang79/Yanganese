@@ -13,6 +13,7 @@
 @interface YNGADownloadViewController : YNGASelectViewController <NSURLConnectionDelegate>
 {
     YNGAPopupView *popupView;
+    UIActivityIndicatorView *activityView;
     
     NSMutableData *retainedData;
 }

@@ -35,6 +35,11 @@
     
     self.emptyMessage = @"No quizzes available for download.";
     
+    // Add activity indicator
+    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    UIBarButtonItem *wrapperButton = [[UIBarButtonItem alloc] initWithCustomView:activityView];
+    self.navigationItem.rightBarButtonItem = wrapperButton;
+    
     retainedData = [[NSMutableData alloc] init];
     
     NSURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:kQuizURL]];
@@ -48,7 +53,10 @@
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     if(connection)
+    {
         self.notificationView.hidden = YES;
+        [activityView startAnimating];
+    }
     else
     {
         self.notificationView.imageView.image = [UIImage imageNamed:@"error.png"];
@@ -82,6 +90,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [activityView startAnimating];
+    
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
@@ -119,6 +129,7 @@
         [context save:&contextError];
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            [activityView stopAnimating];
             
             void(^showToggle)(void) = ^(void) {
                 popupView.alpha = 1.0;
@@ -153,6 +164,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [self updateQuizzes:retainedData];
+    [activityView stopAnimating];
 }
 
 @end
