@@ -131,22 +131,22 @@
         {
             if(button.tag == lastButtonTag)
                 lastButton = button;
-
-            button.alpha = answerHidden ? 0.0 : 1.0;
+            else
+                button.alpha = answerHidden ? 0.0 : 1.0;
         }
         if(answerHidden) {
             self.answerLabel.text = [question answerText];
             
             self.answerLabel.transform = translateDown;
             self.answerLabel.alpha = 1.0;
-            //lastButton.transform = translations[lastButtonTag - 1];
+            lastButton.transform = translations[lastButtonTag - 1];
         }
         else {
             self.answerLabel.text = @"";
             
             self.answerLabel.transform = translateOriginal;
             self.answerLabel.alpha = 0.0;
-            //lastButton.transform = translateOriginal;
+            lastButton.transform = translateOriginal;
         }
 	}];
 	
