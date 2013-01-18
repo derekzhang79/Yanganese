@@ -640,10 +640,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mikkyang.png" id="feZ-ru-pxn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bU2-rs-2VO">
                                 <rect key="frame" x="20" y="504" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -695,6 +691,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b1q-AZ-i4F">
+                                <rect key="frame" x="0.0" y="184" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="mikkyang.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToSite" destination="JjZ-s5-ywf" eventType="touchUpInside" id="HR6-0f-MkY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -715,7 +726,7 @@
         <image name="grey.png" width="130" height="38"/>
         <image name="help.png" width="20" height="20"/>
         <image name="info.png" width="150" height="38"/>
-        <image name="mikkyang.png" width="320" height="568"/>
+        <image name="mikkyang.png" width="320" height="200"/>
         <image name="play.png" width="150" height="38"/>
         <image name="playHighlight.png" width="150" height="38"/>
         <image name="review.png" width="150" height="38"/>
@@ -730,6 +741,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAAboutViewController.h"/>
             <relationships>
                 <relationship kind="action" name="back"/>
+                <relationship kind="action" name="goToSite"/>
                 <relationship kind="action" name="sendSupportMail"/>
                 <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
             </relationships>

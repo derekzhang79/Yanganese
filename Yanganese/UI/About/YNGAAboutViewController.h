@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
+- (IBAction)goToSite;
 - (IBAction)back;
 - (IBAction)sendSupportMail;
 

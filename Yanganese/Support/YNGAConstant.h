@@ -12,4 +12,5 @@ extern float const kCornerRadius;
 extern float const kTransitionTime;
 
 extern NSString * const kQuizURL;
+extern NSString * const kSiteAddress;
 extern NSString * const kMailAddress;

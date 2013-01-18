@@ -12,4 +12,5 @@ float const kCornerRadius = 3.0f;
 float const kTransitionTime = 0.5f;
 
 NSString * const kQuizURL = @"http://yanganese.heroku.com/quizzes";
+NSString * const kSiteAddress = @"http://mikkyang.com";
 NSString * const kMailAddress = @"mailto://support@mikkyang.com";

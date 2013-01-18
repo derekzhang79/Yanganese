@@ -25,6 +25,11 @@
 
 #pragma mark -
 
+- (IBAction)goToSite
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kSiteAddress]];
+}
+
 - (IBAction)back
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
