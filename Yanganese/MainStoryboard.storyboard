@@ -170,7 +170,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleSettings:" destination="vii-Kq-UCH" eventType="touchUpInside" id="2YC-Ws-inL"/>
+                                    <segue destination="JjZ-s5-ywf" kind="modal" id="XaJ-6Q-KQV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -845,4 +845,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="XaJ-6Q-KQV"/>
+    </inferredMetricsTieBreakers>
 </document>
