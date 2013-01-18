@@ -44,6 +44,7 @@
         
         YNGAScoreViewController *detailController = segue.destinationViewController;
         detailController.score = quiz.score;
+        detailController.title = quiz.title;
     }
 }
 
