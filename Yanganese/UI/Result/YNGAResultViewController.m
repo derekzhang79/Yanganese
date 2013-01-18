@@ -12,6 +12,12 @@
 #import "Score.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface YNGAResultViewController ()
+
+- (void)animateBack;
+
+@end
+
 @implementation YNGAResultViewController
 
 - (void)viewDidLoad
@@ -34,6 +40,24 @@
     minutes = [_score.timeMinute intValue];
     seconds = [_score.timeSecond intValue];
     _timeLabel.text = seconds < 10 ? [NSString stringWithFormat:@"Time: %d:0%d", minutes, seconds] : [NSString stringWithFormat:@"Time: %d:%d", minutes, seconds];
+}
+
+#pragma mark -
+
+- (void)animateBack
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    void(^fade)(void) = ^ {
+        for(UIView *view in self.view.subviews)
+            view.alpha = 0.0;
+    };
+    
+    void(^home)(BOOL) = ^(BOOL completion) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    };
+    
+    [UIView animateWithDuration:kTransitionTime animations:fade completion:home];
 }
 
 #pragma mark - Table view data source

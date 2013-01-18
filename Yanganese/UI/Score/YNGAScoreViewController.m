@@ -11,12 +11,6 @@
 #import "YNGAAppDelegate.h"
 #import "Score.h"
 
-@interface YNGAScoreViewController ()
-
-- (void)animateBack;
-
-@end
-
 @implementation YNGAScoreViewController
 
 - (void)viewDidLoad
@@ -61,24 +55,6 @@
     }];
     
     [super viewWillAppear:animated];
-}
-
-#pragma mark -
-
-- (void)animateBack
-{
-	[self.navigationController setNavigationBarHidden:YES animated:YES];
-    
-    void(^fadeTable)(void) = ^(void) {
-        self.scoreLabel.alpha = 0.0;
-        self.resultTable.alpha = 0.0;
-    };
-    
-    void(^popController)(BOOL) = ^(BOOL completed) {
-        [self.navigationController popViewControllerAnimated:NO];
-    };
-    
-    [UIView animateWithDuration:kTransitionTime animations:fadeTable completion:popController];
 }
 
 @end

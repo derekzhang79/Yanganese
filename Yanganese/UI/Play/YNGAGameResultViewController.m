@@ -10,12 +10,6 @@
 
 #import "Score.h"
 
-@interface YNGAGameResultViewController ()
-
-- (void)animateBack;
-
-@end
-
 @implementation YNGAGameResultViewController
 
 - (void)viewDidLoad
@@ -26,24 +20,6 @@
     
 	UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(animateBack)];
 	self.navigationItem.rightBarButtonItem = done;
-}
-
-#pragma mark -
-
-- (void)animateBack
-{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    
-    void(^fade)(void) = ^ {
-        for(UIView *view in self.view.subviews)
-            view.alpha = 0.0;
-    };
-    
-    void(^home)(BOOL) = ^(BOOL completion) {
-        [self.navigationController popToRootViewControllerAnimated:NO];
-    };
-    
-    [UIView animateWithDuration:kTransitionTime animations:fade completion:home];
 }
 
 @end
