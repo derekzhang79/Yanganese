@@ -15,6 +15,9 @@
 		D2140F7A16A9312B004C013F /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7416A9312B004C013F /* info@2x.png */; };
 		D2140F7B16A9312B004C013F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7516A9312B004C013F /* settings.png */; };
 		D2140F7C16A9312B004C013F /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7616A9312B004C013F /* settings@2x.png */; };
+		D2140F8116A937B0004C013F /* mikkyang.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F7F16A937B0004C013F /* mikkyang.png */; };
+		D2140F8216A937B0004C013F /* mikkyang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2140F8016A937B0004C013F /* mikkyang@2x.png */; };
+		D2140F8516A93819004C013F /* YNGAAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2140F8416A93819004C013F /* YNGAAboutViewController.m */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
@@ -132,6 +135,10 @@
 		D2140F7416A9312B004C013F /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "Images/Menu/info@2x.png"; sourceTree = "<group>"; };
 		D2140F7516A9312B004C013F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Images/Menu/settings.png; sourceTree = "<group>"; };
 		D2140F7616A9312B004C013F /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@2x.png"; path = "Images/Menu/settings@2x.png"; sourceTree = "<group>"; };
+		D2140F7F16A937B0004C013F /* mikkyang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mikkyang.png; path = Images/About/mikkyang.png; sourceTree = "<group>"; };
+		D2140F8016A937B0004C013F /* mikkyang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mikkyang@2x.png"; path = "Images/About/mikkyang@2x.png"; sourceTree = "<group>"; };
+		D2140F8316A93819004C013F /* YNGAAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAAboutViewController.h; path = UI/About/YNGAAboutViewController.h; sourceTree = "<group>"; };
+		D2140F8416A93819004C013F /* YNGAAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAAboutViewController.m; path = UI/About/YNGAAboutViewController.m; sourceTree = "<group>"; };
 		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
@@ -290,6 +297,24 @@
 			name = Alert;
 			sourceTree = "<group>";
 		};
+		D2140F7D16A93710004C013F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D2140F8316A93819004C013F /* YNGAAboutViewController.h */,
+				D2140F8416A93819004C013F /* YNGAAboutViewController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		D2140F7E16A937A5004C013F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D2140F7F16A937B0004C013F /* mikkyang.png */,
+				D2140F8016A937B0004C013F /* mikkyang@2x.png */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 		D22C009D16A37276009F26FD /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +420,7 @@
 		D249415516A26A420058E7E6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2140F7E16A937A5004C013F /* About */,
 				D2A1609B16A5DFF3007010A4 /* Notification */,
 				D29CFDC216A350EC00C043E8 /* Play */,
 				D2DB1FA916A2906B002061CC /* Select */,
@@ -567,6 +593,7 @@
 				D2DB1FD016A292E8002061CC /* Download */,
 				D2362EC316A3EA5C007216D8 /* Score */,
 				D29F89AB16A4B44700404242 /* Review */,
+				D2140F7D16A93710004C013F /* About */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -785,6 +812,8 @@
 				D2140F7A16A9312B004C013F /* info@2x.png in Resources */,
 				D2140F7B16A9312B004C013F /* settings.png in Resources */,
 				D2140F7C16A9312B004C013F /* settings@2x.png in Resources */,
+				D2140F8116A937B0004C013F /* mikkyang.png in Resources */,
+				D2140F8216A937B0004C013F /* mikkyang@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +875,7 @@
 				D2A160BD16A5EA8F007010A4 /* YNGAPopupView.m in Sources */,
 				D2A160C816A5FC3B007010A4 /* YNGASegue.m in Sources */,
 				D2140F6C16A90108004C013F /* YNGAAlertView.m in Sources */,
+				D2140F8516A93819004C013F /* YNGAAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
