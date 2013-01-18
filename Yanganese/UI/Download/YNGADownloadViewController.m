@@ -83,7 +83,14 @@
     if(self.quizzes.count > 0)
         self.notificationView.hidden = YES;
     
-    [self.tableView reloadData];
+    [self.tableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.quizzes.count == 0 ? 0 : 1;
 }
 
 #pragma mark - Table view delegate
