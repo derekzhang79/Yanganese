@@ -17,7 +17,7 @@
         <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Question" inverseName="quiz" inverseEntity="Question" syncable="YES"/>
-        <relationship name="score" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Score" inverseName="quiz" inverseEntity="Score" syncable="YES"/>
+        <relationship name="score" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Score" inverseName="quiz" inverseEntity="Score" syncable="YES"/>
     </entity>
     <entity name="Score" representedClassName="Score" syncable="YES">
         <attribute name="counts" optional="YES" attributeType="Transformable" syncable="YES"/>
