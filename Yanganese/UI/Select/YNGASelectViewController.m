@@ -30,6 +30,9 @@
     self.tableView.rowHeight = kRowHeight;
     self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     self.tableView.alpha = 0.0;
+    
+    // Allow editing
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     // Load and add notification view
     [[NSBundle mainBundle] loadNibNamed:@"YNGATableNotificationView" owner:self options:nil];

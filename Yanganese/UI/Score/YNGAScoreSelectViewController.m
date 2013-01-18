@@ -57,4 +57,23 @@
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        
+        // Remove from array
+        [self.quizzes removeObjectAtIndex:[indexPath row]];
+        
+        // Remove score from data store
+        YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+        [context deleteObject:quiz.score];
+        [context save:nil];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    }
+}
+
 @end

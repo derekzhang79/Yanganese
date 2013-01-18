@@ -20,6 +20,9 @@
 	
     self.emptyMessage = @"You have no finished quizzes to review. Try finishing a quiz to begin reviewing.";
     
+    // Disable editing
+    self.navigationItem.rightBarButtonItem = nil;
+    
     // Load quizzes
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
