@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20C204A16A3DE6C00958D1E /* YNGAGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */; };
+		D2140F6C16A90108004C013F /* YNGAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2140F6B16A90108004C013F /* YNGAAlertView.m */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
@@ -117,6 +118,8 @@
 /* Begin PBXFileReference section */
 		D20C204816A3DE6C00958D1E /* YNGAGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAGameResultViewController.h; path = UI/Play/YNGAGameResultViewController.h; sourceTree = "<group>"; };
 		D20C204916A3DE6C00958D1E /* YNGAGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAGameResultViewController.m; path = UI/Play/YNGAGameResultViewController.m; sourceTree = "<group>"; };
+		D2140F6A16A90108004C013F /* YNGAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAAlertView.h; path = UI/Alert/YNGAAlertView.h; sourceTree = "<group>"; };
+		D2140F6B16A90108004C013F /* YNGAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAAlertView.m; path = UI/Alert/YNGAAlertView.m; sourceTree = "<group>"; };
 		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
@@ -266,6 +269,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2140F6816A900E3004C013F /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D2140F6A16A90108004C013F /* YNGAAlertView.h */,
+				D2140F6B16A90108004C013F /* YNGAAlertView.m */,
+			);
+			name = Alert;
+			sourceTree = "<group>";
+		};
 		D22C009D16A37276009F26FD /* Result */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +513,7 @@
 				D29F89B816A4B6F300404242 /* Scroll */,
 				D2DB1F7216A26CC6002061CC /* Cell */,
 				D2A160C016A5EA9D007010A4 /* Popup */,
+				D2140F6816A900E3004C013F /* Alert */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -808,6 +821,7 @@
 				D2A1609816A5D8DC007010A4 /* YNGATableNotificationView.m in Sources */,
 				D2A160BD16A5EA8F007010A4 /* YNGAPopupView.m in Sources */,
 				D2A160C816A5FC3B007010A4 /* YNGASegue.m in Sources */,
+				D2140F6C16A90108004C013F /* YNGAAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
