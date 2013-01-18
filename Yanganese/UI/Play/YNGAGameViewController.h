@@ -8,11 +8,13 @@
 
 #import "YNGAQuestionViewController.h"
 
+#import "YNGAAlertView.h"
+
 #define kCategoryCount 7
 
 @class Question;
 
-@interface YNGAGameViewController : YNGAQuestionViewController
+@interface YNGAGameViewController : YNGAQuestionViewController <YNGAAlertViewDelegate>
 {
     NSArray *categories;
 	int correctCount[kCategoryCount];

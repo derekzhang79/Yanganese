@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
 #import "YNGAGameResultViewController.h"
+#import "YNGAAlertView.h"
 #import "Quiz.h"
 #import "Question.h"
 #import "Score.h"
@@ -248,9 +249,12 @@
 
 - (void)exit
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exiting" message:@"Are you sure you want to quit the current round?\nYour information will be lost."
-												   delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
-	[alert show];
+	YNGAAlertView *alertView = [[YNGAAlertView alloc] initWithFrame:CGRectMake(30, 120, 260, 200)];
+    alertView.messageLabel.text = @"Quit the current round?\nYour information will be lost.";
+    alertView.delegate = self;
+    
+    [self.view addSubview:alertView];
+    [alertView show];
 }
 
 - (void)updateTime:(NSTimer *)timer
@@ -260,6 +264,28 @@
 	timeSec = timeSec % 60;
     
 	[self changeTimeToCurrent];
+}
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(YNGAAlertView *)alertView didDismissWithButtonIndex:(ButtonIndex)buttonIndex
+{
+    if(buttonIndex == kOKButtonIndex)
+    {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [_timer invalidate];
+        
+        void(^fade)(void) = ^ {
+            for(UIView *view in self.view.subviews)
+                view.alpha = 0.0f;
+        };
+        
+        void(^home)(BOOL) = ^(BOOL completion) {
+            [self.navigationController popToRootViewControllerAnimated:NO];
+        };
+        
+        [UIView animateWithDuration:kTransitionTime animations:fade completion:home];
+    }
 }
 
 @end
