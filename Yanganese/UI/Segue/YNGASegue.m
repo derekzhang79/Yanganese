@@ -8,29 +8,20 @@
 
 #import "YNGASegue.h"
 
-@interface YNGASegue ()
-
-- (void)animationDone:(UIViewController *)viewController;
-
-@end
-
 @implementation YNGASegue
 
 - (void)perform
 {    
     UIViewController *dst = [self destinationViewController];
-    [dst viewWillAppear:NO];
-    [dst viewDidAppear:NO];
+    [dst viewWillAppear:YES];
+    [dst viewDidAppear:YES];
 
-    [UIView animateWithDuration:kTransitionTime animations:_animations];
+    void(^pushController)(BOOL) = ^(BOOL completion) {
+        UINavigationController *navigationController = [self.sourceViewController navigationController];
+        [navigationController pushViewController:dst animated:NO];
+    };
     
-    [self performSelector:@selector(animationDone:) withObject:dst afterDelay:kTransitionTime];
-}
-
-- (void)animationDone:(UIViewController *)viewController
-{
-    UINavigationController *nav = [[self sourceViewController] navigationController];
-    [nav pushViewController:viewController animated:NO];
+    [UIView animateWithDuration:kTransitionTime animations:_animations completion:pushController];
 }
 
 @end
