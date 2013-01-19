@@ -7,14 +7,14 @@
 //
 
 #import "Score.h"
+#import "CategoryScore.h"
 #import "Quiz.h"
 
 @implementation Score
 
-@dynamic counts;
-@dynamic totals;
 @dynamic timeSecond;
 @dynamic timeMinute;
+@dynamic categoryScores;
 @dynamic quiz;
 
 @end
