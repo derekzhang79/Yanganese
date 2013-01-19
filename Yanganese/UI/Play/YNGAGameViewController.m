@@ -15,6 +15,7 @@
 #import "Quiz.h"
 #import "Question.h"
 #import "Score.h"
+#import "CategoryScore.h"
 
 #define kXTrans1 83
 #define kXTrans2 -82
@@ -175,10 +176,9 @@
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Score" inManagedObjectContext:context];
-
-    // Load global scores
-    Score *globalScore;
+    NSEntityDescription *catScoreEntity = [NSEntityDescription entityForName:@"CategoryScore" inManagedObjectContext:context];
     
+    // Load global scores    
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSPredicate *noQuiz = [NSPredicate predicateWithFormat:@"quiz == nil"];
     [request setEntity:entity];
@@ -188,42 +188,62 @@
     NSError *fetchError;
     NSArray *fetchedObjects = [context executeFetchRequest:request error:&fetchError];
     
-    globalScore = [fetchedObjects lastObject];
+    Score *globalScore = [fetchedObjects lastObject];
+    BOOL newGlobal = NO;
+
     if(globalScore == nil)
+    {
+        newGlobal = YES;
         globalScore = [[Score alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+    }
     
     // Load quiz score
     Score *quizScore = self.quiz.score;
+    BOOL newScore = NO;
     
     if(quizScore == nil)
     {
+        newScore = YES;
         quizScore = [[Score alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
         self.quiz.score = quizScore;
     }
     
     // Update counts
-    NSMutableArray *counts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
-    NSMutableArray *totals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
-    NSMutableArray *globalCounts = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
-    NSMutableArray *globalTotals = [[NSMutableArray alloc] initWithCapacity:kCategoryCount];
-    
     for(int i = 0; i < kCategoryCount; i++)
     {
-        int count = correctCount[i];
-        int total = questionTotal[i];
-        [counts addObject:[NSNumber numberWithInt:count]];
-        [totals addObject:[NSNumber numberWithInt:total]];
+        NSInteger count = correctCount[i];
+        NSInteger total = questionTotal[i];
         
-        int globalCount = count + [[globalScore.counts objectAtIndex:i] intValue] - [[quizScore.counts objectAtIndex:i] intValue];
-        int globalTotal = total + [[globalScore.totals objectAtIndex:i] intValue] - [[quizScore.counts objectAtIndex:i] intValue];
-        [globalCounts addObject:[NSNumber numberWithInt:globalCount]];
-        [globalTotals addObject:[NSNumber numberWithInt:globalTotal]];
+        CategoryScore *quizCatScore;
+        if(newScore)
+        {
+            quizCatScore = [[CategoryScore alloc] initWithEntity:catScoreEntity insertIntoManagedObjectContext:context];
+            [quizScore addCategoryScoresObject:quizCatScore];
+        }
+        else
+            quizCatScore = [quizScore.categoryScores objectAtIndex:i];
+        
+        quizCatScore.count = [NSNumber numberWithInteger:count];
+        quizCatScore.total = [NSNumber numberWithInteger:total];
+        
+        CategoryScore *globalCatScore;
+        if(newGlobal)
+        {
+            globalCatScore = [[CategoryScore alloc] initWithEntity:catScoreEntity insertIntoManagedObjectContext:context];
+            globalCatScore.count = [NSNumber numberWithInteger:count];
+            globalCatScore.total = [NSNumber numberWithInteger:count];
+            
+            [globalScore addCategoryScoresObject:globalCatScore];
+        }
+        else
+        {
+            globalCatScore = [globalScore.categoryScores objectAtIndex:i];
+            
+            globalCatScore.count = [NSNumber numberWithInteger:(count + [globalCatScore.count integerValue])];
+            globalCatScore.total = [NSNumber numberWithInteger:(total + [globalCatScore.total integerValue])];
+            
+        }
     }
-    
-    quizScore.counts = counts;
-    quizScore.totals = totals;
-    globalScore.counts = globalCounts;
-    globalScore.totals = globalTotals;
 
     quizScore.timeSecond = [NSNumber numberWithInt:timeSec];
     quizScore.timeMinute = [NSNumber numberWithInt:timeMin];
