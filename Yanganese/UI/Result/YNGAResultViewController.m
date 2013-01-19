@@ -8,9 +8,11 @@
 
 #import "YNGAResultViewController.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "Quiz.h"
 #import "Score.h"
-#import <QuartzCore/QuartzCore.h>
+#import "CategoryScore.h"
 
 @interface YNGAResultViewController ()
 
@@ -32,8 +34,8 @@
 	categoryList = @[@"Astro", @"Bio", @"Chem", @"Earth", @"Gen", @"Math", @"Phys"];
     
 	NSUInteger intScore = 0;
-    for(NSNumber *catScore in _score.counts)
-        intScore += [catScore integerValue];
+    for(CategoryScore *catScore in _score.categoryScores)
+        intScore += [catScore.count integerValue];
     _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", intScore];
     
 	NSUInteger minutes, seconds;
@@ -82,12 +84,13 @@
 	cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:16];
 	
     // Show percentage if value exists
-    NSUInteger total = [[_score.totals objectAtIndex:[indexPath row]] integerValue];
+    CategoryScore *catScore = [_score.categoryScores objectAtIndex:[indexPath row]];
+    NSUInteger total = [catScore.total integerValue];
     if(total <= 0)
         cell.detailTextLabel.textColor = [UIColor clearColor];
     else
     {
-        float count = [[_score.counts objectAtIndex:[indexPath row]] floatValue];
+        float count = [catScore.count floatValue];
         float percent = count / total * 100;
         cell.detailTextLabel.textColor = [UIColor whiteColor];
 		NSString *label = [NSString stringWithFormat:@"%.2f%%", percent];
