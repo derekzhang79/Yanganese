@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *resultTable;
 @property (nonatomic, retain) Score *score;
 
+- (void)calcScore;
+
 @end

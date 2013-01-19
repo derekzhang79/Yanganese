@@ -44,6 +44,8 @@
     }
 
     self.score = globalScore;
+    
+    [self calcScore];
 }
 
 - (void)viewWillAppear:(BOOL)animated

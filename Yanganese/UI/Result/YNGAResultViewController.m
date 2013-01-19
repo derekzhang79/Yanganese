@@ -33,10 +33,7 @@
 	
 	categoryList = @[@"Astro", @"Bio", @"Chem", @"Earth", @"Gen", @"Math", @"Phys"];
     
-	NSUInteger intScore = 0;
-    for(CategoryScore *catScore in _score.categoryScores)
-        intScore += [catScore.count integerValue];
-    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", intScore];
+    [self calcScore];
     
 	NSUInteger minutes, seconds;
     minutes = [_score.timeMinute intValue];
@@ -60,6 +57,14 @@
     };
     
     [UIView animateWithDuration:kTransitionTime animations:fade completion:home];
+}
+
+- (void)calcScore
+{
+    NSUInteger intScore = 0;
+    for(CategoryScore *catScore in _score.categoryScores)
+        intScore += [catScore.count integerValue];
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", intScore];
 }
 
 #pragma mark - Table view data source
