@@ -60,6 +60,7 @@
 		D249417E16A26A930058E7E6 /* yanganeseDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = D249416A16A26A930058E7E6 /* yanganeseDisabled.png */; };
 		D249417F16A26A930058E7E6 /* yanganeseDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D249416B16A26A930058E7E6 /* yanganeseDisabled@2x.png */; };
 		D2675E5416A2B135005A5DB4 /* YNGAPlaySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2675E5316A2B135005A5DB4 /* YNGAPlaySelectViewController.m */; };
+		D28A112D16AA8029002AA2B7 /* CategoryScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A112C16AA8029002AA2B7 /* CategoryScore.m */; };
 		D29CFDB016A3442D00C043E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29CFDAF16A3442D00C043E8 /* QuartzCore.framework */; };
 		D29CFDB716A344DA00C043E8 /* YNGAQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29CFDB616A344DA00C043E8 /* YNGAQuestionViewController.m */; };
 		D29CFDBB16A3460300C043E8 /* YNGAGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29CFDBA16A3460300C043E8 /* YNGAGameViewController.m */; };
@@ -189,6 +190,8 @@
 		D249416B16A26A930058E7E6 /* yanganeseDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yanganeseDisabled@2x.png"; path = "Images/Menu/yanganeseDisabled@2x.png"; sourceTree = "<group>"; };
 		D2675E5216A2B135005A5DB4 /* YNGAPlaySelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAPlaySelectViewController.h; path = UI/Play/YNGAPlaySelectViewController.h; sourceTree = "<group>"; };
 		D2675E5316A2B135005A5DB4 /* YNGAPlaySelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAPlaySelectViewController.m; path = UI/Play/YNGAPlaySelectViewController.m; sourceTree = "<group>"; };
+		D28A112B16AA8029002AA2B7 /* CategoryScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryScore.h; path = Model/CategoryScore.h; sourceTree = "<group>"; };
+		D28A112C16AA8029002AA2B7 /* CategoryScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryScore.m; path = Model/CategoryScore.m; sourceTree = "<group>"; };
 		D29CFDAF16A3442D00C043E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D29CFDB516A344DA00C043E8 /* YNGAQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAQuestionViewController.h; path = UI/Question/YNGAQuestionViewController.h; sourceTree = "<group>"; };
 		D29CFDB616A344DA00C043E8 /* YNGAQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAQuestionViewController.m; path = UI/Question/YNGAQuestionViewController.m; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 				D2DB1F8B16A27741002061CC /* Quiz.m */,
 				D22C00A816A37528009F26FD /* Score.h */,
 				D22C00A916A37528009F26FD /* Score.m */,
+				D28A112B16AA8029002AA2B7 /* CategoryScore.h */,
+				D28A112C16AA8029002AA2B7 /* CategoryScore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -876,6 +881,7 @@
 				D2A160C816A5FC3B007010A4 /* YNGASegue.m in Sources */,
 				D2140F6C16A90108004C013F /* YNGAAlertView.m in Sources */,
 				D2140F8516A93819004C013F /* YNGAAboutViewController.m in Sources */,
+				D28A112D16AA8029002AA2B7 /* CategoryScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3012" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="CategoryScore" syncable="YES">
+    <entity name="CategoryScore" representedClassName="CategoryScore" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="total" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="score" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Score" inverseName="categoryScores" inverseEntity="Score" syncable="YES"/>
@@ -31,9 +31,9 @@
         <relationship name="quiz" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="score" inverseEntity="Quiz" syncable="YES"/>
     </entity>
     <elements>
+        <element name="CategoryScore" positionX="160" positionY="192" width="128" height="88"/>
         <element name="Question" positionX="160" positionY="192" width="128" height="163"/>
         <element name="Quiz" positionX="-90" positionY="192" width="128" height="150"/>
         <element name="Score" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="CategoryScore" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>
