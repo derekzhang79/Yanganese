@@ -17,4 +17,13 @@
 @dynamic categoryScores;
 @dynamic quiz;
 
+#pragma mark - Temp fix for generated accessor
+
+- (void)addCategoryScoresObject:(CategoryScore *)value
+{
+    NSMutableOrderedSet* temp = [NSMutableOrderedSet orderedSetWithOrderedSet:self.categoryScores];
+    [temp addObject:value];
+    self.categoryScores = temp;
+}
+
 @end
