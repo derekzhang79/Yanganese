@@ -31,6 +31,10 @@
     self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     self.tableView.alpha = 0.0;
     
+    self.searchDisplayController.searchResultsTableView.rowHeight = kRowHeight;
+    self.searchDisplayController.searchResultsTableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    self.searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // Allow editing
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
@@ -53,6 +57,9 @@
         
     }
     categoryImages = [[NSArray alloc] initWithArray:temp];
+    
+    // Initialize filtered search array
+    self.filteredQuizzes = [NSMutableArray arrayWithCapacity:self.quizzes.count];
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,10 +95,21 @@
     [UIView animateWithDuration:kTransitionTime animations:fadeTable completion:popController];
 }
 
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
+{
+    [_filteredQuizzes removeAllObjects];
+    
+    NSPredicate *matchTitle = [NSPredicate predicateWithFormat:@"SELF.title contains[c] %@", searchText];
+    self.filteredQuizzes = [NSMutableArray arrayWithArray:[_quizzes filteredArrayUsingPredicate:matchTitle]];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if(tableView == self.searchDisplayController.searchResultsTableView)
+        return _filteredQuizzes.count;
+    
     NSInteger count = _quizzes.count;
     
     if(count == 0)
@@ -120,7 +138,12 @@
     cell.nameLabel.highlightedTextColor = [UIColor grayColor];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selectHighlight.png"]];
     
-    Quiz *quiz = [_quizzes objectAtIndex:[indexPath row]];
+    Quiz *quiz;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+        quiz = [_filteredQuizzes objectAtIndex:[indexPath row]];
+    else
+        quiz = [_quizzes objectAtIndex:[indexPath row]];
+    
     cell.nameLabel.text = quiz.title;
     
     int index = [quiz.categoryID intValue];
@@ -138,6 +161,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Search display delegate
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterContentForSearchText:searchString scope:
+    [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+
+    return YES;
 }
 
 @end
