@@ -36,8 +36,18 @@
 {    
     if([segue.identifier isEqualToString:@"startGame"])
     {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        NSIndexPath *indexPath;
+        Quiz *quiz;
+        if(sender == self.searchDisplayController.searchResultsTableView)
+        {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            quiz = [self.filteredQuizzes objectAtIndex:[indexPath row]];
+        }
+        else
+        {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        }
         
         YNGAGameViewController *gameController = segue.destinationViewController;
         gameController.quiz = quiz;
@@ -48,7 +58,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"startGame" sender:self];
+    [self performSegueWithIdentifier:@"startGame" sender:tableView];
     
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
