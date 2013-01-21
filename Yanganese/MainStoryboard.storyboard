@@ -696,7 +696,13 @@
                             <action selector="dismissKeyboard" destination="svc-Db-BBj" eventType="touchUpInside" id="o2a-sq-HAR"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="New Quiz" id="Rs6-I5-WMn"/>
+                    <navigationItem key="navigationItem" title="New Quiz" id="Rs6-I5-WMn">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="036-fv-SnO">
+                            <connections>
+                                <segue destination="MNZ-HU-cZp" kind="push" id="fvH-VT-xbo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
                         <outlet property="authorField" destination="76M-xF-FkE" id="RQs-yr-DeB"/>
@@ -707,6 +713,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip6-iu-f3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="1812"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="0RR-Ax-Yis">
+            <objects>
+                <tableViewController id="MNZ-HU-cZp" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IzA-T6-cYo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="MNZ-HU-cZp" id="Ryo-Iq-BCE"/>
+                            <outlet property="delegate" destination="MNZ-HU-cZp" id="p1x-Ud-eY5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9Jv-Rx-GbR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TTQ-uh-ovk"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sba-jP-iIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="1812"/>
         </scene>
         <!--Score View Controller - Score-->
         <scene sceneID="uSL-mq-kJt">
