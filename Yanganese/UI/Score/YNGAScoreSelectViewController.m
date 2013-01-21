@@ -39,8 +39,18 @@
 {
     if([segue.identifier isEqualToString:@"loadScoreDetail"])
     {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        NSIndexPath *indexPath;
+        Quiz *quiz;
+        if(sender == self.searchDisplayController.searchResultsTableView)
+        {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            quiz = [self.filteredQuizzes objectAtIndex:[indexPath row]];
+        }
+        else
+        {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        }
         
         YNGAScoreViewController *detailController = segue.destinationViewController;
         detailController.score = quiz.score;
@@ -52,7 +62,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"loadScoreDetail" sender:self];
+    [self performSegueWithIdentifier:@"loadScoreDetail" sender:tableView];
 
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
