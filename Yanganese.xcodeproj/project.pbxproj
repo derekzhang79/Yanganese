@@ -22,6 +22,7 @@
 		D21A7D9816AD581A0054D32D /* create@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D21A7D9416AD581A0054D32D /* create@2x.png */; };
 		D21A7D9916AD581A0054D32D /* createHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D21A7D9516AD581A0054D32D /* createHighlight.png */; };
 		D21A7D9A16AD581A0054D32D /* createHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D21A7D9616AD581A0054D32D /* createHighlight@2x.png */; };
+		D21A7D9F16AD58EA0054D32D /* YNGACreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21A7D9E16AD58EA0054D32D /* YNGACreateViewController.m */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
@@ -148,6 +149,8 @@
 		D21A7D9416AD581A0054D32D /* create@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "create@2x.png"; path = "Images/Menu/create@2x.png"; sourceTree = "<group>"; };
 		D21A7D9516AD581A0054D32D /* createHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = createHighlight.png; path = Images/Menu/createHighlight.png; sourceTree = "<group>"; };
 		D21A7D9616AD581A0054D32D /* createHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "createHighlight@2x.png"; path = "Images/Menu/createHighlight@2x.png"; sourceTree = "<group>"; };
+		D21A7D9D16AD58EA0054D32D /* YNGACreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGACreateViewController.h; path = UI/Create/YNGACreateViewController.h; sourceTree = "<group>"; };
+		D21A7D9E16AD58EA0054D32D /* YNGACreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGACreateViewController.m; path = UI/Create/YNGACreateViewController.m; sourceTree = "<group>"; };
 		D22C009916A37271009F26FD /* YNGAResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAResultViewController.h; path = UI/Result/YNGAResultViewController.h; sourceTree = "<group>"; };
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
@@ -324,6 +327,15 @@
 				D2140F8016A937B0004C013F /* mikkyang@2x.png */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		D21A7D9C16AD58CA0054D32D /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				D21A7D9D16AD58EA0054D32D /* YNGACreateViewController.h */,
+				D21A7D9E16AD58EA0054D32D /* YNGACreateViewController.m */,
+			);
+			name = Create;
 			sourceTree = "<group>";
 		};
 		D22C009D16A37276009F26FD /* Result */ = {
@@ -608,6 +620,7 @@
 				D2DB1FD016A292E8002061CC /* Download */,
 				D2362EC316A3EA5C007216D8 /* Score */,
 				D29F89AB16A4B44700404242 /* Review */,
+				D21A7D9C16AD58CA0054D32D /* Create */,
 				D2140F7D16A93710004C013F /* About */,
 			);
 			name = UI;
@@ -898,6 +911,7 @@
 				D2140F6C16A90108004C013F /* YNGAAlertView.m in Sources */,
 				D2140F8516A93819004C013F /* YNGAAboutViewController.m in Sources */,
 				D28A112D16AA8029002AA2B7 /* CategoryScore.m in Sources */,
+				D21A7D9F16AD58EA0054D32D /* YNGACreateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
