@@ -69,6 +69,8 @@
 		D27D7E6316AE0564005DD9C8 /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27D7E5F16AE0564005DD9C8 /* next@2x.png */; };
 		D27D7E6416AE0564005DD9C8 /* nextHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D27D7E6016AE0564005DD9C8 /* nextHighlight.png */; };
 		D27D7E6516AE0564005DD9C8 /* nextHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27D7E6116AE0564005DD9C8 /* nextHighlight@2x.png */; };
+		D27D7E7016AE091E005DD9C8 /* YNGAQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27D7E6F16AE091E005DD9C8 /* YNGAQuestionCell.xib */; };
+		D27D7E7416AE0B89005DD9C8 /* YNGAQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27D7E7316AE0B89005DD9C8 /* YNGAQuestionCell.m */; };
 		D28A112D16AA8029002AA2B7 /* CategoryScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D28A112C16AA8029002AA2B7 /* CategoryScore.m */; };
 		D29CFDB016A3442D00C043E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29CFDAF16A3442D00C043E8 /* QuartzCore.framework */; };
 		D29CFDB716A344DA00C043E8 /* YNGAQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29CFDB616A344DA00C043E8 /* YNGAQuestionViewController.m */; };
@@ -209,6 +211,9 @@
 		D27D7E5F16AE0564005DD9C8 /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "next@2x.png"; path = "Images/Menu/next@2x.png"; sourceTree = "<group>"; };
 		D27D7E6016AE0564005DD9C8 /* nextHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextHighlight.png; path = Images/Menu/nextHighlight.png; sourceTree = "<group>"; };
 		D27D7E6116AE0564005DD9C8 /* nextHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nextHighlight@2x.png"; path = "Images/Menu/nextHighlight@2x.png"; sourceTree = "<group>"; };
+		D27D7E6F16AE091E005DD9C8 /* YNGAQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YNGAQuestionCell.xib; path = UI/Cell/YNGAQuestionCell.xib; sourceTree = "<group>"; };
+		D27D7E7216AE0B89005DD9C8 /* YNGAQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAQuestionCell.h; path = UI/Cell/YNGAQuestionCell.h; sourceTree = "<group>"; };
+		D27D7E7316AE0B89005DD9C8 /* YNGAQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAQuestionCell.m; path = UI/Cell/YNGAQuestionCell.m; sourceTree = "<group>"; };
 		D28A112B16AA8029002AA2B7 /* CategoryScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryScore.h; path = Model/CategoryScore.h; sourceTree = "<group>"; };
 		D28A112C16AA8029002AA2B7 /* CategoryScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryScore.m; path = Model/CategoryScore.m; sourceTree = "<group>"; };
 		D29CFDAF16A3442D00C043E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -646,6 +651,9 @@
 				D2DB1F7B16A26E16002061CC /* YNGAQuizCell.h */,
 				D2DB1F7C16A26E16002061CC /* YNGAQuizCell.m */,
 				D2DB1F7D16A26E16002061CC /* YNGAQuizCell.xib */,
+				D27D7E7216AE0B89005DD9C8 /* YNGAQuestionCell.h */,
+				D27D7E7316AE0B89005DD9C8 /* YNGAQuestionCell.m */,
+				D27D7E6F16AE091E005DD9C8 /* YNGAQuestionCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -864,6 +872,7 @@
 				D27D7E6316AE0564005DD9C8 /* next@2x.png in Resources */,
 				D27D7E6416AE0564005DD9C8 /* nextHighlight.png in Resources */,
 				D27D7E6516AE0564005DD9C8 /* nextHighlight@2x.png in Resources */,
+				D27D7E7016AE091E005DD9C8 /* YNGAQuestionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +937,7 @@
 				D2140F8516A93819004C013F /* YNGAAboutViewController.m in Sources */,
 				D28A112D16AA8029002AA2B7 /* CategoryScore.m in Sources */,
 				D21A7D9F16AD58EA0054D32D /* YNGACreateViewController.m in Sources */,
+				D27D7E7416AE0B89005DD9C8 /* YNGAQuestionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
