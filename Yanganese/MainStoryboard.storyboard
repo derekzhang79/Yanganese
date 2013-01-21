@@ -248,6 +248,60 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" id="BNk-sl-qdq">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Author</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="KUt-eI-TE8" id="co1-LY-RpB"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="List Cell" id="P4o-GB-6Lt" customClass="YNGAQuizCell">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="fkm-1Q-El7">
+                                            <rect key="frame" x="11" y="7" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" lineBreakMode="tailTruncation" minimumFontSize="10" id="5yU-bd-Jyl">
+                                            <rect key="frame" x="81" y="9" width="199" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quiz Name" lineBreakMode="tailTruncation" minimumFontSize="17" id="wHV-TM-1Wf">
+                                            <rect key="frame" x="82" y="24" width="199" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" id="ApS-q0-X8z" customClass="YNGARatingView">
+                                            <rect key="frame" x="82" y="47" width="70" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="authorLabel" destination="5yU-bd-Jyl" id="we6-Ku-IJe"/>
+                                    <outlet property="iconView" destination="fkm-1Q-El7" id="gM9-k3-gvl"/>
+                                    <outlet property="nameLabel" destination="wHV-TM-1Wf" id="6Em-Ng-yFi"/>
+                                    <outlet property="ratingView" destination="ApS-q0-X8z" id="0mw-6l-dN2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="KUt-eI-TE8" id="Mp7-kr-YS2"/>
                             <outlet property="delegate" destination="KUt-eI-TE8" id="In9-Gl-G4T"/>
@@ -255,10 +309,21 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Quizzes" id="9Lc-3h-xaX"/>
                     <connections>
+                        <outlet property="searchBar" destination="BNk-sl-qdq" id="WmA-IG-aKZ"/>
+                        <outlet property="searchDisplayController" destination="fQc-RU-pFY" id="Gar-YX-Hsn"/>
                         <segue destination="SKw-3V-a99" kind="push" identifier="loadScoreDetail" id="dyJ-PF-ObI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94W-b7-HcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="fQc-RU-pFY">
+                    <connections>
+                        <outlet property="delegate" destination="KUt-eI-TE8" id="WLY-sP-tHb"/>
+                        <outlet property="searchBar" destination="BNk-sl-qdq" id="QgH-B5-7Lu"/>
+                        <outlet property="searchContentsController" destination="KUt-eI-TE8" id="Zt7-de-gAt"/>
+                        <outlet property="searchResultsDataSource" destination="KUt-eI-TE8" id="odc-Gc-LIw"/>
+                        <outlet property="searchResultsDelegate" destination="KUt-eI-TE8" id="gOI-zL-ICk"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1562" y="-160"/>
         </scene>
@@ -464,6 +529,60 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" placeholder="Search for Quiz" id="43N-ud-KLr">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Author</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="XuF-jN-VyJ" id="YZi-3H-kMy"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="List Cell" id="oBh-cu-xQ0" customClass="YNGAQuizCell">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Apn-8v-pHQ">
+                                            <rect key="frame" x="11" y="7" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" lineBreakMode="tailTruncation" minimumFontSize="10" id="dRN-Ig-0fY">
+                                            <rect key="frame" x="81" y="9" width="199" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quiz Name" lineBreakMode="tailTruncation" minimumFontSize="17" id="Gmw-T5-mAU">
+                                            <rect key="frame" x="82" y="24" width="199" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" id="D9E-Gv-ejL" customClass="YNGARatingView">
+                                            <rect key="frame" x="82" y="47" width="70" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="authorLabel" destination="dRN-Ig-0fY" id="tNa-Ud-vm8"/>
+                                    <outlet property="iconView" destination="Apn-8v-pHQ" id="ywt-ib-SFI"/>
+                                    <outlet property="nameLabel" destination="Gmw-T5-mAU" id="DIn-9t-62A"/>
+                                    <outlet property="ratingView" destination="D9E-Gv-ejL" id="idc-rH-gO4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="XuF-jN-VyJ" id="B85-NV-ji0"/>
                             <outlet property="delegate" destination="XuF-jN-VyJ" id="Rci-Ub-RGc"/>
@@ -472,10 +591,21 @@
                     <navigationItem key="navigationItem" title="Quizzes" id="JIk-On-yla"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
+                        <outlet property="searchBar" destination="43N-ud-KLr" id="CN2-E8-Nwf"/>
+                        <outlet property="searchDisplayController" destination="THe-HK-oug" id="6aW-aD-pg4"/>
                         <segue destination="nQH-bs-cdQ" kind="push" identifier="startGame" id="3TN-LD-tBu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgV-tH-V2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="THe-HK-oug">
+                    <connections>
+                        <outlet property="delegate" destination="XuF-jN-VyJ" id="E8V-fN-1Pj"/>
+                        <outlet property="searchBar" destination="43N-ud-KLr" id="q4A-lc-DnF"/>
+                        <outlet property="searchContentsController" destination="XuF-jN-VyJ" id="vdt-C3-jof"/>
+                        <outlet property="searchResultsDataSource" destination="XuF-jN-VyJ" id="iHH-51-apt"/>
+                        <outlet property="searchResultsDelegate" destination="XuF-jN-VyJ" id="e8H-0P-i0O"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1132" y="-809"/>
         </scene>
@@ -551,6 +681,60 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" id="UkM-UG-mwJ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Author</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="1Ec-Vu-scK" id="1mY-Zo-h6e"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="List Cell" id="1Pl-kK-KTi" customClass="YNGAQuizCell">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="1Kj-IP-JJ1">
+                                            <rect key="frame" x="11" y="7" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author" lineBreakMode="tailTruncation" minimumFontSize="10" id="C5X-xw-R6U">
+                                            <rect key="frame" x="81" y="9" width="199" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quiz Name" lineBreakMode="tailTruncation" minimumFontSize="17" id="k4C-Lc-SwJ">
+                                            <rect key="frame" x="82" y="24" width="199" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" id="ka4-oa-JUU" customClass="YNGARatingView">
+                                            <rect key="frame" x="82" y="47" width="70" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="authorLabel" destination="C5X-xw-R6U" id="wjg-6P-bln"/>
+                                    <outlet property="iconView" destination="1Kj-IP-JJ1" id="Jf7-yR-Dio"/>
+                                    <outlet property="nameLabel" destination="k4C-Lc-SwJ" id="9TN-kr-jv2"/>
+                                    <outlet property="ratingView" destination="ka4-oa-JUU" id="eg0-pj-Abt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="1Ec-Vu-scK" id="TNN-gI-6Le"/>
                             <outlet property="delegate" destination="1Ec-Vu-scK" id="bOV-aH-9cZ"/>
@@ -559,10 +743,20 @@
                     <navigationItem key="navigationItem" title="Quizzes" id="zhk-Rw-Ej2"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="YTg-y5-tVH" id="xw9-lc-mYS"/>
                         <segue destination="Rpi-VQ-FfY" kind="push" identifier="showReviewQuestions" id="V1Z-b1-FmM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLS-2B-FaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="YTg-y5-tVH">
+                    <connections>
+                        <outlet property="delegate" destination="1Ec-Vu-scK" id="3oq-ZT-6XY"/>
+                        <outlet property="searchBar" destination="UkM-UG-mwJ" id="tnW-qF-7mI"/>
+                        <outlet property="searchContentsController" destination="1Ec-Vu-scK" id="IhI-Ix-EM5"/>
+                        <outlet property="searchResultsDataSource" destination="1Ec-Vu-scK" id="v8n-Cm-l43"/>
+                        <outlet property="searchResultsDelegate" destination="1Ec-Vu-scK" id="5Ge-vI-8XN"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1132" y="1152"/>
         </scene>
@@ -830,6 +1024,7 @@
             <relationships>
                 <relationship kind="outlet" name="notificationView" candidateClass="YNGATableNotificationView"/>
                 <relationship kind="outlet" name="protoCell" candidateClass="YNGAQuizCell"/>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
             </relationships>
         </class>
         <class className="YNGATableNotificationView" superclassName="UIView">
