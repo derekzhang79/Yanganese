@@ -42,8 +42,18 @@
 {
     if([segue.identifier isEqualToString:@"showReviewQuestions"])
     {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        NSIndexPath *indexPath;
+        Quiz *quiz;
+        if(sender == self.searchDisplayController.searchResultsTableView)
+        {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            quiz = [self.filteredQuizzes objectAtIndex:[indexPath row]];
+        }
+        else
+        {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        }
         
         YNGAReviewQuestionViewController *questionController = segue.destinationViewController;
         questionController.quiz = quiz;
@@ -54,7 +64,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"showReviewQuestions" sender:self];
+    [self performSegueWithIdentifier:@"showReviewQuestions" sender:tableView];
     
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
