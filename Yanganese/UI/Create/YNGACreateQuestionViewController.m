@@ -1,0 +1,188 @@
+//
+//  YNGACreateQuestionViewController.m
+//  Yanganese
+//
+//  Created by Michael Yang on 1/21/13.
+//  Copyright (c) 2013 Michael Yang. All rights reserved.
+//
+
+#import "YNGACreateQuestionViewController.h"
+
+#import <QuartzCore/QuartzCore.h>
+
+@interface YNGACreateQuestionViewController ()
+
+- (void)keyboardWillChange:(NSNotification *)notification;
+
+@end
+
+@implementation YNGACreateQuestionViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    for(UITextField *field in _choiceFields)
+    {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        if(field.tag == 1)
+        {
+            lastButton = button;
+            [lastButton setImage:[UIImage imageNamed:@"editCorrect.png"] forState:UIControlStateNormal];
+        }
+        else
+            [button setImage:[UIImage imageNamed:@"editWrong.png"] forState:UIControlStateNormal];
+        
+        button.frame = CGRectMake(0, 0, 10, 38);
+        button.backgroundColor = [UIColor clearColor];
+        [button addTarget:self action:@selector(answerChanged:) forControlEvents:UIControlEventTouchUpInside];
+        field.leftView = button;
+        field.leftViewMode = UITextFieldViewModeAlways;
+        field.layer.cornerRadius = kCornerRadius;
+    }
+
+    _textView.layer.cornerRadius = kCornerRadius;
+    _categoryButton.layer.cornerRadius = kCornerRadius;
+    
+    fieldTrigger = NO;
+    
+    categories = @[@"Astronomy", @"Biology", @"Chemistry", @"Earth Science", @"General Science", @"Mathematics", @"Physics"];
+    
+    actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                              delegate:nil
+                                     cancelButtonTitle:nil
+                                destructiveButtonTitle:nil
+                                     otherButtonTitles:nil];
+    
+    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
+    lastRow = 5;
+    
+    CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
+    
+    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+    pickerView.showsSelectionIndicator = YES;
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    
+    [actionSheet addSubview:pickerView];
+    
+    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:@[@"Close"]];
+    closeButton.momentary = YES;
+    closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
+    closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
+    closeButton.tintColor = [UIColor blackColor];
+    [closeButton addTarget:self action:@selector(dismissActionSheet) forControlEvents:UIControlEventValueChanged];
+    [actionSheet addSubview:closeButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter  defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillHideNotification object:nil];
+    
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+    [super viewWillDisappear:animated];
+}
+
+#pragma mark -
+
+- (IBAction)showPicker
+{
+    [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
+    [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
+}
+
+- (IBAction)dismissKeyboard
+{
+    [_textView resignFirstResponder];
+    for(UITextField *field in _choiceFields)
+        [field resignFirstResponder];
+}
+
+- (IBAction)dismissActionSheet
+{
+    [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+}
+
+- (IBAction)answerChanged:(id)sender
+{    
+    [lastButton setImage:[UIImage imageNamed:@"editWrong.png"] forState:UIControlStateNormal];
+    
+    UIButton *button = (UIButton *)sender;
+    lastButton = button;
+    [lastButton setImage:[UIImage imageNamed:@"editCorrect.png"] forState:UIControlStateNormal];
+}
+
+- (void)keyboardWillChange:(NSNotification *)notification
+{
+    if(!fieldTrigger)
+        return;
+    
+    NSDictionary* info = [notification userInfo];
+    CGFloat keyboardHeight = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
+    
+    [UIView animateWithDuration:kTransitionTime/2 animations:^{
+        CGRect rect = self.view.frame;
+        if (self.view.frame.origin.y >= 0)
+        {
+            rect.origin.y -= keyboardHeight;
+            rect.size.height += keyboardHeight;
+            _textView.alpha = 0.0f;
+        }
+        else
+        {
+            rect.origin.y += keyboardHeight;
+            rect.size.height -= keyboardHeight;
+            _textView.alpha = 1.0f;
+        }
+        self.view.frame = rect;
+    }];
+}
+
+#pragma mark - Text field delegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    fieldTrigger = YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    fieldTrigger = NO;
+}
+
+#pragma mark - Picker view data source
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return categories.count;
+}
+
+#pragma mark - Picker view delegate
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSAttributedString *attrTitle = [[NSAttributedString alloc] initWithString:[categories objectAtIndex:row]];
+    return attrTitle;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    [_categoryButton setTitle:[categories objectAtIndex:row] forState:UIControlStateNormal];
+    lastRow = row;
+}
+
+@end
