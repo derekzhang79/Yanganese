@@ -84,6 +84,10 @@
 		D29CFDD016A3514B00C043E8 /* grey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29CFDC816A3514B00C043E8 /* grey@2x.png */; };
 		D29CFDD116A3514B00C043E8 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D29CFDC916A3514B00C043E8 /* red.png */; };
 		D29CFDD216A3514B00C043E8 /* red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29CFDCA16A3514B00C043E8 /* red@2x.png */; };
+		D29E206116AF294200A4E4CD /* editCorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = D29E205F16AF294200A4E4CD /* editCorrect.png */; };
+		D29E206216AF294200A4E4CD /* editCorrect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29E206016AF294200A4E4CD /* editCorrect@2x.png */; };
+		D29E206516AF573C00A4E4CD /* editWrong.png in Resources */ = {isa = PBXBuildFile; fileRef = D29E206316AF573C00A4E4CD /* editWrong.png */; };
+		D29E206616AF573C00A4E4CD /* editWrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29E206416AF573C00A4E4CD /* editWrong@2x.png */; };
 		D29F89A516A4AB6600404242 /* YNGAScoreSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89A416A4AB6600404242 /* YNGAScoreSelectViewController.m */; };
 		D29F89AF16A4B47700404242 /* YNGAReviewSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89AE16A4B47700404242 /* YNGAReviewSelectViewController.m */; };
 		D29F89BC16A4B74600404242 /* YNGAScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29F89BB16A4B74600404242 /* YNGAScrollView.m */; };
@@ -232,6 +236,10 @@
 		D29CFDC816A3514B00C043E8 /* grey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grey@2x.png"; path = "Images/Play/grey@2x.png"; sourceTree = "<group>"; };
 		D29CFDC916A3514B00C043E8 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = Images/Play/red.png; sourceTree = "<group>"; };
 		D29CFDCA16A3514B00C043E8 /* red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red@2x.png"; path = "Images/Play/red@2x.png"; sourceTree = "<group>"; };
+		D29E205F16AF294200A4E4CD /* editCorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = editCorrect.png; path = Images/Create/editCorrect.png; sourceTree = "<group>"; };
+		D29E206016AF294200A4E4CD /* editCorrect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "editCorrect@2x.png"; path = "Images/Create/editCorrect@2x.png"; sourceTree = "<group>"; };
+		D29E206316AF573C00A4E4CD /* editWrong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = editWrong.png; path = Images/Create/editWrong.png; sourceTree = "<group>"; };
+		D29E206416AF573C00A4E4CD /* editWrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "editWrong@2x.png"; path = "Images/Create/editWrong@2x.png"; sourceTree = "<group>"; };
 		D29F89A316A4AB6600404242 /* YNGAScoreSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAScoreSelectViewController.h; path = UI/Score/YNGAScoreSelectViewController.h; sourceTree = "<group>"; };
 		D29F89A416A4AB6600404242 /* YNGAScoreSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAScoreSelectViewController.m; path = UI/Score/YNGAScoreSelectViewController.m; sourceTree = "<group>"; };
 		D29F89AD16A4B47700404242 /* YNGAReviewSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAReviewSelectViewController.h; path = UI/Review/YNGAReviewSelectViewController.h; sourceTree = "<group>"; };
@@ -461,6 +469,7 @@
 		D249415516A26A420058E7E6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D29E205D16AF293A00A4E4CD /* Create */,
 				D2140F7E16A937A5004C013F /* About */,
 				D2A1609B16A5DFF3007010A4 /* Notification */,
 				D29CFDC216A350EC00C043E8 /* Play */,
@@ -546,6 +555,17 @@
 				D29CFDCA16A3514B00C043E8 /* red@2x.png */,
 			);
 			name = Play;
+			sourceTree = "<group>";
+		};
+		D29E205D16AF293A00A4E4CD /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				D29E206316AF573C00A4E4CD /* editWrong.png */,
+				D29E206416AF573C00A4E4CD /* editWrong@2x.png */,
+				D29E205F16AF294200A4E4CD /* editCorrect.png */,
+				D29E206016AF294200A4E4CD /* editCorrect@2x.png */,
+			);
+			name = Create;
 			sourceTree = "<group>";
 		};
 		D29F89AB16A4B44700404242 /* Review */ = {
@@ -878,6 +898,10 @@
 				D27D7E6416AE0564005DD9C8 /* nextHighlight.png in Resources */,
 				D27D7E6516AE0564005DD9C8 /* nextHighlight@2x.png in Resources */,
 				D27D7E7016AE091E005DD9C8 /* YNGAQuestionCell.xib in Resources */,
+				D29E206116AF294200A4E4CD /* editCorrect.png in Resources */,
+				D29E206216AF294200A4E4CD /* editCorrect@2x.png in Resources */,
+				D29E206516AF573C00A4E4CD /* editWrong.png in Resources */,
+				D29E206616AF573C00A4E4CD /* editWrong@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
