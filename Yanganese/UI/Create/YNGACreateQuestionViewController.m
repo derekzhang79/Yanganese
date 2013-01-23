@@ -9,6 +9,8 @@
 #import "YNGACreateQuestionViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
+#import "YNGAAppDelegate.h"
+#import "Question.h"
 
 @interface YNGACreateQuestionViewController ()
 
@@ -119,6 +121,30 @@
     UIButton *button = (UIButton *)sender;
     lastButton = button;
     [lastButton setImage:[UIImage imageNamed:@"editCorrect.png"] forState:UIControlStateNormal];
+}
+
+- (IBAction)saveQuestion
+{
+    // Update attributes
+    _question.text = _textView.text;
+    
+    for(UITextField *field in _choiceFields)
+    {
+        NSString *key = [NSString stringWithFormat:@"%c", ('w' + field.tag - 1)];
+        [_question setValue:field.text forKey:key];
+    }
+    
+    _question.categoryID = [NSNumber numberWithInteger:(lastRow + 1)];
+    
+    UITextField *lastField = (UITextField *)lastButton.superview;
+    _question.answer = [NSString stringWithFormat:@"%c", ('w' + lastField.tag - 1)];
+    
+    // Save and return to question list
+    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    [context insertObject:_question];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)keyboardWillChange:(NSNotification *)notification

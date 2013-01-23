@@ -820,7 +820,13 @@
                             <action selector="dismissKeyboard" destination="Pu9-aP-BHN" eventType="touchUpInside" id="EiJ-Ch-gHb"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="r6z-nK-Ulq"/>
+                    <navigationItem key="navigationItem" id="r6z-nK-Ulq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="t0b-LJ-Zij">
+                            <connections>
+                                <action selector="saveQuestion" destination="Pu9-aP-BHN" id="CBp-sx-gIP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryButton" destination="QJZ-cm-kek" id="VbT-Mm-dkE"/>
                         <outlet property="textView" destination="cK4-nE-zJW" id="P7t-P2-nGa"/>
@@ -1153,6 +1159,7 @@
                 <relationship kind="action" name="answerChanged:"/>
                 <relationship kind="action" name="dismissActionSheet"/>
                 <relationship kind="action" name="dismissKeyboard"/>
+                <relationship kind="action" name="saveQuestion"/>
                 <relationship kind="action" name="showPicker"/>
                 <relationship kind="outlet" name="categoryButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
