@@ -23,11 +23,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    fieldTrigger = NO;
+    
+    categories = @[@"Astronomy", @"Biology", @"Chemistry", @"Earth Science", @"General Science", @"Mathematics", @"Physics"];
+    
+    // Initialize question information
+    _textView.text = _question.text;
+    
+    for(UITextField *field in _choiceFields)
+    {
+        NSString *key = [NSString stringWithFormat:@"%c", ('w' + field.tag - 1)];
+        field.text = [_question valueForKey:key];
+    }
+    
+    lastRow = [_question.categoryID integerValue] - 1;
+    if(lastRow < 0)
+        lastRow = 5;
 
+    [_categoryButton setTitle:[categories objectAtIndex:lastRow] forState:UIControlStateNormal];
+    
     for(UITextField *field in _choiceFields)
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        if(field.tag == 1)
+        if(field.tag == [_question.answer characterAtIndex:0] - 'w' + 1)
         {
             lastButton = button;
             [lastButton setImage:[UIImage imageNamed:@"editCorrect.png"] forState:UIControlStateNormal];
@@ -46,10 +65,6 @@
     _textView.layer.cornerRadius = kCornerRadius;
     _categoryButton.layer.cornerRadius = kCornerRadius;
     
-    fieldTrigger = NO;
-    
-    categories = @[@"Astronomy", @"Biology", @"Chemistry", @"Earth Science", @"General Science", @"Mathematics", @"Physics"];
-    
     actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                               delegate:nil
                                      cancelButtonTitle:nil
@@ -57,8 +72,6 @@
                                      otherButtonTitles:nil];
     
     [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-    
-    lastRow = 5;
     
     CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
     
