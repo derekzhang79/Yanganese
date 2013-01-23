@@ -46,7 +46,7 @@
     else
         question = [self.data objectAtIndex:[indexPath row]];
     
-    cell.textLabel.text = question.text;
+    cell.questionTextLabel.text = question.text;
     
     for(UILabel *label in cell.optionLabels)
     {

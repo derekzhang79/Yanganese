@@ -11,7 +11,7 @@
 @interface YNGAQuestionCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
-@property (weak, nonatomic) IBOutletCollection(UILabel) NSMutableArray *optionLabels;
+@property (weak, nonatomic) IBOutlet UILabel *questionTextLabel;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSMutableArray *optionLabels;
 
 @end

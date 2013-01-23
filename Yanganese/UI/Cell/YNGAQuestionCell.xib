@@ -71,12 +71,12 @@
 								<reference key="IBUIHighlightedColor" ref="1031590017"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">4</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="1035997034">
-									<int key="type">1</int>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="299831958">
+									<int key="type">2</int>
 									<double key="pointSize">12</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="1034122997">
-									<string key="NSName">Helvetica</string>
+								<object class="NSFont" key="IBUIFont" id="629577848">
+									<string key="NSName">Helvetica-Bold</string>
 									<double key="NSSize">12</double>
 									<int key="NSfFlags">16</int>
 								</object>
@@ -101,8 +101,8 @@
 								<reference key="IBUITextColor" ref="1031590017"/>
 								<reference key="IBUIHighlightedColor" ref="1031590017"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="1035997034"/>
-								<reference key="IBUIFont" ref="1034122997"/>
+								<reference key="IBUIFontDescription" ref="299831958"/>
+								<reference key="IBUIFont" ref="629577848"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="990918903">
@@ -123,8 +123,8 @@
 								<reference key="IBUITextColor" ref="1031590017"/>
 								<reference key="IBUIHighlightedColor" ref="1031590017"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="1035997034"/>
-								<reference key="IBUIFont" ref="1034122997"/>
+								<reference key="IBUIFontDescription" ref="299831958"/>
+								<reference key="IBUIFont" ref="629577848"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="994732715">
@@ -144,8 +144,8 @@
 								<reference key="IBUITextColor" ref="1031590017"/>
 								<reference key="IBUIHighlightedColor" ref="1031590017"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="1035997034"/>
-								<reference key="IBUIFont" ref="1034122997"/>
+								<reference key="IBUIFontDescription" ref="299831958"/>
+								<reference key="IBUIFont" ref="629577848"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="104993905">
@@ -166,8 +166,8 @@
 								<reference key="IBUITextColor" ref="1031590017"/>
 								<reference key="IBUIHighlightedColor" ref="1031590017"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="1035997034"/>
-								<reference key="IBUIFont" ref="1034122997"/>
+								<reference key="IBUIFontDescription" ref="299831958"/>
+								<reference key="IBUIFont" ref="629577848"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
@@ -220,14 +220,6 @@
 					<int key="connectionID">42</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">textLabel</string>
-						<reference key="source" ref="957788725"/>
-						<reference key="destination" ref="943230134"/>
-					</object>
-					<int key="connectionID">43</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
 						<string key="label">optionLabels</string>
 						<reference key="source" ref="957788725"/>
@@ -266,6 +258,14 @@
 						<bool key="addsContentToExistingCollection">NO</bool>
 					</object>
 					<int key="connectionID">47</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">questionTextLabel</string>
+						<reference key="source" ref="957788725"/>
+						<reference key="destination" ref="943230134"/>
+					</object>
+					<int key="connectionID">49</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -352,7 +352,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">49</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -361,15 +361,15 @@
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="iconView">UIImageView</string>
-						<string key="textLabel">UILabel</string>
+						<string key="questionTextLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="iconView">
 							<string key="name">iconView</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="textLabel">
-							<string key="name">textLabel</string>
+						<object class="IBToOneOutletInfo" key="questionTextLabel">
+							<string key="name">questionTextLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>
