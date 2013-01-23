@@ -24,6 +24,7 @@
 
     self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     self.tableView.alpha = 0.0;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.searchDisplayController.searchResultsTableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
     self.searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
