@@ -28,7 +28,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ListCellIdentifier = @"List Cell";
+    static NSString *ListCellIdentifier = @"Quiz Cell";
     
     YNGAQuizCell *cell = (YNGAQuizCell *)[tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
     if (cell == nil) {
