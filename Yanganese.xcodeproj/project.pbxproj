@@ -25,6 +25,7 @@
 		D21A7D9F16AD58EA0054D32D /* YNGACreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21A7D9E16AD58EA0054D32D /* YNGACreateViewController.m */; };
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
+		D234055B16B0429500AA9971 /* YNGAQuestionSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D234055A16B0429500AA9971 /* YNGAQuestionSelectViewController.m */; };
 		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
 		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
 		D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
@@ -167,6 +168,8 @@
 		D22C009A16A37271009F26FD /* YNGAResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAResultViewController.m; path = UI/Result/YNGAResultViewController.m; sourceTree = "<group>"; };
 		D22C00A816A37528009F26FD /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
 		D22C00A916A37528009F26FD /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Model/Score.m; sourceTree = "<group>"; };
+		D234055916B0429500AA9971 /* YNGAQuestionSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAQuestionSelectViewController.h; path = UI/Select/YNGAQuestionSelectViewController.h; sourceTree = "<group>"; };
+		D234055A16B0429500AA9971 /* YNGAQuestionSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAQuestionSelectViewController.m; path = UI/Select/YNGAQuestionSelectViewController.m; sourceTree = "<group>"; };
 		D2362EC916A3EB05007216D8 /* YNGAScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAScoreViewController.h; path = UI/Score/YNGAScoreViewController.h; sourceTree = "<group>"; };
 		D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAScoreViewController.m; path = UI/Score/YNGAScoreViewController.m; sourceTree = "<group>"; };
 		D249410C16A2693F0058E7E6 /* Yanganese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yanganese.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -708,6 +711,8 @@
 				D2DB1F9216A27816002061CC /* YNGASelectViewController.m */,
 				D2AA8EEA16B03C5B008856C4 /* YNGAQuizSelectViewController.h */,
 				D2AA8EEB16B03C5B008856C4 /* YNGAQuizSelectViewController.m */,
+				D234055916B0429500AA9971 /* YNGAQuestionSelectViewController.h */,
+				D234055A16B0429500AA9971 /* YNGAQuestionSelectViewController.m */,
 			);
 			name = Select;
 			sourceTree = "<group>";
@@ -974,6 +979,7 @@
 				D27D7E7416AE0B89005DD9C8 /* YNGAQuestionCell.m in Sources */,
 				D27D7E7716AE1005005DD9C8 /* YNGACreateQuestionViewController.m in Sources */,
 				D2AA8EEC16B03C5B008856C4 /* YNGAQuizSelectViewController.m in Sources */,
+				D234055B16B0429500AA9971 /* YNGAQuestionSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
