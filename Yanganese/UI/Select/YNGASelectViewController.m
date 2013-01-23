@@ -56,7 +56,7 @@
             [temp addObject:categoryImage];
         
     }
-    categoryImages = [[NSArray alloc] initWithArray:temp];
+    self.categoryImages = [[NSArray alloc] initWithArray:temp];
     
     // Initialize filtered search array
     self.filteredData = [NSMutableArray arrayWithCapacity:self.data.count];
@@ -149,7 +149,7 @@
     int index = [quiz.categoryID intValue];
 
     if(index > 0)
-        cell.iconView.image = [categoryImages objectAtIndex:index - 1];
+        cell.iconView.image = [_categoryImages objectAtIndex:index - 1];
     cell.authorLabel.text = quiz.author;
     cell.ratingView.rating = [quiz.rating floatValue];
     

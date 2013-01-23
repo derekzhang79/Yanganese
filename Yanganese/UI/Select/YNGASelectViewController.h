@@ -12,9 +12,6 @@
 @class YNGATableNotificationView;
 
 @interface YNGASelectViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
-{
-    NSArray *categoryImages;
-}
 
 @property (weak, nonatomic) IBOutlet YNGAQuizCell *protoCell;
 @property (strong, nonatomic) IBOutlet YNGATableNotificationView *notificationView;
@@ -22,6 +19,7 @@
 
 @property (nonatomic, retain) NSMutableArray *data;
 @property (nonatomic, retain) NSMutableArray *filteredData;
+@property (nonatomic, retain) NSArray *categoryImages;
 @property (nonatomic, retain) NSString *emptyMessage;
 
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope;
