@@ -73,14 +73,14 @@
         
     NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
-    self.quizzes = [[NSMutableArray alloc] initWithCapacity:json.count];
+    self.data = [[NSMutableArray alloc] initWithCapacity:json.count];
     for(NSDictionary *dict in json)
     {
         Quiz *quiz = [[Quiz alloc] initWithEntity:entity insertIntoManagedObjectContext:nil andProperties:dict];
-        [self.quizzes addObject:quiz];
+        [self.data addObject:quiz];
     }
     
-    if(self.quizzes.count > 0)
+    if(self.data.count > 0)
         self.notificationView.hidden = YES;
     
     [self.tableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
@@ -90,7 +90,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.quizzes.count == 0 ? 0 : 1;
+    return self.data.count == 0 ? 0 : 1;
 }
 
 #pragma mark - Table view delegate
@@ -103,7 +103,7 @@
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:context];
     
-    Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+    Quiz *quiz = [self.data objectAtIndex:[indexPath row]];
     
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

@@ -20,8 +20,8 @@
 @property (strong, nonatomic) IBOutlet YNGATableNotificationView *notificationView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
-@property (nonatomic, retain) NSMutableArray *quizzes;
-@property (nonatomic, retain) NSMutableArray *filteredQuizzes;
+@property (nonatomic, retain) NSMutableArray *data;
+@property (nonatomic, retain) NSMutableArray *filteredData;
 @property (nonatomic, retain) NSString *emptyMessage;
 
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope;

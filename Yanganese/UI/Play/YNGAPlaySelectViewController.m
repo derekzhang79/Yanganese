@@ -29,7 +29,7 @@
     [request setEntity:entity];
     NSError *error;
     NSArray *fetchedObjects = [context executeFetchRequest:request error:&error];
-    self.quizzes = [[NSMutableArray alloc] initWithArray:fetchedObjects];
+    self.data = [[NSMutableArray alloc] initWithArray:fetchedObjects];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -41,12 +41,12 @@
         if(sender == self.searchDisplayController.searchResultsTableView)
         {
             indexPath = [self.tableView indexPathForSelectedRow];
-            quiz = [self.filteredQuizzes objectAtIndex:[indexPath row]];
+            quiz = [self.filteredData objectAtIndex:[indexPath row]];
         }
         else
         {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            quiz = [self.quizzes objectAtIndex:[indexPath row]];
+            quiz = [self.data objectAtIndex:[indexPath row]];
         }
         
         YNGAGameViewController *gameController = segue.destinationViewController;
@@ -67,10 +67,10 @@
 {
     if(editingStyle == UITableViewCellEditingStyleDelete)
     {
-        Quiz *quiz = [self.quizzes objectAtIndex:[indexPath row]];
+        Quiz *quiz = [self.data objectAtIndex:[indexPath row]];
         
         // Remove from array
-        [self.quizzes removeObjectAtIndex:[indexPath row]];
+        [self.data removeObjectAtIndex:[indexPath row]];
         
         // Remove from data store
         YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];

@@ -35,7 +35,7 @@
     
     NSError *fetchError;
     NSArray *fetchedObjects = [context executeFetchRequest:request error:&fetchError];
-    self.quizzes = [[NSMutableArray alloc] initWithArray:fetchedObjects];
+    self.data = [[NSMutableArray alloc] initWithArray:fetchedObjects];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -47,12 +47,12 @@
         if(sender == self.searchDisplayController.searchResultsTableView)
         {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            quiz = [self.filteredQuizzes objectAtIndex:[indexPath row]];
+            quiz = [self.filteredData objectAtIndex:[indexPath row]];
         }
         else
         {
             indexPath = [self.tableView indexPathForSelectedRow];
-            quiz = [self.quizzes objectAtIndex:[indexPath row]];
+            quiz = [self.data objectAtIndex:[indexPath row]];
         }
         
         YNGAReviewQuestionViewController *questionController = segue.destinationViewController;

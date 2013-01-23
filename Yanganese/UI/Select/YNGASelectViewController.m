@@ -59,7 +59,7 @@
     categoryImages = [[NSArray alloc] initWithArray:temp];
     
     // Initialize filtered search array
-    self.filteredQuizzes = [NSMutableArray arrayWithCapacity:self.quizzes.count];
+    self.filteredData = [NSMutableArray arrayWithCapacity:self.data.count];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,10 +97,10 @@
 
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
 {
-    [_filteredQuizzes removeAllObjects];
+    [_filteredData removeAllObjects];
     
     NSPredicate *matchTitle = [NSPredicate predicateWithFormat:@"SELF.title contains[c] %@", searchText];
-    self.filteredQuizzes = [NSMutableArray arrayWithArray:[_quizzes filteredArrayUsingPredicate:matchTitle]];
+    self.filteredData = [NSMutableArray arrayWithArray:[_data filteredArrayUsingPredicate:matchTitle]];
 }
 
 #pragma mark - Table view data source
@@ -108,9 +108,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(tableView == self.searchDisplayController.searchResultsTableView)
-        return _filteredQuizzes.count;
+        return _filteredData.count;
     
-    NSInteger count = _quizzes.count;
+    NSInteger count = _data.count;
     
     if(count == 0)
     {
@@ -140,9 +140,9 @@
     
     Quiz *quiz;
     if (tableView == self.searchDisplayController.searchResultsTableView)
-        quiz = [_filteredQuizzes objectAtIndex:[indexPath row]];
+        quiz = [_filteredData objectAtIndex:[indexPath row]];
     else
-        quiz = [_quizzes objectAtIndex:[indexPath row]];
+        quiz = [_data objectAtIndex:[indexPath row]];
     
     cell.nameLabel.text = quiz.title;
     
