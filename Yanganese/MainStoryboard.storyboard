@@ -728,12 +728,111 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="9Jv-Rx-GbR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TTQ-uh-ovk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TTQ-uh-ovk">
+                            <connections>
+                                <segue destination="Pu9-aP-BHN" kind="push" id="ckv-fy-SJ4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sba-jP-iIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="1812"/>
+        </scene>
+        <!--Create Question View Controller-->
+        <scene sceneID="L5Q-uH-Ttb">
+            <objects>
+                <viewController id="Pu9-aP-BHN" customClass="YNGACreateQuestionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nnW-pR-gXc" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cK4-nE-zJW">
+                                <rect key="frame" x="20" y="49" width="280" height="249"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="W" textAlignment="center" minimumFontSize="17" id="xpC-bj-vnh">
+                                <rect key="frame" x="20" y="306" width="280" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pu9-aP-BHN" id="RK8-zA-EeE"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="X" textAlignment="center" minimumFontSize="17" id="6p4-Kj-irw">
+                                <rect key="frame" x="20" y="352" width="280" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pu9-aP-BHN" id="fh5-ta-eD8"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Y" textAlignment="center" minimumFontSize="17" id="HxR-9t-1ch">
+                                <rect key="frame" x="20" y="398" width="280" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pu9-aP-BHN" id="RXc-Q9-fDN"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Z" textAlignment="center" minimumFontSize="17" id="SvO-TY-jfP">
+                                <rect key="frame" x="20" y="444" width="280" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pu9-aP-BHN" id="OAY-cl-mLx"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QJZ-cm-kek">
+                                <rect key="frame" x="20" y="490" width="280" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="General">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPicker" destination="Pu9-aP-BHN" eventType="touchUpInside" id="tSf-Xq-MRO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="dismissKeyboard" destination="Pu9-aP-BHN" eventType="touchUpInside" id="EiJ-Ch-gHb"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="r6z-nK-Ulq"/>
+                    <connections>
+                        <outlet property="categoryButton" destination="QJZ-cm-kek" id="VbT-Mm-dkE"/>
+                        <outlet property="textView" destination="cK4-nE-zJW" id="P7t-P2-nGa"/>
+                        <outletCollection property="choiceFields" destination="xpC-bj-vnh" id="pfl-MA-GWb"/>
+                        <outletCollection property="choiceFields" destination="6p4-Kj-irw" id="gsc-yb-AqO"/>
+                        <outletCollection property="choiceFields" destination="HxR-9t-1ch" id="tgv-9l-EXw"/>
+                        <outletCollection property="choiceFields" destination="SvO-TY-jfP" id="28z-Qv-arG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJb-Gi-kht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="1812"/>
         </scene>
         <!--Score View Controller - Score-->
         <scene sceneID="uSL-mq-kJt">
@@ -1046,6 +1145,18 @@
                 <relationship kind="action" name="goToSite"/>
                 <relationship kind="action" name="sendSupportMail"/>
                 <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="YNGACreateQuestionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGACreateQuestionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerChanged:"/>
+                <relationship kind="action" name="dismissActionSheet"/>
+                <relationship kind="action" name="dismissKeyboard"/>
+                <relationship kind="action" name="showPicker"/>
+                <relationship kind="outlet" name="categoryButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outletCollection" name="choiceFields" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="YNGACreateViewController" superclassName="UIViewController">
