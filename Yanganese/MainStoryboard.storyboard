@@ -1178,7 +1178,7 @@
                 <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
-        <class className="YNGADownloadViewController" superclassName="YNGASelectViewController">
+        <class className="YNGADownloadViewController" superclassName="YNGAQuizSelectViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGADownloadViewController.h"/>
         </class>
         <class className="YNGAGameResultViewController" superclassName="YNGAResultViewController">
@@ -1206,7 +1206,7 @@
                 <relationship kind="outletCollection" name="buttons" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="YNGAPlaySelectViewController" superclassName="YNGASelectViewController">
+        <class className="YNGAPlaySelectViewController" superclassName="YNGAQuizSelectViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAPlaySelectViewController.h"/>
         </class>
         <class className="YNGAQuestionViewController" superclassName="UIViewController">
@@ -1224,6 +1224,12 @@
                 <relationship kind="outlet" name="iconView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="ratingView" candidateClass="YNGARatingView"/>
+            </relationships>
+        </class>
+        <class className="YNGAQuizSelectViewController" superclassName="YNGASelectViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAQuizSelectViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="protoCell" candidateClass="YNGAQuizCell"/>
             </relationships>
         </class>
         <class className="YNGARatingView" superclassName="UIView">
@@ -1245,10 +1251,10 @@
                 <relationship kind="outlet" name="toggleButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="YNGAReviewSelectViewController" superclassName="YNGASelectViewController">
+        <class className="YNGAReviewSelectViewController" superclassName="YNGAQuizSelectViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAReviewSelectViewController.h"/>
         </class>
-        <class className="YNGAScoreSelectViewController" superclassName="YNGASelectViewController">
+        <class className="YNGAScoreSelectViewController" superclassName="YNGAQuizSelectViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGAScoreSelectViewController.h"/>
         </class>
         <class className="YNGAScoreViewController" superclassName="YNGAResultViewController">
@@ -1261,7 +1267,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGASelectViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="notificationView" candidateClass="YNGATableNotificationView"/>
-                <relationship kind="outlet" name="protoCell" candidateClass="YNGAQuizCell"/>
                 <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
             </relationships>
         </class>

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Michael Yang. All rights reserved.
 //
 
-#import "YNGASelectViewController.h"
+#import "YNGAQuizSelectViewController.h"
 
-@interface YNGAReviewSelectViewController : YNGASelectViewController
+@interface YNGAReviewSelectViewController : YNGAQuizSelectViewController
 
 @end

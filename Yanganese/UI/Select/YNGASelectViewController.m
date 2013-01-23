@@ -8,12 +8,7 @@
 
 #import "YNGASelectViewController.h"
 
-#import "YNGAQuizCell.h"
-#import "YNGARatingView.h"
 #import "YNGATableNotificationView.h"
-#import "Quiz.h"
-
-#define kRowHeight 75
 
 @interface YNGASelectViewController ()
 
@@ -27,11 +22,9 @@
 {
     [super viewDidLoad];
 
-    self.tableView.rowHeight = kRowHeight;
     self.tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     self.tableView.alpha = 0.0;
     
-    self.searchDisplayController.searchResultsTableView.rowHeight = kRowHeight;
     self.searchDisplayController.searchResultsTableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
     self.searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -120,40 +113,6 @@
     }
 
     return count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *ListCellIdentifier = @"List Cell";
-    
-    YNGAQuizCell *cell = (YNGAQuizCell *)[tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
-    if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"YNGAQuizCell" owner:self options:nil];
-		cell = _protoCell;
-		self.protoCell = nil;
-    }
-	
-    // Set cell properties
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    cell.nameLabel.highlightedTextColor = [UIColor grayColor];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selectHighlight.png"]];
-    
-    Quiz *quiz;
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-        quiz = [_filteredData objectAtIndex:[indexPath row]];
-    else
-        quiz = [_data objectAtIndex:[indexPath row]];
-    
-    cell.nameLabel.text = quiz.title;
-    
-    int index = [quiz.categoryID intValue];
-
-    if(index > 0)
-        cell.iconView.image = [_categoryImages objectAtIndex:index - 1];
-    cell.authorLabel.text = quiz.author;
-    cell.ratingView.rating = [quiz.rating floatValue];
-    
-    return cell;
 }
 
 #pragma mark - Table view delegate

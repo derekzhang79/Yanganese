@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class YNGAQuizCell;
 @class YNGATableNotificationView;
 
 @interface YNGASelectViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
-@property (weak, nonatomic) IBOutlet YNGAQuizCell *protoCell;
 @property (strong, nonatomic) IBOutlet YNGATableNotificationView *notificationView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 

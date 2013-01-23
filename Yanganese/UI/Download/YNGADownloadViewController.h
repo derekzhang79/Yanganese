@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Michael Yang. All rights reserved.
 //
 
-#import "YNGASelectViewController.h"
+#import "YNGAQuizSelectViewController.h"
 
 @class YNGAPopupView;
 
-@interface YNGADownloadViewController : YNGASelectViewController <NSURLConnectionDelegate>
+@interface YNGADownloadViewController : YNGAQuizSelectViewController <NSURLConnectionDelegate>
 {
     YNGAPopupView *popupView;
     UIActivityIndicatorView *activityView;
