@@ -10,6 +10,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
+#import "YNGACreateSelectViewController.h"
 #import "Quiz.h"
 
 @interface YNGACreateViewController ()
@@ -64,6 +65,15 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
     [super viewWillAppear:animated];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"addQuestions"])
+    {
+        YNGACreateSelectViewController *createSelectController = (YNGACreateSelectViewController *)segue.destinationViewController;
+        createSelectController.quiz = [self createQuiz];
+    }
 }
 
 #pragma mark -
