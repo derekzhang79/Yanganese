@@ -699,7 +699,7 @@
                     <navigationItem key="navigationItem" title="New Quiz" id="Rs6-I5-WMn">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="036-fv-SnO">
                             <connections>
-                                <segue destination="MNZ-HU-cZp" kind="push" id="fvH-VT-xbo"/>
+                                <segue destination="MNZ-HU-cZp" kind="push" identifier="addQuestions" id="fvH-VT-xbo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
