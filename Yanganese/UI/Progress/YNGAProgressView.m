@@ -19,7 +19,8 @@
 {
     if(self = [super initWithFrame:frame])
     {
-        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+        self.layer.cornerRadius = kCornerRadius;
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.9];
         
         CGRect progressFrame = CGRectMake(frame.origin.x + kSideMargin, (frame.size.height - kProgressViewHeight) / 2, (frame.size.width - 2 * kSideMargin) * 0.6, kProgressViewHeight);
         CGRect labelFrame = CGRectMake(progressFrame.origin.x + progressFrame.size.width * 1.1, 0, (frame.size.width - 2 * kSideMargin) * 0.2, frame.size.height);
@@ -42,7 +43,7 @@
 
 - (void)setProgress:(float)progress
 {
-    progressView.progress = progress;
+    [progressView setProgress:progress animated:YES];
     percentageLabel.text = [NSString stringWithFormat:@"%d%%", (int)(progress * 100)];
 }
 
