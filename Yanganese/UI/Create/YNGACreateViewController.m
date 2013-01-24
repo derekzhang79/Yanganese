@@ -40,7 +40,7 @@
     
     [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
-    lastRow = 5;
+    lastRow = 4;
     
     CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
     
