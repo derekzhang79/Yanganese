@@ -1,5 +1,5 @@
 //
-//  YNGACreateViewController.h
+//  YNGACreateQuizViewController.h
 //  Yanganese
 //
 //  Created by Michael Yang on 1/21/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YNGACreateViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface YNGACreateQuizViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 {
     NSArray *categories;
     NSInteger lastRow;

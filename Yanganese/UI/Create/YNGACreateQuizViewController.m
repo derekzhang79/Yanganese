@@ -1,26 +1,26 @@
 //
-//  YNGACreateViewController.m
+//  YNGACreateQuizViewController.m
 //  Yanganese
 //
 //  Created by Michael Yang on 1/21/13.
 //  Copyright (c) 2013 Michael Yang. All rights reserved.
 //
 
-#import "YNGACreateViewController.h"
+#import "YNGACreateQuizViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
 #import "YNGACreateSelectViewController.h"
 #import "Quiz.h"
 
-@interface YNGACreateViewController ()
+@interface YNGACreateQuizViewController ()
 
 - (void)animateBack;
 - (Quiz *)createQuiz;
 
 @end
 
-@implementation YNGACreateViewController
+@implementation YNGACreateQuizViewController
 
 - (void)viewDidLoad
 {
