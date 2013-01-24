@@ -679,7 +679,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="General">
+                                <state key="normal" title="General Science">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1166,6 +1166,9 @@
         </class>
         <class className="YNGACreateSelectViewController" superclassName="YNGAQuestionSelectViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGACreateSelectViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="uploadQuiz"/>
+            </relationships>
         </class>
         <class className="YNGACreateViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGACreateViewController.h"/>
