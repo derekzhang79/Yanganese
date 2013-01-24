@@ -39,6 +39,21 @@
     return self;
 }
 
+- (NSDictionary *)properties
+{
+    return
+    @{
+    @"text": self.text,
+    @"answer": self.answer,
+    @"category_id": self.categoryID,
+    @"w": self.w,
+    @"x": self.x,
+    @"y": self.y,
+    @"z": self.z,
+    @"quiz_id": self.quiz.quizID
+    };
+}
+
 - (NSString *)fullText
 {
     NSMutableString *text = [[NSMutableString alloc] initWithString:self.text];

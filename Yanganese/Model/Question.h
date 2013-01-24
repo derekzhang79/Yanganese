@@ -23,6 +23,7 @@
 @property (nonatomic, retain) Quiz *quiz;
 
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context andProperties:(NSDictionary *)APIResponse;
+- (NSDictionary *)properties;
 
 - (NSString *)fullText;
 - (NSString *)answerText;
