@@ -1,5 +1,5 @@
 //
-//  YNGACreateSelectViewController.h
+//  YNGACreateQuestionSelectViewController.h
 //  Yanganese
 //
 //  Created by Michael Yang on 1/23/13.
@@ -13,7 +13,7 @@
 @class YNGAPopupView, YNGAProgressView;
 @class Quiz;
 
-@interface YNGACreateSelectViewController : YNGAQuestionSelectViewController <YNGAAlertViewDelegate>
+@interface YNGACreateQuestionSelectViewController : YNGAQuestionSelectViewController <YNGAAlertViewDelegate>
 {
     YNGAPopupView *popupView;
     YNGAProgressView *progressView;

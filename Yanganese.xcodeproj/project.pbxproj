@@ -26,7 +26,7 @@
 		D22C009B16A37271009F26FD /* YNGAResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C009A16A37271009F26FD /* YNGAResultViewController.m */; };
 		D22C00AA16A37528009F26FD /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = D22C00A916A37528009F26FD /* Score.m */; };
 		D234055B16B0429500AA9971 /* YNGAQuestionSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D234055A16B0429500AA9971 /* YNGAQuestionSelectViewController.m */; };
-		D234055F16B0445900AA9971 /* YNGACreateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D234055E16B0445900AA9971 /* YNGACreateSelectViewController.m */; };
+		D234055F16B0445900AA9971 /* YNGACreateQuestionSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D234055E16B0445900AA9971 /* YNGACreateQuestionSelectViewController.m */; };
 		D2362ECB16A3EB05007216D8 /* YNGAScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */; };
 		D249411116A2693F0058E7E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411016A2693F0058E7E6 /* UIKit.framework */; };
 		D249411316A2693F0058E7E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D249411216A2693F0058E7E6 /* Foundation.framework */; };
@@ -171,8 +171,8 @@
 		D22C00A916A37528009F26FD /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Model/Score.m; sourceTree = "<group>"; };
 		D234055916B0429500AA9971 /* YNGAQuestionSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAQuestionSelectViewController.h; path = UI/Select/YNGAQuestionSelectViewController.h; sourceTree = "<group>"; };
 		D234055A16B0429500AA9971 /* YNGAQuestionSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAQuestionSelectViewController.m; path = UI/Select/YNGAQuestionSelectViewController.m; sourceTree = "<group>"; };
-		D234055D16B0445900AA9971 /* YNGACreateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGACreateSelectViewController.h; path = UI/Create/YNGACreateSelectViewController.h; sourceTree = "<group>"; };
-		D234055E16B0445900AA9971 /* YNGACreateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGACreateSelectViewController.m; path = UI/Create/YNGACreateSelectViewController.m; sourceTree = "<group>"; };
+		D234055D16B0445900AA9971 /* YNGACreateQuestionSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGACreateQuestionSelectViewController.h; path = UI/Create/YNGACreateQuestionSelectViewController.h; sourceTree = "<group>"; };
+		D234055E16B0445900AA9971 /* YNGACreateQuestionSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGACreateQuestionSelectViewController.m; path = UI/Create/YNGACreateQuestionSelectViewController.m; sourceTree = "<group>"; };
 		D2362EC916A3EB05007216D8 /* YNGAScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YNGAScoreViewController.h; path = UI/Score/YNGAScoreViewController.h; sourceTree = "<group>"; };
 		D2362ECA16A3EB05007216D8 /* YNGAScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YNGAScoreViewController.m; path = UI/Score/YNGAScoreViewController.m; sourceTree = "<group>"; };
 		D249410C16A2693F0058E7E6 /* Yanganese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yanganese.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,8 +367,8 @@
 			children = (
 				D21A7D9D16AD58EA0054D32D /* YNGACreateQuizViewController.h */,
 				D21A7D9E16AD58EA0054D32D /* YNGACreateQuizViewController.m */,
-				D234055D16B0445900AA9971 /* YNGACreateSelectViewController.h */,
-				D234055E16B0445900AA9971 /* YNGACreateSelectViewController.m */,
+				D234055D16B0445900AA9971 /* YNGACreateQuestionSelectViewController.h */,
+				D234055E16B0445900AA9971 /* YNGACreateQuestionSelectViewController.m */,
 				D27D7E7516AE1005005DD9C8 /* YNGACreateQuestionViewController.h */,
 				D27D7E7616AE1005005DD9C8 /* YNGACreateQuestionViewController.m */,
 			);
@@ -985,7 +985,7 @@
 				D27D7E7716AE1005005DD9C8 /* YNGACreateQuestionViewController.m in Sources */,
 				D2AA8EEC16B03C5B008856C4 /* YNGAQuizSelectViewController.m in Sources */,
 				D234055B16B0429500AA9971 /* YNGAQuestionSelectViewController.m in Sources */,
-				D234055F16B0445900AA9971 /* YNGACreateSelectViewController.m in Sources */,
+				D234055F16B0445900AA9971 /* YNGACreateQuestionSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

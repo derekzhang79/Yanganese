@@ -1,12 +1,12 @@
 //
-//  YNGACreateSelectViewController.m
+//  YNGACreateQuestionSelectViewController.m
 //  Yanganese
 //
 //  Created by Michael Yang on 1/23/13.
 //  Copyright (c) 2013 Michael Yang. All rights reserved.
 //
 
-#import "YNGACreateSelectViewController.h"
+#import "YNGACreateQuestionSelectViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
@@ -17,14 +17,14 @@
 #import "Quiz.h"
 #import "Question.h"
 
-@interface YNGACreateSelectViewController ()
+@interface YNGACreateQuestionSelectViewController ()
 
 - (void)uploadQuestions;
 - (void)addQuestion:(id)sender;
 
 @end
 
-@implementation YNGACreateSelectViewController
+@implementation YNGACreateQuestionSelectViewController
 
 - (void)viewDidLoad
 {

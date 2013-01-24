@@ -10,7 +10,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
-#import "YNGACreateSelectViewController.h"
+#import "YNGACreateQuestionSelectViewController.h"
 #import "Quiz.h"
 
 @interface YNGACreateQuizViewController ()
@@ -71,7 +71,7 @@
 {
     if([segue.identifier isEqualToString:@"addQuestions"])
     {
-        YNGACreateSelectViewController *createSelectController = (YNGACreateSelectViewController *)segue.destinationViewController;
+        YNGACreateQuestionSelectViewController *createSelectController = (YNGACreateQuestionSelectViewController *)segue.destinationViewController;
         createSelectController.quiz = [self createQuiz];
     }
 }
