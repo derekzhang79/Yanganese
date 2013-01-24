@@ -22,6 +22,7 @@
 @property (nonatomic, retain) Score *score;
 
 - (id)initWithEntity:(NSEntityDescription *)entity insertIntoManagedObjectContext:(NSManagedObjectContext *)context andProperties:(NSDictionary *)APIResponse;
+- (NSDictionary *)properties;
 
 @end
 

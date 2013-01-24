@@ -37,6 +37,16 @@
     return self;
 }
 
+- (NSDictionary *)properties
+{
+    return
+    @{
+    @"title": self.title,
+    @"author": self.author,
+    @"category_id": self.categoryID
+    };
+}
+
 #pragma mark - Temp fix for generated accessor
 
 - (void)addQuestionsObject:(Question *)value
