@@ -112,6 +112,8 @@
         _notificationView.imageView.image = [UIImage imageNamed:@"zero.png"];
         _notificationView.hidden = NO;
     }
+    else
+        _notificationView.hidden = YES;
 
     return count;
 }
