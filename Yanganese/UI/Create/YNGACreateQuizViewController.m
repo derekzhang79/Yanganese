@@ -16,6 +16,7 @@
 @interface YNGACreateQuizViewController ()
 
 - (void)animateBack;
+- (void)addQuestions:(id)sender;
 
 @end
 
@@ -28,6 +29,10 @@
     _titleField.layer.cornerRadius = kCornerRadius;
     _authorField.layer.cornerRadius = kCornerRadius;
     _categoryButton.layer.cornerRadius = kCornerRadius;
+    
+    // Add next button
+    UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleBordered target:self action:@selector(addQuestions:)];
+    self.navigationItem.rightBarButtonItem = nextButton;
     
     categories = @[@"Astronomy", @"Biology", @"Chemistry", @"Earth Science", @"General Science", @"Mathematics", @"Physics"];
     
@@ -112,6 +117,11 @@
     };
     
     [UIView animateWithDuration:kTransitionTime animations:fade completion:popController];
+}
+
+- (void)addQuestions:(id)sender
+{
+    [self performSegueWithIdentifier:@"addQuestions" sender:self];
 }
 
 #pragma mark - Picker view data source
