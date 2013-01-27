@@ -1178,6 +1178,7 @@
         <class className="YNGACreateQuestionSelectViewController" superclassName="YNGAQuestionSelectViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YNGACreateQuestionSelectViewController.h"/>
             <relationships>
+                <relationship kind="action" name="saveQuiz"/>
                 <relationship kind="action" name="uploadQuiz"/>
             </relationships>
         </class>

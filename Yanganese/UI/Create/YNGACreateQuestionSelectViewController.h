@@ -24,5 +24,6 @@
 @property (nonatomic, retain) Quiz *quiz;
 
 - (IBAction)uploadQuiz;
+- (IBAction)saveQuiz;
 
 @end

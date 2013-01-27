@@ -10,6 +10,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
+#import "YNGACreateViewController.h"
 #import "YNGACreateQuestionViewController.h"
 #import "YNGAPopupView.h"
 #import "YNGAProgressView.h"
@@ -39,14 +40,23 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 78)];
     headerView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f];
 
-    UIButton *finishButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 280, 38)];//[UIButton buttonWithType:UIButtonTypeCustom];
-    finishButton.layer.cornerRadius = kCornerRadius;
-    [finishButton setTitle:@"Upload and Finish" forState:UIControlStateNormal];
-    finishButton.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
-    finishButton.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7f];
-    [finishButton addTarget:self action:@selector(uploadQuiz) forControlEvents:UIControlEventTouchUpInside];
-    
-    [headerView addSubview:finishButton];
+    UIButton *uploadButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 120, 38)];
+    UIButton *saveButton = [[UIButton alloc] initWithFrame:CGRectMake(180, 20, 120, 38)];
+
+    NSArray *headerButtons = @[uploadButton, saveButton];
+    for(UIButton *button in headerButtons)
+    {
+        button.layer.cornerRadius = kCornerRadius;
+        button.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+        button.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7f];
+        [headerView addSubview:button];
+    }
+
+    [uploadButton setTitle:@"Upload" forState:UIControlStateNormal];
+    [uploadButton addTarget:self action:@selector(uploadQuiz) forControlEvents:UIControlEventTouchUpInside];
+    [saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    [saveButton addTarget:self action:@selector(saveQuiz) forControlEvents:UIControlEventTouchUpInside];
+
     self.tableView.tableHeaderView = headerView;
     
     // Add popup view
@@ -151,6 +161,27 @@
     else
     {
     }
+}
+
+- (IBAction)saveQuiz
+{
+    // Save quiz locally
+    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    [context insertObject:_quiz];
+    
+    for(Question *question in self.data)
+        [_quiz addQuestionsObject:question];
+    
+    [context save:nil];
+    
+    // Return to list
+    UIViewController *targetController;
+    for(UIViewController *controller in self.navigationController.viewControllers)
+        if([controller isKindOfClass:[YNGACreateViewController class]])
+            targetController = controller;
+    [self.navigationController popToViewController:targetController animated:YES];
 }
 
 - (void)uploadQuestions
