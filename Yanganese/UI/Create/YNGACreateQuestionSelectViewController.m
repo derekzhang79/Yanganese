@@ -72,7 +72,9 @@
     progressView.alpha = 0.0;
     [self.tableView addSubview:progressView];
     
-    self.data = [[NSMutableArray alloc] init];
+    self.data = [[NSMutableArray alloc] initWithCapacity:_quiz.questions.count];
+    for(Question *question in _quiz.questions)
+        [self.data addObject:question];
 }
 
 - (void)viewWillAppear:(BOOL)animated
