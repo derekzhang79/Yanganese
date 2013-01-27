@@ -10,7 +10,7 @@
 
 @class Question;
 
-@interface YNGACreateQuestionViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface YNGACreateQuestionViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 {
     UIActionSheet *actionSheet;
     UIButton *lastButton;

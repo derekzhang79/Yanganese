@@ -198,6 +198,24 @@
     fieldTrigger = NO;
 }
 
+#pragma mark - Text view delegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [UIView animateWithDuration:kTransitionTime/2 animations:^{
+        for(UITextField *field in _choiceFields)
+            field.alpha = 0.0f;
+    }];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [UIView animateWithDuration:kTransitionTime/2 animations:^{
+        for(UITextField *field in _choiceFields)
+            field.alpha = 1.0f;
+    }];
+}
+
 #pragma mark - Picker view data source
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

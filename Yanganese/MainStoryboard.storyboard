@@ -770,6 +770,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pu9-aP-BHN" id="pg8-fL-fbN"/>
+                                </connections>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="W" textAlignment="center" minimumFontSize="17" id="xpC-bj-vnh">
                                 <rect key="frame" x="20" y="306" width="280" height="38"/>
