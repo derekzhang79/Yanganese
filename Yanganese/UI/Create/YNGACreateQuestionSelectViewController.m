@@ -152,6 +152,23 @@
         
         void(^uploadQuestions)(BOOL) = ^(BOOL completion) {
             [self uploadQuestions];
+            
+            // Fade and reset progress
+            void(^fadeProgress)(void) = ^ {
+                progressView.alpha = 0.0f;
+            };
+            
+            void(^clearProgress)(BOOL) = ^(BOOL completion) {
+                YNGAAlertView *alertView = [[YNGAAlertView alloc] initWithFrame:CGRectMake(30, 120, 260, 200)];
+                alertView.cancelButton.hidden = YES;
+                alertView.messageLabel.text = @"Upload finished. You will now be taken back to the main menu.";
+                alertView.delegate = self;
+                
+                [self.view addSubview:alertView];
+                [alertView show];
+            };
+            
+            [UIView animateWithDuration:kTransitionTime animations:fadeProgress completion:clearProgress];
         };
         
         [UIView animateWithDuration:kTransitionTime animations:^{
@@ -208,23 +225,6 @@
             [progressView setProgress:(questionCount * 1.0f / _quiz.questions.count)];
         }
     }
-    
-    // Fade and reset progress
-    void(^fadeProgress)(void) = ^ {
-        progressView.alpha = 0.0f;
-    };
-    
-    void(^clearProgress)(BOOL) = ^(BOOL completion) {
-        YNGAAlertView *alertView = [[YNGAAlertView alloc] initWithFrame:CGRectMake(30, 120, 260, 200)];
-        alertView.cancelButton.hidden = YES;
-        alertView.messageLabel.text = @"Upload finished. You will now be taken back to the main menu.";
-        alertView.delegate = self;
-        
-        [self.view addSubview:alertView];
-        [alertView show];
-    };
-    
-    [UIView animateWithDuration:kTransitionTime animations:fadeProgress completion:clearProgress];
 }
 
 - (void)addQuestion:(id)sender
