@@ -39,7 +39,7 @@
     
     lastRow = [_question.categoryID integerValue] - 1;
     if(lastRow < 0)
-        lastRow = 5;
+        lastRow = 4;
 
     [_categoryButton setTitle:[categories objectAtIndex:lastRow] forState:UIControlStateNormal];
     
