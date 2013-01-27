@@ -28,6 +28,8 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addQuiz:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
+    self.emptyMessage = @"There are no unuploaded quizzes. Quizzes that you do not upload are saved here.";
+    
     // Load quizzes
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
