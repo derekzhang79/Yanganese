@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Quiz;
+
 @interface YNGACreateQuizViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 {
     NSArray *categories;
@@ -20,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *authorField;
 @property (weak, nonatomic) IBOutlet UIButton *categoryButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
+@property (nonatomic, retain) Quiz *quiz;
 
 - (IBAction)showPicker;
 - (IBAction)dismissKeyboard;

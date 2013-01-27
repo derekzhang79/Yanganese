@@ -16,7 +16,6 @@
 @interface YNGACreateQuizViewController ()
 
 - (void)animateBack;
-- (Quiz *)createQuiz;
 
 @end
 
@@ -71,8 +70,12 @@
 {
     if([segue.identifier isEqualToString:@"addQuestions"])
     {
+        _quiz.title = _titleField.text;
+        _quiz.author = _authorField.text;
+        _quiz.categoryID = [NSNumber numberWithInteger:(lastRow + 1)];
+        
         YNGACreateQuestionSelectViewController *createSelectController = (YNGACreateQuestionSelectViewController *)segue.destinationViewController;
-        createSelectController.quiz = [self createQuiz];
+        createSelectController.quiz = _quiz;
     }
 }
 
@@ -109,20 +112,6 @@
     };
     
     [UIView animateWithDuration:kTransitionTime animations:fade completion:popController];
-}
-
-- (Quiz *)createQuiz
-{
-    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
-    
-    Quiz *quiz = [[Quiz alloc] initWithEntity:entity insertIntoManagedObjectContext:nil];
-    quiz.title = _titleField.text;
-    quiz.author = _authorField.text;
-    quiz.categoryID = [NSNumber numberWithInteger:(lastRow + 1)];
-    
-    return quiz;
 }
 
 #pragma mark - Picker view data source
