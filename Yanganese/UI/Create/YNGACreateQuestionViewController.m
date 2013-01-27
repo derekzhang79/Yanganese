@@ -10,6 +10,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
+#import "YNGAAlertView.h"
 #import "Question.h"
 
 @interface YNGACreateQuestionViewController ()
@@ -138,19 +139,43 @@
 
 - (IBAction)saveQuestion
 {
-    // Update attributes
+    // Update and check validity attributes
     _question.text = _textView.text;
-    
+
+    BOOL incompleteFields = NO;
     for(UITextField *field in _choiceFields)
     {
         NSString *key = [NSString stringWithFormat:@"%c", ('w' + field.tag - 1)];
         [_question setValue:field.text forKey:key];
+        incompleteFields = incompleteFields || [field.text isEqualToString:@""] || field.text == nil;
+    }
+    
+    if([_textView.text isEqualToString:@""] || _textView.text == nil || incompleteFields)
+    {
+        YNGAAlertView *alertView = [[YNGAAlertView alloc] initWithFrame:CGRectMake(30, 120, 260, 200)];
+        alertView.cancelButton.hidden = YES;
+        alertView.messageLabel.text = @"Please enter text and answer choices for the question.";
+        
+        [self.view addSubview:alertView];
+        [alertView show];
+        return;
     }
     
     _question.categoryID = [NSNumber numberWithInteger:(lastRow + 1)];
     
     UITextField *lastField = (UITextField *)lastButton.superview;
     _question.answer = [NSString stringWithFormat:@"%c", ('w' + lastField.tag - 1)];
+    
+    if(lastField.tag == 0)
+    {
+        YNGAAlertView *alertView = [[YNGAAlertView alloc] initWithFrame:CGRectMake(30, 120, 260, 200)];
+        alertView.cancelButton.hidden = YES;
+        alertView.messageLabel.text = @"Tap the color of the answer choice that is the answer.";
+        
+        [self.view addSubview:alertView];
+        [alertView show];
+        return;
+    }
     
     // Save and return to question list
     YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
