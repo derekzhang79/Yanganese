@@ -24,6 +24,8 @@
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
+#pragma mark -
+
 - (void)addQuiz:(id)sender
 {
     [self performSegueWithIdentifier:@"addQuiz" sender:sender];
