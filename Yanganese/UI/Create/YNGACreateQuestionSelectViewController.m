@@ -21,6 +21,7 @@
 @interface YNGACreateQuestionSelectViewController ()
 
 - (void)uploadQuestions;
+- (void)saveLocalContext;
 - (void)addQuestion:(id)sender;
 
 @end
@@ -120,16 +121,7 @@
 
 - (IBAction)uploadQuiz
 {
-    // Save quiz locally
-    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    
-    [context insertObject:_quiz];
-    
-    for(Question *question in self.data)
-        [_quiz addQuestionsObject:question];
-    
-    [context save:nil];
+    [self saveLocalContext];
     
     // Upload quiz
     NSDictionary *quizDict = @{@"quiz":[_quiz properties]};
@@ -148,6 +140,8 @@
     {
         NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
         _quiz.quizID = [jsonResponse objectForKey:@"quiz_id"];
+        YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
         [context save:nil];
         
         void(^uploadQuestions)(BOOL) = ^(BOOL completion) {
@@ -182,16 +176,7 @@
 
 - (IBAction)saveQuiz
 {
-    // Save quiz locally
-    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    
-    [context insertObject:_quiz];
-    
-    for(Question *question in self.data)
-        [_quiz addQuestionsObject:question];
-    
-    [context save:nil];
+    [self saveLocalContext];
     
     // Return to list
     UIViewController *targetController;
@@ -225,6 +210,19 @@
             [progressView setProgress:(questionCount * 1.0f / _quiz.questions.count)];
         }
     }
+}
+
+- (void)saveLocalContext
+{
+    YNGAAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    [context insertObject:_quiz];
+    
+    for(Question *question in self.data)
+        [_quiz addQuestionsObject:question];
+    
+    [context save:nil];
 }
 
 - (void)addQuestion:(id)sender
