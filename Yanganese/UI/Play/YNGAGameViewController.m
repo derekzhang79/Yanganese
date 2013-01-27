@@ -89,14 +89,14 @@
 	self.title = [[NSString alloc] initWithFormat:@"Question %d", (questionNumber + 1)];
 	
 	// set question type in navigation bar
-	self.numberLabel.text = [categories objectAtIndex:[question.categoryID integerValue]];
+	self.numberLabel.text = [categories objectAtIndex:[question.categoryID integerValue] - 1];
 
     _questionView.text = [question fullText];
 }
 
 - (IBAction)answer:(id)sender
 {
-	NSUInteger categoryIndex = [question.categoryID integerValue];
+	NSUInteger categoryIndex = [question.categoryID integerValue] - 1;
 
     UIButton *button = (UIButton *)sender;
     lastButtonTag = button.tag;
