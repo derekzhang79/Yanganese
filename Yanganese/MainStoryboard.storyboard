@@ -667,6 +667,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <connections>
                         <segue destination="svc-Db-BBj" kind="push" identifier="addQuiz" id="Tgp-Vn-0FV"/>
+                        <segue destination="MNZ-HU-cZp" kind="push" identifier="editQuiz" id="AkG-No-4EJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bh1-Hr-X4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1328,7 +1329,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2n9-44-sNy"/>
         <segue reference="XaJ-6Q-KQV"/>
+        <segue reference="AkG-No-4EJ"/>
+        <segue reference="XMH-aa-VRe"/>
     </inferredMetricsTieBreakers>
 </document>
