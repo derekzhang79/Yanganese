@@ -36,7 +36,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Quiz" inManagedObjectContext:context];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSPredicate *notUploaded = [NSPredicate predicateWithFormat:@"quizID == nil"];
+    NSPredicate *notUploaded = [NSPredicate predicateWithFormat:@"quizID == 0"];
     [request setEntity:entity];
     [request setPredicate:notUploaded];
     
