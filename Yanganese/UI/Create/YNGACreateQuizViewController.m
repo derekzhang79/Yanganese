@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "YNGAAppDelegate.h"
 #import "YNGACreateQuestionSelectViewController.h"
+#import "YNGAAlertView.h"
 #import "Quiz.h"
 
 @interface YNGACreateQuizViewController ()
@@ -121,6 +122,17 @@
 
 - (void)addQuestions:(id)sender
 {
+    if([_titleField.text isEqualToString:@""])
+    {
+        YNGAAlertView *alertView = [[YNGAAlertView alloc] initWithFrame:CGRectMake(30, 120, 260, 200)];
+        alertView.cancelButton.hidden = YES;
+        alertView.messageLabel.text = @"Please enter a title for the quiz.";
+        
+        [self.view addSubview:alertView];
+        [alertView show];
+        return;
+    }
+
     [self performSegueWithIdentifier:@"addQuestions" sender:self];
 }
 
