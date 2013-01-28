@@ -82,6 +82,7 @@
     UIButton *button = (UIButton *)sender;
     
     void(^delegate)(BOOL) = ^(BOOL completion) {
+        [self removeFromSuperview];
         [_delegate alertView:self didDismissWithButtonIndex:button.tag];
     };
     
