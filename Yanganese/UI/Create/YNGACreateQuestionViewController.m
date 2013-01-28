@@ -200,12 +200,21 @@
             rect.origin.y -= keyboardHeight;
             rect.size.height += keyboardHeight;
             _textView.alpha = 0.0f;
+            
+            CGFloat height = -keyboardHeight + self.view.frame.size.height - _categoryButton.frame.origin.y;
+            
+            CGAffineTransform shiftUp = CGAffineTransformMakeTranslation(0, height);
+            for(UITextField *field in _choiceFields)
+                field.transform = shiftUp;
         }
         else
         {
             rect.origin.y += keyboardHeight;
             rect.size.height -= keyboardHeight;
             _textView.alpha = 1.0f;
+            
+            for(UITextField *field in _choiceFields)
+                field.transform = CGAffineTransformIdentity;
         }
         self.view.frame = rect;
     }];
