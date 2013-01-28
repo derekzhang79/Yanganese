@@ -73,12 +73,12 @@
         Quiz *quiz;
         if(sender == self.searchDisplayController.searchResultsTableView)
         {
-            indexPath = [self.tableView indexPathForSelectedRow];
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             quiz = [self.filteredData objectAtIndex:[indexPath row]];
         }
         else
         {
-            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            indexPath = [self.tableView indexPathForSelectedRow];
             quiz = [self.data objectAtIndex:[indexPath row]];
         }
         
