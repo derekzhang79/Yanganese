@@ -89,6 +89,12 @@
 	cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:16];
 	
     // Show percentage if value exists
+    if(_score.categoryScores.count == 0)
+    {
+        cell.detailTextLabel.textColor = [UIColor clearColor];
+        return cell;
+    }
+        
     CategoryScore *catScore = [_score.categoryScores objectAtIndex:[indexPath row]];
     NSUInteger total = [catScore.total integerValue];
     if(total <= 0)
