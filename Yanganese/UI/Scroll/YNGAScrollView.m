@@ -40,7 +40,7 @@
             if([object isKindOfClass:[UITextView class]])
             {
                 UITextView *cast = (UITextView *)object;
-                cast.backgroundColor = [UIColor blackColor];
+                cast.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7f];
                 cast.layer.cornerRadius = kCornerRadius;
                 cast.editable = NO;
                 cast.textColor = [UIColor whiteColor];
