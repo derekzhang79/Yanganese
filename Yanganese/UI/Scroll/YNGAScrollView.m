@@ -21,9 +21,7 @@
 {
     if(self = [super initWithCoder:aDecoder])
     {
-        if(CGSizeEqualToSize(self.frame.size, CGSizeZero))
-            self.frame = CGRectMake(0, 0, kDefaultWidth, kDefaultHeight);
-
+        self.autoresizesSubviews = YES;
         CGSize size = self.frame.size;
         UITextView *prevView = [[UITextView alloc] initWithFrame:CGRectMake(kSideMargin, 0, size.width - 2 * kSideMargin, size.height)];
         UITextView *currView = [[UITextView alloc] initWithFrame:CGRectMake(size.width + kSideMargin, 0, size.width - 2 * kSideMargin, size.height)];
@@ -45,6 +43,7 @@
                 cast.editable = NO;
                 cast.textColor = [UIColor whiteColor];
                 cast.font = [UIFont fontWithName:@"Helvetica" size:16.0];
+                cast.autoresizingMask = UIViewAutoresizingFlexibleHeight;
             }
         }
         
@@ -52,8 +51,15 @@
         self.contentSize = CGSizeMake(3 * size.width, size.height);
         [self scrollToMiddle];
     }
-    
+
     return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.contentSize = CGSizeMake(3 * self.frame.size.width, self.frame.size.height);
 }
 
 #pragma mark -
