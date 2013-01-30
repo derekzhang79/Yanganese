@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+extern float const kSideMargin;
 extern float const kCornerRadius;
 extern float const kTransitionTime;
 

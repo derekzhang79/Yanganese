@@ -10,8 +10,6 @@
 
 #import "YNGASegue.h"
 
-#define kSideMargin 20
-
 @interface YNGAMenuViewController ()
 
 - (void)translateOut;

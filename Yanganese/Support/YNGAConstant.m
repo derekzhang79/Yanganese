@@ -8,6 +8,7 @@
 
 #import "YNGAConstant.h"
 
+float const kSideMargin = 20.0f;
 float const kCornerRadius = 3.0f;
 float const kTransitionTime = 0.5f;
 

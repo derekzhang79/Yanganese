@@ -10,7 +10,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#define kSideMargin 20
 #define kProgressViewHeight 9
 
 @implementation YNGAProgressView

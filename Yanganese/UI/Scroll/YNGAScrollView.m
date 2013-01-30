@@ -10,8 +10,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#define kSideMargin 20
-
 #define kDefaultWidth 320
 #define kDefaultHeight 313
 
